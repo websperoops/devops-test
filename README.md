@@ -57,3 +57,4 @@ $ . env_localhost                                                       # Set th
 $ set +a
 $ celery -A blocklight -l info beat                                     # Start celery beat
 
+
