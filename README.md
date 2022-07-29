@@ -15,7 +15,7 @@ nodejs
 This project is ongoing and proprietary.
 
 ## Quick Install or Setup project in you local ##
-
+```
 $ mkdir blocklight                                                      # Create the project folder
 $ cd blocklight
 $ virtualenv venv                                                       # Create virtual environment to run the project locally
@@ -57,4 +57,4 @@ $ . env_localhost                                                       # Set th
 $ set +a
 $ celery -A blocklight -l info beat                                     # Start celery beat
 
-
+```
