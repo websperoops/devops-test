@@ -1,0 +1,61 @@
+server	{
+	listen 80;
+	server_name dev.blocklight.io;
+	return 301 https://dev.blocklight.io$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name dev.blocklight.io;
+
+    ssl on;
+    ssl_certificate /root/ssl/blocklight.io.chained.crt;
+    ssl_certificate_key /root/ssl/blocklight.io.key;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/django/django_project;
+    }
+
+    location /media/ {
+       root /home/django/django_project;
+    }
+
+    location /flower/ {
+        auth_basic "Restricted Access";
+        auth_basic_user_file /home/django/htpasswd;
+
+        proxy_pass http://127.0.0.1:8001;
+				rewrite ^/flower/(.*)$ /$1 break;
+        proxy_set_header Host $host;
+        proxy_redirect off;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location /flower/logout {
+			return 401 Unauthorized;
+    }
+
+    location / {
+        client_max_body_size 30M;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+
+        include proxy_params;
+        #proxy_pass http://unix:/run/gunicorn.sock;
+        proxy_pass http://127.0.0.1:8000;
+    }
+
+		# Serving permission-checked files
+		location /sfiles/ {
+		  internal;
+		  alias /home/django/django_project/smedia/filer_private/;
+		}
+		location /sfiles_thumbnails/ {
+		  internal;
+		  alias /home/django/django_project/smedia/filer_private_thumbnails/;
+		}
+
+}

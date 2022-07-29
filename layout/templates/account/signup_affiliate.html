@@ -1,0 +1,138 @@
+{% extends "_layouts/login.html" %}
+{% load account socialaccount %}
+{% load i18n %}
+{% block page_title %}Blocklight - Sign Up{% endblock %}
+{% block page_class %}signup-page{% endblock %}
+{% block head_title %}Sign Up for Blocklight{% endblock %}
+
+{% block content %}
+<div class="wrapper-page">
+    <div class="signup-background countdown-background" id="beta_signup_content">
+
+        <section class="beta-signup-page" id="signup">
+            <div class="container beta-signup-container">
+                   <section class="beta-signup-page" id="signup">
+            {% for message in messages %}
+            <div class="text-center alert {{ message.tags }}" role="alert">
+            {{ message }}
+            </div>
+               {% endfor %}
+                <div class="beta-signup-header">
+                    <h3>Welcome To Blocklight!</h3>
+                    <h5>Ready, set, <span style="color: #ef7c15">GROW!</span> Sign up today and manage your entire business easier, 
+                        get real time updates on your business operations, and use our insights to help your business find new 
+                        opportunities for growth!</h5>
+                </div>
+
+                <div >
+                    <h5 class="beta-signup-header" 
+                    style="background-color:#ffca28; 
+                           color: black !important; 
+                           padding: 10px;
+                           width: 68%;
+                           margin: auto;">
+                    <img style="width:20px;" src="../../static/images/referral icon.svg" />       
+                    Get up to 2 years of <strong>FREE</strong> Premium Analytics by referring your friends after signing up!</h5>
+                </div>
+                <div class="beta_signup_form_container">
+
+{% comment %} 
+                    <iframe class="sync_video" width="440" height="240" src="https://www.youtube.com/embed/sLAgIiY2bu8"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> {% endcomment %}
+
+                    <form class="beta_signup_form" id="beta_signup_form" method="post" action="/signup/">
+                        {% csrf_token %}
+                        <div class="signup-user-info">
+                            <div class="signup-input-container">
+                                <div class="signup-input">
+                                    <label for="first-name">First Name <span>*</span></label>
+                                    <input required type="text" id="first_name" name="first_name" />
+                                </div>
+                                <div class="signup-input">
+                                    <label htmlFor="last-name" >Last Name <span>*</span></label>
+                                    <input type="text" id="last_name" name="last_name" />
+                                </div>
+
+                            </div>
+                            <div class="signup-input-container">
+                                <div class="signup-input">
+                                    <label htmlFor="email">Email <span>*</span></label>
+                                    <input required type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        id="email" name="email_address" />
+                                </div>
+                       
+                                <div class="signup-input">
+                                    <label htmlFor="email2">Confirm Email <span>*</span></label>
+                                    <input required type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        id="email" name="email_confirm" />
+                                </div>
+                                </div>
+
+                               <div class="signup-input-container">
+                               <div class="signup-input">
+                                    <label htmlFor="loyalty-code">Loyalty Code</label>
+                                    <input type="text" id="loyalty-code" name="loyalty_code" value={{affiliate_code}} />
+                                    </div>
+                                </div>
+                             <p class="signin-rememberme" style="display: flex;margin-top: 5px; margin-left: 15px;">
+                                    <input required style="width:20px;margin-right:5px" type="checkbox" id="checkbox" name="accept_tos" />
+                                    <label style="font-size:12px" htmlFor="checkbox">I agree to the Blocklight <a target="_blank" style="color: #ef7c15" href="https://blocklight.io/tos">Terms of Service</a> and <a style="color: #ef7c15" target="_blank" href="https://blocklight.io/privacy">Privacy Policy</a></label>
+                                </p>
+                                <div class="signup-input" style="align-items:center">
+                                 <div class="g-recaptcha mt-4 w-100" data-callback="recaptchaCallback" data-sitekey="6LdoJtAZAAAAABbHF6XBrsWwnM1pA-e6I3Q0xCgN"></div>
+                                 <br/>
+                                    </div>
+                            <div class="button-signup-container">
+                                <button type="submit" id='signup-btn'
+                                    class="btn_signup_beta btn_orange" disabled>Submit</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Alert if email is already in-use by another account -->
+{% comment %} {% if check_email_flag %}
+<script>
+    alert('This Email Address has already applied. Please use a different Email Address.')
+</script>
+{% endif %} {% endcomment %}
+
+<!-- Alert if email does not match confirmation -->
+{% comment %} {% if email_confirm_flag %}
+<script>
+    alert('E-mail address does not match confirmation.  Please check that your e-mail address has been entered correctly.')
+</script>
+{% endif %} {% endcomment %}
+
+<!-- Toggle submit button -->
+<script>
+    function recaptchaCallback() {
+        document.getElementById('signup-btn').disabled = false
+    }   
+    $('form :input').change(function () {
+        var first_name = document.forms["beta_signup_form"]["first_name_input"].value;
+        var email = document.forms["beta_signup_form"]["email_address_input"].value;
+        if (first_name != null && first_name != "" && email != null && email != "") {
+            document.getElementById('submit_button').style.display = 'block';
+        }
+        else {
+            document.getElementById('submit_button').style.display = 'none';
+        }
+    });
+    var textarea = document.querySelector("textarea");
+    textarea.addEventListener("input", function () {
+        var currentLength = this.value.length;
+        document.getElementById('description-length').textContent = currentLength;
+    });
+</script>
+
+{% endblock %}

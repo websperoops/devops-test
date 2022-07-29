@@ -1,0 +1,59 @@
+{% extends "_layouts/loggedin.html" %}
+{% load i18n avatar_tags %}
+{% load blocklight_tags %}
+
+
+
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+{% load i18n avatar_tags %}
+
+{% block content %}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Welcome {{user.username }}</h4>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item"><a href="#">Blocklight.IO</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <p>{% trans "Your current avatar: " %}</p>
+                    {% avatar user %}
+                    {% if not avatars %}
+                    <p>{% trans "You haven't uploaded an avatar yet. Please upload one now." %}</p>
+                    {% endif %}
+                    <form enctype="multipart/form-data" method="POST" action="{% url 'avatar_add' %}">
+                        {{ upload_avatar_form.as_p }}
+                        <p>{% csrf_token %}<input type="submit" value="{% trans " Upload New Image" %}" /></p>
+                    </form>
+
+                </div>
+                <!-- end col -8 -->
+
+
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end content -->
+
+    </div>
+</div>
+
+{% endblock content %}

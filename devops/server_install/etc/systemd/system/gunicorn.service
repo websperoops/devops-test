@@ -1,0 +1,26 @@
+[Unit]
+Description=Gunicorn daemon for Django Project
+#Requires=gunicorn.socket
+After=network.target
+Before=nginx.service
+
+[Service]
+User=django
+Group=django
+EnvironmentFile=/home/django/django_project/.env
+WorkingDirectory=/home/django/django_project
+ExecStart=/home/django/bl_venv_python3.6/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+	  --timeout 300 \
+          --bind 127.0.0.1:8000 \
+          django_project.wsgi:application
+
+	 #  --bind unix:/run/gunicorn.sock \
+Restart=always
+#SyslogIdentifier=gunicorn
+#User=django
+#Group=django
+
+[Install]
+WantedBy=multi-user.target

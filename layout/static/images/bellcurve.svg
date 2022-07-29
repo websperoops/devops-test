@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>bellcurve</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25.496045,6.91375244 C26.8900048,13.1431777 27.8913231,17.3902986 28.5,19.6551152 C29.9471611,25.039835 32.1138278,30.1547966 35,35 L0,35 C3.33333333,29.8378744 5.66666667,24.7229128 7,19.6551152 C7.56549604,17.5057506 8.52073098,13.2837423 9.86570482,6.98909011 L9.86569943,6.98908896 C10.7889112,2.66833816 15.0399828,-0.0859114305 19.3607335,0.837300314 C22.4172466,1.49038327 24.813529,3.86367687 25.496045,6.91375244 Z" id="path-1"></path>
+    </defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Metric-Icons" transform="translate(-210.000000, -84.000000)">
+            <g id="bellcurve" transform="translate(210.000000, 84.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <rect id="Rectangle-4" fill="#FFCA28" mask="url(#mask-2)" x="10.5" y="0" width="14.5" height="35"></rect>
+                <rect id="Rectangle-4" fill="#EF7C15" mask="url(#mask-2)" x="-5.5" y="0" width="15" height="35"></rect>
+                <rect id="Rectangle-4" fill="#D8D8D8" mask="url(#mask-2)" x="26" y="1" width="15" height="35"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

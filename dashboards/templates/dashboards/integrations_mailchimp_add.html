@@ -1,0 +1,147 @@
+{% extends "_layouts/loggedin.html" %}
+{% load account socialaccount %}
+{% load blocklight_tags %}
+{% block leftbar %} {% get_social_navbar user %} {% endblock %}
+{% block content %}
+{% block navtag_authenticated %} {% include "layout/navtag_authenticated.html" %} {% endblock %}
+
+<!-- ============================================================== -->
+<!-- Main Content -->
+<!-- ============================================================== -->
+<div class="content-page integrations-content-page">
+  <div id="integration-page" class="content integration-page">
+    <div class="container-fluid">
+      {% for message in messages %}
+      {% endfor %}
+      <!-- ================ -->
+      <!-- Main page area -->
+      <!-- ================ -->
+      <div id="integrations">
+
+        <!-- React is Rendering here -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- Javascript -->
+      <!-- ============================================================== -->
+
+      <!-- New function to add Google -->
+      <script type="text/javascript">
+        function connectGoogle(google_id) {
+          var path = "{% url 'connect_google' %}" +
+            "?google_id=" + google_id.toString();
+          $.getJSON(path);
+          location.reload();
+        }
+
+        let googleInfoNeeded = null;
+        var googleAccountOptions = null;
+
+
+
+        {% if google_info_needed %}
+        googleInfoNeeded = true;
+        googleAccountOptions = JSON.parse("{{ google_account_options | escapejs }}");
+        console.log(googleAccountOptions)
+        {% else %}
+        googleInfoNeeded = false
+        {% endif %}
+
+
+        console.log(googleAccountOptions)
+      </script>
+
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="/static/js/owl.carousel.min.js"></script>
+
+      <!--Global Variables-->
+      <script>
+        var added_integrations = [];
+        var not_added_integrations = [];
+        var all_settings = {};
+        var settingsCheckBoxes = {
+          Auto_Sync: true,
+          Manual_Sync: false,
+          Auto_Arrange: true,
+          Manual_Arrange: false,
+          Send_Reports: true,
+          Send_Alerts: false,
+          Native_Metrics: true,
+          Blocklight_Metrics: false
+        }
+        var syncTime = new Date();
+        var syncFrequency = { Days: "00", Hrs: "00", Min: "05", Sec: "00" }
+        var logo_images = {
+          facebook: '/static/images/facebook-icon.png',
+          google: '/static/images/google-icon.png',
+          quickbooks: '/static/images/quickbooks-icon.png',
+          shopify: "/static/images/shopify-icon.png",
+          mailchimp: "/static/images/mailchimp-icon.png",
+          instagram: "/static/images/instagram-icon.png",
+          shipstation: '/static/images/shipstation-icon.png',
+          twitter: '/static/images/twitter-icon.png',
+          etsy: '/static/images/etsy-icon.png',
+          woocommerce: '/static/images/woocommerce-icon.png'
+
+        }
+        // Calling Google from Javascript api
+        var base_url = 'https://accounts.google.com/o/oauth2/v2/auth?';
+        var scope = 'scope=email profile https://www.googleapis.com/auth/analytics.readonly&';
+        var access_type = "access_type=offline&";
+        // { #var include_granted_scopes = "include_granted_scopes=true&"; # }
+        //redirect_uri = 'redirect_uri=https%3A%2F%2F127.0.0.1:8000%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&';
+        //var redirect_uri = 'redirect_uri=https%3A%2F%2F127.0.0.1:8000%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&';
+        var redirect_uri = 'redirect_uri=https://127.0.0.1:8000/dashboards/integrations&';
+        var response_type = 'response_type=code&';
+        var client_id = 'client_id=876865146153-kcpiro4nmgh9eajp3pibnq5bqhd94t4s.apps.googleusercontent.com&';
+        var google_url = base_url + redirect_uri + response_type + client_id + scope + access_type;
+
+        // replace current_url with gogle_url in the bottom.
+        var connect_urls = {
+          google: 'https://{{ current_url }}/google/login/?process=connect',
+          // { #google: google_url, # }
+          facebook: 'https://{{ current_url }}/facebook/login/?process=connect',
+          instagram: 'https://{{ current_url }}/facebook/login/?process=connect',
+          // instagram: 'https://{{ current_url }}/instagram/login/?process=connect',
+          quickbooks: 'https://{{ current_url }}/quickbooks/login/?process=connect',
+          mailchimp: 'https://{{ current_url }}/mailchimp/login/?process=connect',
+          shopify: 'https://{{ current_url }}/dashboards/integrate/shopify',
+          shipstation: '#',
+          twitter: 'https://{{ current_url }}/twitter/login/?process=connect',
+          etsy: 'https://{{ current_url }}/etsy/login/?process=connect',
+          woocommerce: 'https://{{ current_url }}/etsy/login/?process=connect'
+        }
+        console.log(connect_urls)
+        var currentIntegration = '{{ first_added }}';
+        console.log(added_integrations)
+        console.log(not_added_integrations)
+        not_added_integrations.push("shopify")
+      </script>
+
+      {% for item in all_status %}
+      <script>
+        if ("{{ item.status }}" == 'added') {
+          if("{{item.name}}"==='shopify'){
+            
+            added_integrations.push({name:"{{ item.name }}",data: "{{item.data|safe}}", count: "{{item.count}}"})
+          }
+          
+         else
+        {added_integrations.push({name:"{{ item.name }}", other: '{{item.other | escapejs}}',email: '{{item.email | escapejs}}'}); }
+        }else {  
+            if("{{item.name}}"==='shopify'){}
+            else{
+          not_added_integrations.push("{{ item.name }}"); }}
+        console.log(added_integrations)
+        console.log(not_added_integrations)
+      </script>
+      {% endfor %}
+
+      {% for item in all_settings %}
+      <script>
+        all_settings["{{ item.name }}"] = { "autosync_enabled": "{{ item.autosync_enabled }}", "autosync_time": "{{ item.autosync_time }}" }
+      </script>
+      {% endfor %}
+
+      {% endblock content %}

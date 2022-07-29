@@ -1,0 +1,47 @@
+body {
+    margin: 0px 12px 0px 5px;
+}
+table.dataTable.display tbody tr.odd,
+table.dataTable.display tbody tr.odd > .sorting_1 {
+    background-color: #69696936;
+}
+table.dataTable.display tbody tr.even,
+table.dataTable.display tbody tr.even > .sorting_1 {
+    background-color: #868e964d;
+}        tr {
+    border-color: black;
+}
+.dataTables_scrollHeadInner,
+.dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable {
+    width: 100% !important;
+}
+.dataTables_wrapper .dataTables_info {
+    color: white;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding-top: 5px;
+}
+h1, h2 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    line-height: normal;
+    font-weight: normal;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    text-align: center;
+}
+h1 {
+    font-size: 18px;
+}
+h2 {
+    font-size: 12px;
+}
+th {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+td {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+#names, #data {
+}

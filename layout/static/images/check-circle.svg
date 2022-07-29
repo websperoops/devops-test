@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>check-circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tasklist-Modal-#1" transform="translate(-301.000000, -106.000000)" fill-rule="nonzero" fill="#FFCA28">
+            <g id="integrations-Moal" transform="translate(2.000000, 2.000000)">
+                <g id="products-copy-2" transform="translate(41.000000, 81.000000)">
+                    <g id="visitors">
+                        <g id="Rectangle">
+                            <g id="check-circle" transform="translate(258.000000, 23.000000)">
+                                <path d="M30,15 C30,23.2842944 23.2842944,30 15,30 C6.71570565,30 0,23.2842944 0,15 C0,6.71570565 6.71570565,0 15,0 C23.2842944,0 30,6.71570565 30,15 Z M13.2649597,22.942379 L24.3939919,11.8133468 C24.7718952,11.4354435 24.7718952,10.8226815 24.3939919,10.4447782 L23.0254234,9.07620968 C22.6475202,8.69824597 22.0347581,8.69824597 21.6567944,9.07620968 L12.5806452,18.1522984 L8.34320565,13.9148589 C7.96530242,13.5369556 7.35254032,13.5369556 6.97457661,13.9148589 L5.60600806,15.2834274 C5.22810484,15.6613306 5.22810484,16.2740927 5.60600806,16.651996 L11.8963306,22.9423185 C12.2742944,23.3202823 12.886996,23.3202823 13.2649597,22.942379 L13.2649597,22.942379 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,214 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:dateHour",
+					"ga:continent",
+					"ga:subContinent",
+					"ga:country",
+					"ga:region",
+					"ga:city"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:users",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"2019070405",
+							"Oceania",
+							"Australasia",
+							"Australia",
+							"New South Wales",
+							"Sydney"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070514",
+							"Americas",
+							"Northern America",
+							"United States",
+							"Georgia",
+							"Marietta"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070515",
+							"Americas",
+							"Northern America",
+							"United States",
+							"Washington",
+							"Redmond"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070517",
+							"Americas",
+							"Northern America",
+							"United States",
+							"California",
+							"Isla Vista"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070519",
+							"Americas",
+							"Northern America",
+							"United States",
+							"Illinois",
+							"Chicago"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070609",
+							"Americas",
+							"Northern America",
+							"United States",
+							"California",
+							"Isla Vista"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070609",
+							"Americas",
+							"Northern America",
+							"United States",
+							"New York",
+							"New York"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070612",
+							"Americas",
+							"Northern America",
+							"United States",
+							"Illinois",
+							"Chicago"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070619",
+							"Americas",
+							"Northern America",
+							"United States",
+							"Illinois",
+							"Chicago"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2019070701",
+							"Americas",
+							"Northern America",
+							"United States",
+							"California",
+							"Belmont"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					}
+				],
+				"rowCount": 55,
+				"minimums": [
+					{
+						"values": [
+							"1"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"2"
+						]
+					}
+				]
+			},
+			"nextPageToken": "10"
+		}
+	]
+}

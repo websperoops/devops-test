@@ -1,0 +1,133 @@
+
+<!-- Start Header Area -->
+<header class="header" id="header" data-stellar-background-ratio="0.1">
+    <div class="fix ">
+
+        <!-- Start  Navbar Area -->
+        <div class="header-navbar navbar-fixed-top" id="header-navbar">
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <!-- New Sidebar -->
+                        <label for="sidebar-bars"><i class="fa fa-bars fa-2x"></i></label>
+                        <input type="checkbox" id="sidebar-bars" />
+                        <ul class="sidebar-menu">
+                            <div class="sidebar-menu-section">
+                                <p class="sidebar-menu-section-title">Analytics Platform</p>
+                                <li><a href="/bap">How It Works</a></li>
+                                <li><a href="/use_cases">Use Cases</a></li>
+                            </div>
+                            <div class="sidebar-menu-section">
+                                <p class="sidebar-menu-section-title">About Us</p>
+
+                                <li><a href="/about">The Company</a></li>
+                                <li><a href="/blog">Newsroom</a></li>
+                                <li><a href="/roadmap">Roadmap</a></li>
+                                <li><a href="/faq">FAQs</a></li>
+                            </div>
+
+                        </ul>
+
+                        <!-- Blocklight logo -->
+                        <a class="navbar-brand"
+                          href="/">
+                            <img
+                            style="width: 115px;"
+                             src="/static/images/BlocklightLogo_Full_Transparent_WhiteText.svg" class="logo" alt="">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                        <!-- Left-side links -->
+                        <ul class="nav navbar-nav navbar-left myNavbarUl" id="collapseNav">
+
+                            <!-- Hamburger menu (for mobile) -->
+                            <li style="display: none" class="my-dropdown"><a href="javascript:void(0);" class="icon"
+                                    onclick="toggleNavbar()">&#9776;</a></li>
+
+                            <!-- Analytics -->
+                            <li class="nav-item dropdown normal">
+
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true " aria-expanded="false">
+                                    Analytics Platform
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="normal"><a class="dropdown-item" href="/bap">How it Works</a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/use_cases">Use Cases</a></li>
+
+                                </ul>
+                            </li>
+
+                            <!-- About Blocklight -->
+                            <li class="nav-item dropdown normal">
+
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true " aria-expanded="false ">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="normal"><a class="dropdown-item" href="/about">The Company</a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/blog">Newsroom</a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/blog"><div class="space">Blog</div></a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/blog"><div class="space">Newsletter</div></a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/blog"><div class="space">Press Releases</div></a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/roadmap">Roadmap</a></li>
+                                    <li class="normal"><a class="dropdown-item" href="/faq">FAQs</a></li>
+                                </ul>
+                            </li>
+
+                        </ul> <!-- End Left-side links -->
+
+                        <ul style="margin-top: 0px" class="nav navbar-nav navbar-right myNavbarUl">
+
+                            <!-- Right-side links -->
+                              {% if user.is_authenticated %}
+                               {% else %}
+                            <li class="navbar-register register-li">
+                                  <a href="/signup/">
+                                    <button class="pricing-btn">Sign Up</span></button>
+                                </a>
+                            </li>
+                            {% endif %}
+                             {% if user.is_authenticated %}
+                                <li class="navbar-register login-li">
+                                <a class="login-btn" href="/accounts/login/">{{user.username}}</a>
+                            </li>
+                             {% else %}
+                            <li class="navbar-register login-li">
+                                <a class="login-btn" href="/accounts/login/">Login</a>
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                        <!-- End Right-side links -->
+                    </div>
+                    <!-- End all links -->
+                </div>
+                <!-- End container -->
+            </nav>
+            <!-- End Navbar navbar-inverse -->
+        </div>
+        <!-- End Navbar Area -->
+    </div>
+    <!-- End fix header-overlay overlay-color -->
+</header>
+<!-- End Header Area -->
+
+<script>
+
+    /* NAVBAR TOGGLE                                 */
+    function toggleNavbar() {
+        var x = document.getElementById("collapseNav");
+        if (x.className === "nav navbar-nav navbar-left myNavbarUl animated" || x.className === "nav navbar-nav navbar-left myNavbarUl") {
+            x.className += " responsive";
+        }
+        else {
+            x.className = "nav navbar-nav navbar-left myNavbarUl animated";
+        }
+    }
+
+</script>

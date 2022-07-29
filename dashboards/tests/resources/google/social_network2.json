@@ -1,0 +1,176 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:dateHour",
+					"ga:socialNetwork"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:users",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"2018062014",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062015",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062016",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062108",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062109",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062110",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062111",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062112",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062113",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018062115",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"2"
+								]
+							}
+						]
+					}
+				],
+				"totals": [
+					{
+						"values": [
+							"5230"
+						]
+					}
+				],
+				"rowCount": 3098,
+				"minimums": [
+					{
+						"values": [
+							"1"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"18"
+						]
+					}
+				]
+			}
+		}
+	]
+}

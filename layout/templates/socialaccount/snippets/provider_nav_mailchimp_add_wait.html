@@ -1,0 +1,44 @@
+{% load socialaccount %}
+{% load static %}
+{% static "" as baseUrl %}
+{% providers_media_js %}
+
+{% get_providers as socialaccount_providers %}
+
+<h3>You're Shopify store data is importing - if you have a MailChimp account, you can integrate it while you wait. We will send you an email when the data sync finishes!</h3>
+{% for provider in socialaccount_providers %}
+{% if provider.id == "shopify" %}
+<div class="row" style="padding:20px">
+    <a href="/dashboards/">
+        <div class="col-lg-6">
+              <img src="{{ baseUrl }}/landing/images/logos-integrations/{{provider.name}}.png" class="logo" alt="" style="height:75px">
+        </div>
+    </a>
+    <div>
+         <a href="/dashboards/remove/shopify">Remove</a>
+    </div>
+</div>
+<br>
+{% else %}
+
+<div class="row" style="padding:20px">
+<a title="{{provider.name}}"
+     href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+
+                            <div class="col-lg-6">
+                                <img src="{% static 'landing/images/logos-integrations/{{provider.name}}.png' %}" class="logo" alt="" style="height:75px">
+                            </div>
+</a>
+<div>
+     <a title="{{provider.name}}"
+        href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">Add</a>
+</div>
+</div>
+{% endif %}
+{% endfor %}
+
+
+
+
+
+

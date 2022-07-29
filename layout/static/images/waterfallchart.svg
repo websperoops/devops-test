@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>waterfallchart</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="26" width="9.35114504" height="9"></rect>
+        <rect id="path-2" x="8.54961832" y="8" width="9.35114504" height="19"></rect>
+        <rect id="path-3" x="17.0992366" y="0" width="9.35114504" height="9"></rect>
+        <rect id="path-4" x="25.648855" y="0" width="9.35114504" height="35"></rect>
+    </defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Metric-Icons" transform="translate(-92.000000, -143.000000)">
+            <g id="waterfallchart" transform="translate(92.000000, 143.000000)">
+                <g id="Rectangle-19">
+                    <use fill="#FFCA28" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#FFFFFF" stroke-width="1" x="0.5" y="26.5" width="8.35114504" height="8"></rect>
+                </g>
+                <g id="Rectangle-19">
+                    <use fill="#FFCA28" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#FFFFFF" stroke-width="1" x="9.04961832" y="8.5" width="8.35114504" height="18"></rect>
+                </g>
+                <g id="Rectangle-19">
+                    <use fill="#FFCA28" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <rect stroke="#FFFFFF" stroke-width="1" x="17.5992366" y="0.5" width="8.35114504" height="8"></rect>
+                </g>
+                <g id="Rectangle-19">
+                    <use fill="#EF7C15" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <rect stroke="#FFFFFF" stroke-width="1" x="26.148855" y="0.5" width="8.35114504" height="34"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

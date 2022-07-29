@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>scatterchart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Metric-Icons" transform="translate(-623.000000, -85.000000)">
+            <g id="scatterchart" transform="translate(623.000000, 85.000000)">
+                <circle id="Oval" fill="#EF7C15" cx="24.5" cy="7.5" r="2.5"></circle>
+                <circle id="Oval" fill="#EF7C15" cx="2.5" cy="29.5" r="2.5"></circle>
+                <circle id="Oval" fill="#D8D8D8" cx="32.5" cy="2.5" r="2.5"></circle>
+                <circle id="Oval" fill="#D8D8D8" cx="7.5" cy="14.5" r="2.5"></circle>
+                <circle id="Oval" fill="#EF7C15" cx="7.5" cy="32.5" r="2.5"></circle>
+                <circle id="Oval" fill="#EF7C15" cx="4.5" cy="23.5" r="2.5"></circle>
+                <circle id="Oval" fill="#EF7C15" cx="9.5" cy="26.5" r="2.5"></circle>
+                <circle id="Oval" fill="#EF7C15" cx="12.5" cy="10.5" r="2.5"></circle>
+                <circle id="Oval" fill="#EF7C15" cx="22.5" cy="20.5" r="2.5"></circle>
+                <circle id="Oval" fill="#FFCA28" cx="14.5" cy="16.5" r="2.5"></circle>
+                <circle id="Oval" fill="#FFCA28" cx="9.5" cy="20.5" r="2.5"></circle>
+                <circle id="Oval" fill="#FFCA28" cx="32.5" cy="12.5" r="2.5"></circle>
+                <circle id="Oval" fill="#FFCA28" cx="20.5" cy="31.5" r="2.5"></circle>
+                <circle id="Oval" fill="#D8D8D8" cx="19.5" cy="13.5" r="2.5"></circle>
+                <circle id="Oval" fill="#D8D8D8" cx="15.5" cy="23.5" r="2.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

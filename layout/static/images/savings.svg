@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="75px" height="83px" viewBox="0 0 75 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>C6A74D07-A60E-4E7D-98A2-CC6D5BCAE741</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Blocklight-Website-Prototype" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOMEPAGE" transform="translate(-1028.000000, -1419.000000)" fill-rule="nonzero">
+            <g id="MEET-BLOCKLIGHT" transform="translate(0.000000, 504.000000)">
+                <g id="savings" transform="translate(1028.000000, 915.000000)">
+                    <g id="XMLID_821_" transform="translate(0.000000, 49.270073)">
+                        <path d="M74.2434375,9.1778415 C72.7410937,6.68031804 69.500625,5.87486966 67.0052344,7.37877998 L49.9804688,16.0862096 C50.9564062,15.1282586 51.5625,13.7937435 51.5625,12.3172836 C51.5625,9.4016684 49.2014062,7.03834724 46.2890625,7.03834724 L30.3021094,7.03834724 C23.671875,7.03858186 20.5471875,2.34619395 9.375,2.34619395 C9.375,14.1581074 9.375,25.8081335 9.375,25.8081335 C9.375,25.8081335 12.421875,27.919708 16.40625,30.5005214 C19.9617187,32.8033107 21.6307031,32.8467153 24.3370312,32.8467153 L41.7970313,32.8403806 C43.9842187,32.8403806 46.171875,31.9082377 48.5939062,30.7351408 C51.0159375,29.5620438 72.44625,16.4233577 72.44625,16.4233577 C74.9414062,14.9192127 75.7457813,11.6755996 74.2434375,9.1778415 Z" id="XMLID_823_" fill="#FFFFFF"></path>
+                        <path d="M9.375,2.34619395 L9.375,25.8081335 C9.375,25.8081335 12.4221094,27.919708 16.4064844,30.5005214 C19.9619531,32.8033107 21.6307031,32.8467153 24.3370313,32.8467153 L35.1564844,32.8427268 L9.375,2.34619395 Z" id="XMLID_825_" fill="#FFFFFF"></path>
+                        <g id="XMLID_822_" transform="translate(0.000000, 16.423358)" fill="#FF9811">
+                            <rect id="XMLID_50_" x="0" y="0" width="9.375" height="16.4233577"></rect>
+                        </g>
+                        <rect id="XMLID_48_" fill="#FFD200" x="0" y="2.84217094e-14" width="9.375" height="16.4233577"></rect>
+                    </g>
+                    <g id="XMLID_826_" transform="translate(11.718750, 0.000000)">
+                        <g id="XMLID_827_" transform="translate(25.781250, 30.500521)">
+                            <ellipse id="XMLID_828_" fill="#FFD200" cx="10.546875" cy="10.5578728" rx="10.546875" ry="10.5578728"></ellipse>
+                            <path d="M10.546875,21.1157456 C4.72195312,21.1157456 0,16.388634 0,10.5578728 C0,4.72711157 4.72195312,0 10.546875,0" id="XMLID_829_" fill="#FF9811"></path>
+                            <ellipse id="XMLID_830_" fill="#FFFFFF" cx="10.546875" cy="10.5578728" rx="5.859375" ry="5.86548488"></ellipse>
+                        </g>
+                        <g id="XMLID_831_" transform="translate(0.000000, 21.115746)">
+                            <ellipse id="XMLID_832_" fill="#FFD200" cx="10.546875" cy="10.5578728" rx="10.546875" ry="10.5578728"></ellipse>
+                            <path d="M10.546875,21.1157456 C4.72195312,21.1157456 0,16.388634 0,10.5578728 C0,4.72711157 4.72195312,0 10.546875,0" id="XMLID_833_" fill="#FF9811"></path>
+                            <ellipse id="XMLID_834_" fill="#FFFFFF" cx="10.546875" cy="10.5578728" rx="5.859375" ry="5.86548488"></ellipse>
+                        </g>
+                        <g id="XMLID_835_" transform="translate(16.406250, 0.000000)">
+                            <ellipse id="XMLID_836_" fill="#FFD200" cx="10.546875" cy="10.5578728" rx="10.546875" ry="10.5578728"></ellipse>
+                            <path d="M10.546875,21.1157456 C4.72195312,21.1157456 0,16.3888686 0,10.5578728 C0,4.72687696 4.72195312,0 10.546875,0" id="XMLID_837_" fill="#FF9811"></path>
+                            <ellipse id="XMLID_838_" fill="#FFFFFF" cx="10.546875" cy="10.5578728" rx="5.859375" ry="5.86548488"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

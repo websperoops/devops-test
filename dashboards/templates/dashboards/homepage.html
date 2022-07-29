@@ -1,0 +1,102 @@
+{% extends "_layouts/loggedin.html" %}
+{% load account socialaccount %} {% load blocklight_tags %}
+{% block leftbar %} {% get_social_navbar user %} {% load static %}
+{% endblock %}
+{% block content %}
+
+<!-- ============================================================== -->
+<!-- Main content -->
+<!-- ============================================================== -->
+<div id="reauth"></div>
+
+<div class="d-flex flex-row flex-wrap justify-content-around flex-grow-1">
+    {% for message in messages %}
+    {% endfor %}
+    <div id="timeline">
+        <!--React Rendering Here!-->
+    </div>
+
+    <div class="homepage-charts-section">
+
+        <div id="homepage_content" class="homepage-container  theme-body">
+            <!--style="visibility:hidden"-->
+            <div id="signup-react">
+                <!-- React Renders Here  -->
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- Summary & Favorite Metrics section -->
+            <!-- ============================================================== -->
+            <div class="homepage-dashboard">
+
+                <h2 class="summary-header homepage-header theme-text">Summary</h2>
+                <!-- Chart area -->
+                <div class="row" id="summaryCharts" style="width: 100%; margin-left: 1%;">
+                </div>
+                <div class="row" id="summaryModals">
+                </div>
+
+                <h2 class="summary-header homepage-header theme-text">Top Posts</h2>
+                <!-- <span id='homepageHeaderDropdown'></span> -->
+                <div class="row" id="topSocial" style="width: 100%; margin-left: 1%;">
+                </div>
+
+                <!-- <h3 class="section-header homepage-header theme-text">Favorite Metrics</h3> -->
+                <div class="content">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div id="favorites_dash">
+                                <!--- FILLED BY REACT --->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            {% endblock content %} {% block js %}
+
+            <!-- ============================================================== -->
+            <!-- Global variables -->
+            <!-- ============================================================== -->
+            <script type="text/javascript">
+                var verbose = true //= location.hostname == '127.0.0.1' ? true : false;
+                var has_account = {};
+                var has_value = {};
+                var has_num = {};
+                var all_chart_containers = [];
+                var loaded_chart_containers = [];
+                var current_chart_ids = {};
+                var current_integrations = {};
+                var current_metrics = {};
+                var new_chart_options = {};
+                var activated_modal_slot = 0;
+                var dashLink = [];
+                var dashTitle = [];
+                var dashNum = [];
+                var dashDate = [];
+                var dashInt = []
+                var dashInfo = {}
+                //Added while adding favorites grid
+                var chart_positions = {};
+                var widget_to_delete = '';
+                var blocklight_data = true;
+                var movedWidget = "";
+                var destinationDash = "";
+                var chartID = []
+                var chartHeader = []
+                var chartType = []
+                var selectedCharts = []
+                var chart_id_metrics = {}
+                var chartsInfo = [];
+                const chart_feedback_url = "{% url 'chart_feedback' %}"
+                const dashboards = null;
+
+
+                const widget_charts = JSON.parse('{{widgets_json|escapejs}}');
+                const summary_charts = JSON.parse('{{summary_json|escapejs}}');
+                const chart_data_url = "{% url 'chart_data_json' %}"
+            </script>
+            {% endblock js %}

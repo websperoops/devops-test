@@ -1,0 +1,45 @@
+{% extends "_layouts/loggedin.html" %} {% load blocklight_tags %} {% load static %} {% block leftbar %} {% get_social_navbar user %} {% endblock %} {% block content %}
+<!DOCTYPE html>
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<html lang="en">
+
+<head>
+</head>
+<!-- CSS moved to style2.css -->
+
+<!-- ============================================================== -->
+<!-- Start page -->
+<!-- ============================================================== -->
+
+<body style="padding-top: 70px">
+
+    <!-- Main part of page -->
+
+    <!-- Dark theme -->
+    {% if theme_color == 'dark' %}
+    <div class="content-page theme-body" style="min-height: 100vh">
+        <!-- Light theme -->
+    {% else %}
+        <div class="content-page light-theme-body" style="min-height: 100vh">
+      {% endif %}
+            <!-- Dashboard selection row -->
+            <div class="row">
+
+                <div id="dash-header-menu"></div>
+
+                <!-- Main content area -->
+                <div class="content">
+                    <!-- Gridstack area -->
+                    <div class="row">
+                        <div class="container-fluid dashboard-container" style="margin-left: 50px">
+                            <div id="grid" style="width: 95vw">
+                                <!-- Content filled via JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endblock content %}

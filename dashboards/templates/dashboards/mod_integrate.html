@@ -1,0 +1,89 @@
+{% extends "_layouts/loggedin.html" %}
+{% load i18n account socialaccount %}
+{% load blocklight_tags %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+  
+{% block content %}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Account Integrations for {{user.username }}</h4>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item"><a href="#">Blocklight.IO</a></li>
+                            <li class="breadcrumb-item active">Integrations</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                {% if form.accounts %}
+                <div class="col-sm-12">You have the following services connected to your Blocklight Account</div>
+                    <div class="col-12">
+                        <div class="card-deck-wrapper">
+                            <div class="card-deck">
+                                <form method="post" action="{% url 'socialaccount_connections' %}" style="display:inherit!important;">
+                                    {% csrf_token %}
+
+                                        {% if form.non_field_errors %}
+                                        <div id="errorMsg">{{ form.non_field_errors }}</div>
+                                        {% endif %}
+                                        {% for base_account in form.accounts %}
+                                        {% with base_account.get_provider_account as account %}
+                                        <div class="card m-b-20">
+                                            {% if base_account.provider == "shopify" %} <img
+                                                src="/static/images/Shopify.png" class="card-img-top img-fluid">
+                                            {% elif base_account.provider == "quickbooks" %} <img
+                                                src="/static/images/quickbooks.jpg" class="card-img-top img-fluid">
+                                            {% else %}
+                                            <div class="card-img-top img-fluid" width="150px">
+                                                <i class="mdi mdi-{{base_account.provider}} mdi-48px" style="margin:50px"></i>
+                                            </div>
+                                            {% endif %}
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{account.get_brand.name}}</h5>
+                                                <p class="card-text">{{ account }}</p>
+                                                <label for="id_account_{{ base_account.id }}">
+                                                    <input id="radio_single id_account_{{ base_account.id }}"
+                                                           type="radio"
+                                                           name="account"
+                                                           value="{{ base_account.id }}"/>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        {% endwith %}
+                                        {% endfor %}
+                                        <button type="submit">{% trans 'Remove' %}</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                <p>{% trans 'You currently have no integrations connected to this account.' %}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+   <script>
+   var resizefunc = [];
+</script>
+{% endblock js %}

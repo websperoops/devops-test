@@ -1,0 +1,150 @@
+{% load avatar_tags %}
+{% load socialaccount %}
+{% get_providers as socialaccount_providers %}
+{% providers_media_js %}
+{% load static %}
+{% static "" as baseUrl %}
+
+<!-- Top Bar Start -->
+<div class="topbar">
+
+    <!-- Blocklight logo -->
+    <div class="topbar-left d-flex">
+        <div class="text-center ml-3">
+            <a href="/" class="logo"><img src="/static/images/BlocklightLogo_Full_Transparent_WhiteText.svg"
+                    height="50px" width="150px"></a>
+        </div>
+    </div>
+
+    <!-- Main nav area -->
+    <nav class="navbar-custom dark-theme-nav-bar">
+
+        <!-- Left content -->
+        <ul class="list-inline float-left mb-0 left-menu">
+            <li class="list-inline-item">
+                <a href="/dashboards/homepage" class="waves-effect waves-primary nav-link menu-item">
+                    <img src="/static/svg/Home_Icon.svg" class="nav-icon" />
+                    <span>Homepage</span></a>
+            </li>
+
+            <!-- Dashboards page-->
+            <li class="list-inline-item">
+                <a href="/dashboards/v2" class="waves-effect waves-primary nav-link menu-item">
+                    <img src="/static/svg/Dashboards_Icon.svg" class="nav-icon" /></i><span>Dashboards</a>
+            </li>
+            <!-- Integrations page -->
+            <li class="list-inline-item">
+                <a href="/dashboards/integrations" class="waves-effect waves-primary nav-link menu-item">
+                    <img src="/static/svg/Integrations_Icon.svg" class="nav-icon" /><span>Integrations</span></a>
+            </li>
+
+            <!-- Social Page -->
+            <li class="list-inline-item">
+
+                <a href="/dashboards/social" class="waves-effect waves-primary nav-link menu-item">
+                    <img src="/static/svg/Social_Icon.svg" class="nav-icon" /> <span>Social</span></a>
+            </li>
+
+        </ul> <!-- End left content -->
+        <div class="hide-phone dropdown collapsed-list list-inline float-left">
+            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
+                role="button" aria-haspopup="false" aria-expanded="false">
+                <i class="ti-menu"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right sections-dropdown " aria-labelledby="Preview">
+                <a href="/dashboards/homepage" style="display: flex; justify-content: center;">Homepage</a>
+                <a href="/dashboards/v2" style="display: flex; justify-content: center;">Dashboards</a>
+                <a href="/dashboards/integrations" style="display: flex; justify-content: center;">Integrations</a>
+                <a href="/dashboards/social" style="display: flex; justify-content: center;">Social</a>
+            </div>
+        </div>
+
+        <!-- Right content -->
+        <ul class="list-inline float-right mb-0 right-menu">
+
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+            <!-- If user is logged in -->
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+            {% if user.is_authenticated %}
+
+            <!-- Right-side options -->
+            <li>
+                <!-- Settings (hidden for now) -->
+            <li class="list-inline-item notification-list hide-phone" style="display: none">
+                <a class="nav-link waves-light waves-effect" href="#" id="btn-settings">
+                    <i class="ti-settings noti-icon"></i>
+                </a>
+            </li>
+            <!-- Toggle Day/Night Mode -->
+            <!-- <li class="list-inline-item notification-list hide-phone">
+                    <a class="nav-link waves-light waves-effect nav-user" href="" id="btn-color-toggle">
+                        <i class="ti-exchange-vertical noti-icon"></i>
+                    </a>
+                </li>-->
+            <!-- User feedback -->
+            <li class="list-inline-item notification-list hide-phone">
+                <a class="nav-link waves-light waves-effect nav-user" href="/dashboards/feedback" id="btn-feedback">
+                    <i class="ti-comment-alt noti-icon" style="font-size: 18px;"></i>
+                </a>
+            </li>
+            <!-- User avatar photo and menu dropdown -->
+            <li class="list-inline-item dropdown notification-list">
+                <!-- Button -->
+                <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="ti-user"></i>
+                </a>
+                <!-- Dropdown -->
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
+                    <!-- Display username -->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="text-overflow"><small>Welcome</small> </h5>
+                    </div>
+                    <!-- Profile link -->
+                    <a href="/dashboards/profile" class="dropdown-item notify-item">
+                        <i class="mdi mdi-account-star-variant"></i> <span>Profile</span>
+                    </a>
+                    <!-- Admin dashboard-->
+                    <!--{% if user.is_superuser %}-->
+                    <!--<a href="/admin" class="dropdown-item notify-item">-->
+                    <!--<i class="mdi mdi-pill"></i> <span>Admin Dashboard</span>-->
+                    <!--</a>-->
+                    <!--{% endif %}-->
+                    <!-- Logout -->
+                    <a href="/accounts/logout" class="dropdown-item notify-item">
+                        <i class="mdi mdi-logout"></i> <span>Logout</span>
+                    </a>
+                </div>
+            </li>
+            <!-- Full screen toggle -->
+            <li class="list-inline-item notification-list hide-phone">
+                <a class="nav-link waves-light waves-effect" href="#" id="btn-fullscreen">
+                    <i class="mdi mdi-fullscreen noti-icon"></i>
+                </a>
+            </li>
+            </li>
+
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+            <!-- If user is NOT logged in -->
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+            {% else %}
+            <!-- Dropdown -->
+            <li class="list-inline-item dropdown notification-list">
+                <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="mdi mdi-account"></i>
+                </a>
+                <!-- Require login -->
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
+                    <a href="/accounts/login" class="dropdown-item notify-item">
+                        <i class="mdi mdi-login"></i> <span>Login</span>
+                    </a>
+                </div>
+            </li>
+
+            {% endif %}
+
+        </ul> <!-- End right content -->
+
+    </nav>
+</div>

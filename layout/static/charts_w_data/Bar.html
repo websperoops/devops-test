@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/js/highchartsv6.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_highcharts.css">
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <!-- ============================================================== -->
+    <!-- Empty container -->
+    <!-- ============================================================== -->
+    <div id="container"> </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Where the magic happens -->
+    <!-- ============================================================== -->
+    <script type="text/javascript">
+        console.log($('.graph').width());
+        // BEGIN chart styling
+        Highcharts.theme = {
+            colors: ['#e98535','#dd403a', '#456990', '#dfd6a7', '#36413e','#698996','#c17c74', '#247BA0','#bcac9b','#ffe0b5'],
+            chart: {
+                backgroundColor:null
+            },
+            title: {
+                style: {
+                    color: '#ffffff',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#ffffff',
+                }
+            },
+            xAxis: {
+                gridLineColor: '#ffffff',
+                lineColor: '#ffffff',
+                minorGridLineColor: '#ffffff',
+                tickColor: '#ffffff',
+                plotLines: [{
+                    color: '#ffffff'
+                }],
+                labels: {
+                    style: {
+                        color: '#ffffff',
+                    }
+                }
+            },
+            yAxis: [{
+                gridLineColor: '#ffffff',
+                lineColor: '#ffffff',
+                minorGridLineColor: '#ffffff',
+                tickColor: '#ffffff',
+                plotLines: [{
+                    color: '#ffffff'
+                }],
+                labels: {
+                    style: {
+                        color: '#ffffff',
+                    }
+                },
+                title: {
+                    style: {
+                        color: '#ffffff',
+                    },
+                    /*x: -190,
+                    y: 20,
+
+                    textAlign: 'center',
+                     margin: 0,
+                     offset: 0,*/                  
+                }
+
+            }]
+        };
+        Highcharts.setOptions(Highcharts.theme);
+
+        // BEGIN chart template
+        var chart = new Highcharts.Chart('container', {
+
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'bar',
+                
+                
+            },
+            title: {
+                text: 'Historic World Population by Region'
+            },
+            subtitle: {
+                text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
+            },
+            xAxis: {
+                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                //min: 0,
+                title: {
+                    text: 'Population (millions)',
+                //    align: 'high',
+                },
+                /*labels: {
+                    overflow: 'justify'
+                }*/
+            },
+            tooltip: {
+                valueSuffix: ' millions'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true,
+                        style:{
+                            textOutline: "none",
+                            color: '#ffffff',
+                        },
+                        y: -5,
+                        /*veticalAlign: 'middle',*/
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 80,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Year 1800',
+                data: [107, 31, 635, 203, 2]
+            }, {
+                name: 'Year 1900',
+                data: [133, 156, 947, 408, 6]
+            }, {
+                name: 'Year 2000',
+                data: [814, 841, 3714, 727, 31]
+            }, {
+                name: 'Year 2016',
+                data: [1216, 1001, 4436, 738, 40]
+            }]
+
+        }); // END chart template
+
+    </script>
+
+</body>
+</html>

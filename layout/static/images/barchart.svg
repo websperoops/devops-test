@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>barchart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Metric-Icons" transform="translate(-151.000000, -84.000000)">
+            <g id="barchart" transform="translate(151.000000, 84.000000)">
+                <rect id="Rectangle-2" fill="#D8D8D8" x="0" y="0" width="18" height="11"></rect>
+                <rect id="Rectangle-27" fill="#FFCA28" x="0" y="12" width="35" height="11"></rect>
+                <rect id="Rectangle-28" fill="#EF7C15" x="0" y="24" width="28" height="11"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

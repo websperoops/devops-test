@@ -1,0 +1,184 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+  
+{% block content %}
+           
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Welcome {{user.username }}</h4>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="#">Blocklight.IO</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+     							<div class="col-lg-6">
+    <div class="card-box">
+                                    <div class="widget-chart text-center">
+                                        <div id="sparkline1"></div>
+                                    </div>
+                                </div>
+     							</div>
+                            <!-- end col -8 -->
+                        
+                     <div class="col-lg-6">
+    								<div class="card-box">
+                                    <div class="widget-chart text-center">
+                                        <div id="countrychart"></div>
+                                    </div>
+                                </div>
+     							</div>
+</div>
+    <div class="row">
+
+                        
+                     <div class="col-lg-12">
+    								<div class="card-box">
+<table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>SKU</th>
+                                            <th>Product</th>
+                                            <th>Variant</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+              <!-- iterate here with django for loop -->
+                                        
+                                        <tr>
+                                            <th scope="row"> variant.sku </th>
+                                            <td> part.title </td>
+                                            <td> variant.title </td>
+                                            <td> variant.price </td>
+                                            <td> variant.inventory_quantity </td>                                            
+                                        </tr>
+                 <!-- end iterate -->
+                                        
+                                        </tbody>
+                                    </table>
+
+                                </div>
+     							</div>
+
+                            <!-- end col -8 -->
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end content -->
+
+</div>
+            </div>
+{% endblock content %}
+
+{% block js %}
+<script src="//code.highcharts.com/maps/modules/map.js"></script>
+<script src="//code.highcharts.com/mapdata/custom/world.js"></script>
+<script>
+
+
+//Prepare demo data
+
+//Instantiate the map
+
+//
+// Refer back to shopify.html for data variable line
+//
+Highcharts.mapChart('countrychart', {
+    chart: {
+        map: 'custom/world',
+        borderWidth: 1
+    },
+
+    title: {
+        text: 'Last 30 Days by Country'
+    },
+
+    legend: {
+        enabled: false
+    },
+
+    series: [{
+        name: 'Country',
+        dataLabels: {
+            enabled: true,
+            color: '#FFFFFF',
+            formatter: function () {
+                if (this.point.value) {
+                    return this.point.name;
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            pointFormat: '{point.name}'
+        }
+    }]
+});
+
+
+</script>
+<script>
+/**
+ * Theme: Minton Admin Template
+ * Author: Coderthemes
+ * Component: Dashboard
+ *
+ */
+ $(function () { 
+	    var myChart = Highcharts.chart('sparkline1', {
+	        chart: {
+	            type: 'area',
+	        },
+	        title: {
+        	    text: 'Last 30 Days vs Previous 30 Days'
+        	},
+	        	xAxis: [{
+   				      type: 'datetime'
+	        		}, {
+	    		      type: 'datetime'
+	        		}],
+	        yAxis: {
+	            title: {
+	                text: 'Gross Receipts'   
+	            },
+	            labels: {
+	                formatter: function() {
+	                    return '$'+this.value;
+	                }
+	            }
+	        },
+	        series: [{
+	        	name: 'Last 30 Days',
+	        }, {
+	        	xAxis: 1,
+	            name: 'Previous 30 Days',
+	        }]
+	    });
+	});
+	</script>
+
+
+{% endblock js %}

@@ -1,0 +1,52 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content justify-content-around">
+        <div class="container-fluid justify-content-around">
+
+
+
+            <div class="row justify-content-around">
+            <div class = "col-4">
+                <div class = "col-4">
+                <form action="" method="post" class="form-cus form-control justify-content-around">{% csrf_token %}
+                    <span>{{ form.as_p }}</span>
+                    <br>
+                        <div class = "form-group justify-content-around">
+                            <label>Add Default</label>
+                            <select id="addDefaultChart_valueSelect" class="form-control input-sm justify-content-around">
+                                <option value="shopify" class="form-control input-sm">Shopify</option>
+                                <option value="mailchimp" class="form-control input-sm">MailChimp</option>
+                                <option value="combination" class="form-control input-sm">Combination</option>
+                            </select>
+                        </div>
+                    <br>
+                    <input type="submit" value="Save" class="btn-fill btn-standard btn btn-cus"/>
+
+
+                </form>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+   <script>
+   var resizefunc = [];
+</script>
+{% endblock js %}

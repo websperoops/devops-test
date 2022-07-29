@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/js/highchartsv6.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_highcharts.css">
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <!-- ============================================================== -->
+    <!-- Empty container -->
+    <!-- ============================================================== -->
+    <div id="container"> </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Where the magic happens -->
+    <!-- ============================================================== -->
+    <script type="text/javascript">
+
+        // BEGIN chart styling
+        Highcharts.theme = {
+            colors: ['#eb8527','#FFCA3D', '#babbbd', '#2e86ab', '#d20c0f'],
+            chart: {
+                backgroundColor:'#ffffff',
+            },
+            title: {
+                style: {
+                    color: '#000000',
+                    fontWeight: 'bold',
+                    fontSize: '14px',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            xAxis: {
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            },
+            yAxis: [{
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            }],
+            lang: {
+                thousandsSep: ','
+            }
+        };
+        Highcharts.setOptions(Highcharts.theme);
+
+        // BEGIN chart template
+        var chart = new Highcharts.Chart('container', {
+
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'area'
+            },
+            title: {
+                align: "left"
+                // text: 'US and USSR nuclear stockpiles' (set via JS)
+            },
+            subtitle: {
+                // text: 'Subtitle text' (set via JS)
+            },
+            xAxis: {
+                title: {
+                    // text: 'Year' (set via JS)
+                    style: {
+                        color: '#ffffff'
+                    }
+                },
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    // text: 'Nuclear weapon states' (set via JS)
+                    style: {
+                        color: '#ffffff'
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [/*{
+                name: 'USA',
+                data: [[2010, 369], [2011, 640], [2012, 1005], [2013, 1436]]
+            }, {
+                name: 'USSR/Russia',
+                data: [[2010, 1605], [2011, 2471], [2012, 3322], [2013, 5221]]
+            }*/], // (set via JS)
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            },
+            legend: {
+                backgroundColor: 'rgba(255,255,255,0.8)'
+            }
+
+        });
+
+        function darkModeChart(){
+        chart.update({
+            chart: {
+                backgroundColor:'#ffffff',
+            },
+            title: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+                }
+
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                       style: {
+                            textOutline: "none",
+                            color: "#000000"
+                        }
+                    }
+                }
+            },
+            xAxis: {        
+                
+                title: {
+                    style: {
+                        color: '#000000',
+                    },
+                },
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                },
+                tickColor: '#000000',
+            },
+            yAxis: [{
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                
+                title: {
+                    style: {
+                        color: '#000000',
+                    },
+                },
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            }],
+            legend: {
+                backgroundColor: 'rgba(0,0,0,0.4)',
+                itemStyle:{
+                    color: '#ffffff'
+                }
+            },
+        })
+    }
+    function lightModeChart(){
+        chart.update({
+            chart: {
+                backgroundColor:'#ffffff',
+            },
+            title: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+                }
+
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                       style: {
+                            textOutline: "none",
+                            color: "#000000"
+                        }
+                    }
+                }
+            },
+            xAxis: {        
+                
+                title: {
+                    style: {
+                        color: '#000000',
+                    },
+                },
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                },
+                tickColor: '#000000',
+            },
+            yAxis: [{
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                
+                title: {
+                    style: {
+                        color: '#000000',
+                    },
+                },
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            }],
+            legend: {
+                backgroundColor: 'rgba(0,0,0,0.4)',
+                itemStyle:{
+                    color: '#ffffff'
+                }
+            },
+        })
+    }
+</script>
+
+</body>
+</html>

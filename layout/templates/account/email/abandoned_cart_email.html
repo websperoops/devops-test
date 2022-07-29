@@ -1,0 +1,277 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+
+	<head>
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+		<style>
+			@media screen and (max-width: 400px){
+                .container-table {
+					width: 100%;
+				}
+            }
+		</style>
+
+	</head>
+
+	<body style="
+		font-family: Ubuntu, Helvetica, Arial, sans-serif;
+		margin: 0; padding: 0;">
+		<table bgcolor="#fff" align="center" border="0" cellpadding="0" cellspacing="0" width="600" class="container-table" style="border-collapse: collapse;">
+			<!-- header -->
+			<tr bgcolor="" style="border-bottom: 10px solid #d2d2d2;vertical-align:top;" width="100%">
+				<td style="padding: 5px 25px;"></td>
+			</tr>
+
+			<!-- content -->
+			<tr bgcolor="#ffffff">
+				<td style="padding: 0 0 40px 0;">
+               <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+						<!-- headline -->
+						<tr>
+							<td align="center">
+								<h2 style="
+									font-weight:bolder;
+									font-size:35px;
+									line-height:150%;
+									color:#ef7b15;">
+								Forget Something?</h2>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<img height="auto"
+                                    src="https://dev.blocklight.io/static/images/icon-abandonedcart.png"
+                                    width="110px" />
+							</td>
+						</tr>
+
+						<!-- description -->
+						<tr>
+							<td style="padding:40px 0 0 0;">
+								<p style="
+									font-size:20px;
+									line-height:30px;
+									text-align:center;
+									color:#8d8d8d;">
+                           We noticed you left some things behind.
+								</p>
+							</td>
+                  </tr>
+                  
+                  <!-- items -->
+                  <tr>
+                     <td align="left" style="font-size: 0px; word-break: break-word">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;background-color: #fff;">
+                           <!-- item title -->
+                           <tr style="background-color: #d2d2d2">
+                              <th style="width: 50%;">
+                                 <p style="
+                                    padding-left: 20px;
+                                    font-size:16px;
+                                    line-height:20px;
+                                    text-align:left;
+                                    color:#000;">Item</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    font-size:16px;
+                                    line-height:20px;
+                                    text-align:center;
+                                    color:#000;">Qty</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    padding-right: 20px;
+                                    font-size:16px;
+                                    line-height:20px;
+                                    text-align:right;
+                                    color:#000;">Total</p>
+                              </th>
+                           </tr>
+
+                           <!-- item content -->
+                           {% for item in line_items %}
+                           <tr>
+                              <td>
+                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                    <tr>
+                                       <td width="40px" style="padding-left: 5px;">
+                                          <img src="{{item.image}}" width="40">
+                                       </td>
+                                       <td style="padding: 10px">
+                                          <p style="
+                                             font-size:14px;
+                                             line-height:20px;
+                                             text-align:left;
+                                             color:#000;">
+                                             {{item.product}}
+                                          </p>
+                                       </td>
+                                    </tr>
+                                 </table>
+                                 
+                              </td>
+                              <td><p style="
+                                 font-size:14px;
+                                 line-height:20px;
+                                 text-align:center;
+                                 color:#000;">{{item.quantity}}</p>
+                              </td>
+                              <td><p style="
+                                 padding-right: 5px;
+                                 font-size:14px;
+                                 line-height:20px;
+                                 text-align:right;
+                                 color:#000;">${{item.price}}</p>
+                              </td>
+                           </tr>
+                           {% endfor %}
+
+                           <!-- discount -->
+                           <tr style="border-top: 1px solid rgb(209, 209, 209);">
+                              <th style="width: 50%;"></th>
+                              <th>
+                                 <p style="
+                                    margin: 14px 0 6px 0;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">Discounts(-):</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    margin: 14px 0 6px 0;
+                                    padding-right: 5px;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">${{discounts}}</p>
+                              </th>
+                           </tr>
+                           <tr>
+                              <th style="width: 50%;"></th>
+                              <th>
+                                 <p style="
+                                    margin: 6px 0;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">Subtotal:</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    margin: 6px 0;
+                                    padding-right: 5px;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">${{subtotal}}</p>
+                              </th>
+                           </tr>
+                           <tr>
+                              <th style="width: 50%;"></th>
+                              <th>
+                                 <p style="
+                                    margin: 6px 0;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">Shipping:</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    margin: 6px 0;
+                                    padding-right: 5px;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">${{shipping}}</p>
+                              </th>
+                           </tr>
+                           <tr>
+                              <th style="width: 50%;"></th>
+                              <th>
+                                 <p style="
+                                    margin: 6px 0;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">Tax:</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    margin: 6px 0;
+                                    padding-right: 5px;
+                                    font-size:14px;
+                                    line-height:14px;
+                                    text-align:right;
+                                    color:#8d8d8d;">${{tax}}</p>
+                              </th>
+                           </tr>
+                           <tr>
+                              <th style="width: 50%;"></th>
+                              <th>
+                                 <p style="
+                                    font-size:16px;
+                                    line-height:20px;
+                                    text-align:right;
+                                    color:#000;">Total:</p>
+                              </th>
+                              <th>
+                                 <p style="
+                                    padding-right: 5px;
+                                    font-size:16px;
+                                    line-height:20px;
+                                    text-align:right;
+                                    color:#000;">${{total_price}}</p>
+                              </th>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+                  
+                  <!-- CTA button -->
+                  <tr>
+							<td align="center" style="padding:0;">
+                        <p style="
+									font-size:20px;
+									line-height:30px;
+									text-align:center;
+									color:#8d8d8d;">
+                           Let's complete your order!
+								</p>
+							</td>
+						</tr>
+                  <tr>
+                     <td align="center" style="padding:10px 25px;">
+                        <a href={{url}}
+                           style="
+                              font-size:20px;
+                              background:#ef7b15;
+                              color:#ffffff;
+                              text-decoration:none;
+                              text-transform:none;
+                              padding:10px 25px;
+                              border-radius:3px;"
+                           target="_blank">
+                           Resume Checkout
+                        </a>
+                     </td>
+                  </tr>
+					</table>
+				</td>
+			</tr>
+
+			<!-- footer -->
+			<tr bgcolor="#d2d2d2">
+				<td style="padding:20px 25px 10px;"></td>
+			</tr>
+		</table>
+	</body>
+</html> 

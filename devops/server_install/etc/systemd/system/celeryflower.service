@@ -1,0 +1,17 @@
+[Unit]
+Description=Celery Flower Service
+After=network.target
+
+[Service]
+Type=simple
+User=django
+Group=django
+EnvironmentFile=/etc/celery/celery.env
+EnvironmentFile=/home/django/django_project/.env
+WorkingDirectory=/home/django/django_project
+
+ExecStart=/bin/sh -c '${CELERY_BIN} flower -A ${CELERY_APP} --url_prefix=flower \
+  --address=127.0.0.1 --port=8001 --broker=amqp:// --broker_api=http://guest:guest@localhost:15672/api/'
+
+[Install]
+WantedBy=multi-user.target

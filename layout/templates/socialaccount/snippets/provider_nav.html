@@ -1,0 +1,45 @@
+{% load socialaccount %}
+
+{% providers_media_js %}
+{% load static %}
+{% static "" as baseUrl %}
+{% get_providers as socialaccount_providers %}
+
+{% for provider in socialaccount_providers %}
+{% if provider.id == "shopify" %}
+
+   <!-- <div class="col-lg-offset-2 col-lg-3 col-md-offset-2 col-md-3 col-sm-offset-2 col-sm-4 integration-item">
+        <a href="/dashboards/">
+            <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_white_text.png" class="logo" alt="">
+        </a>
+        <div>
+            <a href="/dashboards/remove/shopify" class = "btn-fill btn-standard btn btn-cus">Remove</a>
+        </div>
+    </div>
+
+    <br>
+{% else %}
+
+    <div class="col-lg-offset-2 col-lg-3 col-md-offset-2 col-md-3 col-sm-offset-1 col-sm-4 integration-item">
+        <a title="{{provider.name}}"
+            href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+            <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_white_text.png" class="logo" alt="">
+        </a>
+        <div>
+            <a href="/dashboards/remove/mailchimp" class = "btn-fill btn-standard btn btn-cus">Remove</a>
+        </div>
+</div>-->
+<script type = "text/javascript">
+    function(){
+        var imgWidth = $(".integration-item").find('.logo');
+        console.log("haroo");
+    }
+</script>
+{% endif %}
+{% endfor %}
+
+
+
+
+
+

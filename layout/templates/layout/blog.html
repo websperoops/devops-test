@@ -1,0 +1,151 @@
+{% extends "_layouts/domain_landing.html" %} {% block css %} {{block.super}} {% endblock css %}
+{% block page_title %}Blocklight - Home{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %}
+{% block landing_header %} {% include "layout/landing_header.html" %} {% endblock %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div class="spinner-wrapper">
+        <div class="bubblingG">
+            <span id="bubblingG_1"></span>
+            <span id="bubblingG_2"></span>
+            <span id="bubblingG_3"></span>
+        </div>
+    </div>
+    <!-- /END PRELOADER -->
+
+    <!-- Blog -->
+    <section class="blog main" id="blog-main">
+        <div class="container">
+            <div class="row main-body" id="main-body">
+                <div class="blog-header">
+                    <h2>SOME "LIGHT" READINdG</h2>
+                </div>
+                <div class="email-form">
+                    <form>
+                        <label>Subscribe:</label>
+                        <input placeholder="Email Address" type="email">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="blog-body">
+        <div class="row search-row">
+            <div class="search-forms">
+
+                <form id="categories">
+                    <input placeholder="Filter by Category">
+                </form>
+
+                <form id="blog-search">
+                    <input placeholder="Search Our Blog">
+                </form>
+
+            </div>
+        </div>
+        <div class="row blog-btn-row">
+            <a>
+                <button class="blocklight-btn roadmap-btn">PROGRAMMING</button>
+            </a>
+            <a>
+                <button class="blocklight-btn roadmap-btn">DESIGN</button>
+            </a>
+            <a>
+                <button class="blocklight-btn roadmap-btn">LIFESTYLE</button>
+            </a>
+            <a>
+                <button class="blocklight-btn roadmap-btn">BUSINESS</button>
+            </a>
+            <a>
+                <button class="blocklight-btn roadmap-btn">LEADERSHIP</button>
+            </a>
+            <a>
+                <button class="blocklight-btn roadmap-btn">ECOMMERCE</button>
+            </a>
+        </div>
+        <div class="row blog-posts-list">
+            <div class="blog-post">
+                <div class="post-img">
+                    <img src='/static/images/beta-launch-photo.jpeg'>
+                    <div class="post-title">
+                        BLOCKLIGHT BETA HAS LAUNCHED!
+                    </div>
+                    <div class="post-date">
+                        10/26/18
+                    </div>
+                </div>
+                <div class="post-preview">
+                    <p>This week, we launched our beta program for the Blocklight Analytics Platform in
+                        partnership with The Tulle Project.</p>
+                </div>
+                <div class="read-more-row">
+                    <div class="underline">
+                    </div>
+                    <div class="read-more-btn">
+                        <a href="/static/images/Blocklight-beta-update.pdf">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-post">
+                <div class="post-img">
+                    <img src='/static/images/blocklight-blog-img.png'>
+
+                    <div class="post-title">
+                        What Do We Do Now?!? A Start Up Story
+                    </div>
+                    <div class="post-date">
+                        8/1/18
+                    </div>
+                </div>
+                <div class="post-preview">
+                    <p>Imagine this, a team of two, paving their lives together, creating the legacy they will leave
+                        behind. Him, a graduated engineer by training. He’s as left-brained as one could…</p>
+                </div>
+                <div class="read-more-row">
+                    <div class="underline">
+                    </div>
+                    <div class="read-more-btn">
+                        <a href="https://medium.com/@blocklight.io/what-do-we-do-now-a-start-up-story-3adcbdc411ec">READ
+                            MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-post">
+                <div class="post-img">
+                    <img src='/static/images/Blocklight_Logo_Transparent_Square-512px.png'>
+                    <div class="post-title">
+                        BLOCKLIGHT HAS LAUNCHED!
+                    </div>
+                    <div class="post-date">
+                        6/19/18
+                    </div>
+                </div>
+                <div class="post-preview">
+                    <p>Our blog is coming soon!</p>
+                </div>
+                <div class="read-more-row">
+                    <div class="underline">
+                    </div>
+                    <div class="read-more-btn">
+                        READ MORE
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,189 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+{% load account socialaccount %}
+
+
+{% load socialaccount %}
+
+{% block content %}
+{% providers_media_js %}
+{% load static %}
+{% static "" as baseUrl %}
+{% get_providers as socialaccount_providers %}
+<!--<div class = "row">
+{% for provider in socialaccount_providers %}
+    {% if provider.id == "shopify" %}
+
+        <div class="col-lg-4 col-md-4 col-sm-6 integration-item ">
+            <a href="/dashboards/">
+                <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_white_text.png" class="logo" alt="">
+            </a>
+            <div>
+                {% if sh_button == 'add' %}
+                 <a title="{{provider.name}}"
+                    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" class = "btn-fill btn-standard btn btn-cus btn-int">Add
+                 </a>
+                {% else %}
+                <a href="/dashboards/remove/shopify" class = "btn-fill btn-standard btn btn-cus btn-int">Remove</a>
+                {% endif %}
+
+            </div>
+        </div>
+    {% endif %}
+
+    {% if provider.id == "mailchimp" %}
+        <div class="col-lg-4 col-md-4 col-sm-6 integration-item">
+            <a title="{{provider.name}}" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_white_text.png" class="logo" alt="">
+            </a>
+            <div>
+                {% if mc_button == 'add' %}
+                 <a title="{{provider.name}}"
+                    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" class = "btn-fill btn-standard btn btn-cus btn-int">Add
+                 </a>
+                {% else %}
+                <a href="/dashboards/remove/mailchimp" class = "btn-fill btn-standard btn btn-cus btn-int">Remove</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+
+    {% if provider.id == "quickbooks" %}
+        <div class="col-lg-4 col-md-4 col-sm-6 integration-item">
+            <a title="{{provider.name}}" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_logo_white_text.png" class="logo" alt="">
+            </a>
+            <div>
+                {% if qb_button == 'add' %}
+                 <a title="{{provider.name}}"
+                    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" class = "btn-fill btn-standard btn btn-cus btn-int">Add
+                 </a>
+
+                {% else %}
+                <a href="/dashboards/remove/quickbooks" class = "btn-fill btn-standard btn btn-cus btn-int">Remove</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if provider.id == "facebook" %}
+        <div class="col-lg-4 col-md-4 col-sm-6 integration-item">
+            <a title="{{provider.name}}" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_white_text.png" class="logo" alt="">
+            </a>
+            <div>
+                {% if fb_button == 'add' %}
+                 <a title="{{provider.name}}"
+                    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" class = "btn-fill btn-standard btn btn-cus btn-int">Add
+                 </a>
+
+                {% else %}
+                <a href="/dashboards/remove/facebook" class = "btn-fill btn-standard btn btn-cus btn-int">Remove</a>
+                {% endif %}
+            </div>
+        </div>
+
+    {% endif %}
+
+
+
+    {% if provider.id == "instagram" %}
+        <div class="col-lg-4 col-md-4 col-sm-6 integration-item justify-content-center">
+            <a title="{{provider.name}}" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}_logo_white_text.png" class="logo" alt="">
+            </a>
+            <div>
+                {% if ig_button == 'add' %}
+                 <a title="{{provider.name}}"
+                    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" class = "btn-fill btn-standard btn btn-cus btn-int">Add
+                 </a>
+
+                {% else %}
+                <a href="/dashboards/remove/instagram" class = "btn-fill btn-standard btn btn-cus btn-int">Remove</a>
+                {% endif %}
+            </div>
+        </div>
+
+    {% endif %}
+
+
+    {% if provider.id == "google" %}
+        <div class="col-lg-4 col-md-4 col-sm-6 integration-item">
+            <a title="{{provider.name}}" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <img src="{{ baseUrl }}landing/images/logos-integrations/{{provider.id}}.png" class="logo" alt="">
+            </a>
+            <div>
+                {% if gg_button == 'add' %}
+                 <a title="{{provider.name}}"
+                    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" class = "btn-fill btn-standard btn btn-cus btn-int">Add
+                 </a>
+                {% else %}
+                <a href="/dashboards/remove/google" class = "btn-fill btn-standard btn btn-cus btn-int ">Remove</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+{% endfor %}
+
+
+<div class="col-lg-4 col-md-4 col-sm-6 integration-item">
+    <a href="#newDashboardModal">
+        <img src="{{ baseUrl }}landing/images/logos-integrations/ShipStation_logo_white_text.png" class="logo" alt="">
+    </a>
+    <div>
+        {% if ss_button == 'add' %}
+        <a data-toggle="modal" href="#newDashboardModal" class="btn-fill btn-standard btn btn-cus btn-int">Add</a>
+        {% else %}
+        <a href="/dashboards/remove/shipstation" class = "btn-fill btn-standard btn btn-cus btn-int">Remove</a>
+        {% endif %}
+    </div>
+</div>
+</div>
+
+
+<div class="modal fade" id="newDashboardModal" role="dialog">
+            <div class="vertical-alignment-helper">
+                <div class="modal-dialog modal-lg vertical-align-center">
+                    <div class="modal-content" id="newDashboardModal_content">
+                        <div class = "modal-header newDashboardModal-header">
+                            <h3>ADD YOUR SHIPSTATION API KEY/SECRET
+                            <br>
+                                <small>Find your keys in <a href="https://ss5.shipstation.com/#/settings/api">ShipStation settings</a> </small>
+                            </h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <form class="form" method="POST" action="/dashboards/addshipstation/" autocapitalize="off" >
+
+                                {% csrf_token %}
+                                {{ form }}
+
+                                <!-- Hidden fields (user_iden set later) -->
+ <!--                               <input id="user_iden" type="hidden" name="user_iden" value="none" />
+                                <input id="integration_name" type="hidden" name="integration_name" value="shipstation" />
+
+                                <div class="row justify-content-center" style="margin-top: 20px;">
+
+                                    <input id="api_key" type="password" name="api_key" maxlength="100" placeholder="-- API KEY --" required />
+                                </div>
+                                <div class="row justify-content-center" style="margin-top: 20px;">
+                                    <input id="api_secret" type="password" name="api_secret" maxlength="100" placeholder="-- API SECRET --" required />
+                                </div>
+                                <div class="row justify-content-center align-items-center" style="margin-top:20px;">
+                                    <button class="btn btn-primary btn-custom w-md waves-effect waves-light" type="submit">Submit</button>
+                                </div>
+
+                            </form>
+
+
+                        </div> <!-- End modal body -->
+<!--                    </div> <!-- End modal content -->
+    <!--            </div> <!-- End modal dialog -->
+        <!--    </div> <!-- End vertical alignment helper -->
+        <!--</div><!-- End modal -->
+
+
+{% endblock content %}
+

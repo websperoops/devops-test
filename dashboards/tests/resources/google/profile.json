@@ -1,0 +1,31 @@
+{
+	"id": "177083815",
+	"kind": "analytics#profile",
+	"selfLink": "https://www.googleapis.com/analytics/v3/management/accounts/120810601/webproperties/UA-120810601-1/profiles/177083815",
+	"accountId": "120810601",
+	"webPropertyId": "UA-120810601-1",
+	"internalWebPropertyId": "178618680",
+	"name": "All Web Site Data",
+	"currency": "USD",
+	"timezone": "America/Chicago",
+	"websiteUrl": "https://www.blocklight.io/",
+	"type": "WEB",
+	"permissions": {
+		"effective": [
+			"COLLABORATE",
+			"EDIT",
+			"READ_AND_ANALYZE"
+		]
+	},
+	"created": "2018-06-14T17:21:44.659Z",
+	"updated": "2018-06-14T17:21:44.659Z",
+	"eCommerceTracking": false,
+	"parentLink": {
+		"type": "analytics#webproperty",
+		"href": "https://www.googleapis.com/analytics/v3/management/accounts/120810601/webproperties/UA-120810601-1"
+	},
+	"childLink": {
+		"type": "analytics#goals",
+		"href": "https://www.googleapis.com/analytics/v3/management/accounts/120810601/webproperties/UA-120810601-1/profiles/177083815/goals"
+	}
+}

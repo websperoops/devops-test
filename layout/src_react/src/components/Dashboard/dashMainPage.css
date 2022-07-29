@@ -1,0 +1,188 @@
+.btn-dropdown-dashActionMenu{
+    background: #fff; 
+    border: none;
+}
+
+.icon-dropdown-dashActionMenu{
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.dash-dropdown {
+    list-style-type: none;
+    font-size: 12px;
+    width: 120px;
+    position: absolute;
+    z-index: 3;
+    background: #fff;
+    height: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    top: 35px;
+    left: 15px;
+    transition: all 0.3s;
+  }
+  
+  .dash-dropdown li {
+    margin: 5px;
+    margin-left: -50%;
+    text-align: start;
+    cursor: pointer;
+    width: 120px;
+    position: relative;
+    height: 20px;
+  }
+  
+  .dash-dropdown li:hover {
+    background: #ddd;
+    font-weight: bold;
+  }
+  
+  .dash-dropdown p {
+    height: 5px;
+    padding-left: 20px;
+  }
+  
+  .dash-dropdown .fa-check {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    color: #ef7c15;
+  }
+
+.dash-widget-content{
+    visibility: unset;
+    height: 346px;
+    position: relative;
+}
+
+.widget-chart-type{
+    background-color:transparent;
+    margin-top: -21px;
+}
+
+.shader {
+    background-color: #d1d1d1;
+    position: absolute;
+    width: 95%;
+    height: 78%;
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-top: 45px;
+    z-index: 1;
+}
+  
+.shader-content {
+    padding-top: 20px;
+}
+  
+.shader h3,
+.shader h4 {
+    text-align: center;
+    color: black;
+    padding-top: 6%;
+}
+  
+.shader p {
+    color: black;
+    padding: 0 20px;
+    word-wrap: break-word;
+    text-align: center;
+}
+  
+.shader .icon {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+}
+
+.ti-close {
+    cursor: pointer;
+}
+
+.thumb-row {
+    text-align: center;
+    color: white;
+}
+
+.thumb-up,
+.thumb-down {
+  text-align: center;
+  font-size: 70px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+
+.thumb-up.none,
+.thumb-down.none,
+.thumb-up.bad,
+.thumb-down.good {
+  color: white !important;
+}
+
+.thumb-up.good {
+  color: #2ecc71 !important;
+}
+
+.thumb-down.bad {
+  color: #e74c3c !important;
+}
+
+.edit-metric-modal {
+    /* margin-top: -10%; */
+    /* margin-left: -15%; */
+    min-width: 550px;
+}
+
+@media (max-width: 700px) {
+    .edit-metric-modal {
+      min-width: 250px !important;
+      max-width: 350px;
+      margin-top: -20%;
+      margin-left: 7%;
+      height: 475px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+}
+
+.edit-metric-container {
+    border: 1px solid #d1d1d1;
+}
+  
+.edit-metric-container p,
+.edit-metric-container select {
+    font-size: 14px;
+}
+
+.edit-metric-header-container {
+    border: 1px solid #d1d1d1;
+    background-color: #efefef;
+    height: 30px;
+    color: #8d8d8d;
+    font-size: 14px !important;
+}
+
+.edit_type_item {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn-div {
+    text-align: center;
+}

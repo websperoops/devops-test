@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% load static %}
+
+<head>
+
+  <title>{% block page_title %}Analytics, Insights &amp; Tools for E-Commerce Business Owners - Blocklight{% endblock %}
+  </title>
+
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="Blocklight">
+  {% block title %}
+  <meta name="title" content="Analytics, Insights &amp; Tools for E-Commerce Business Owners - Blocklight" />
+  {% endblock%}
+  {% block description %}
+  <meta name="description"
+    content="We help e-commerce stores manage their business and grow their brands with intelligent, affordable tools - Blocklight" />
+  {% endblock %}
+
+  <!-- Facebook Meta Data (Open Graph Data) -->
+  {% block facebook-url %}
+  <meta property="og:url" content="https://blocklight.io/" />
+  {% endblock %}
+  <meta property="og:type" content="website" />
+  {% block facebook-title %}
+  <meta property="og:title" content="Analytics, Insights &amp; Tools for E-Commerce Business Owners - Blocklight" />
+  {%endblock %}
+  <meta property="og:image" content="/static/images/promo-image-social.png" />
+  {% block facebook-description %}
+  <meta property="og:description"
+    content="Blocklight is a powerful data and analytics platform for small and medium e-commerce businesses. We help you grow your business and visualize all your business data in one place." />
+  {% endblock %}
+  <meta property="og:site_name" content="Blocklight" />
+  <meta property="fb:app_id" content="2034153323539640" />
+  <meta name="facebook-domain-verification" content="r14pfwnuj8tvl13jfhjj1xq13k3eu7" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@blocklightio">
+  <meta name="twitter:creator" content="blocklightio">
+  {% block twitter-title %}
+  <meta name="twitter:title" content="Analytics, Insights &amp; Tools for E-Commerce Business Owners - Blocklight">
+  {%endblock %}
+  {% block twitter-description %}
+  <meta name="twitter:description"
+    content="Blocklight is a powerful data and analytics platform for small and medium e-commerce businesses. We help you grow your business and visualize all your business data in one place.">
+  {% endblock %}
+
+  <!-- Twitter summary card with large image must be at least 280x150px -->
+  <meta name="twitter:image" content="/static/images/promo-image-social.png">
+
+  <!-- Favicons and Touch Icons (need to add all sizes in our assets (view-source:https://www.socialchamp.io/) -->
+  <link rel="apple-touch-icon" href="/static/images/Blocklight_Logomark_Transparent_Square.png" />
+  <link rel="icon" type="image/png" href="/static/images/Blocklight_Logomark_Transparent_Square.png" />
+
+  <!-- Google Fonts -->
+  <link href='/static/css/oswald.css' rel='stylesheet' type='text/css'>
+  <link href='/static/css/opensands.css' rel='stylesheet' type='text/css'>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="/static/js/g-tag.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120810601-1');
+
+  </script>
+
+  <!-- CSS -->
+  {% block css %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/static/css/bootstrap3.3.7.min.css">
+  <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+
+  <!-- Font Icons -->
+  <link rel="stylesheet" href="/static/css/font-awesome.css">
+
+  <!-- Pre-Loader -->
+  <link rel="stylesheet" href="/static/css/preloader.css">
+
+  <!-- css3 Animate css  -->
+  <link rel="stylesheet" href="/static/css/animate.css">
+
+  <!-- Dropdown CSS -->
+  <link rel="stylesheet" href="/static/css/fancySelect.css" />
+
+  <!-- Image Hover Effect -->
+  <link rel="stylesheet" href="/static/css/hover-effect-animate.css" />
+  <link rel="stylesheet" href="/static/css/hover-effect.css" />
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="/static/css/responsive.css">
+  <link rel="stylesheet" href="/static/css/static_landing_css_style.css">
+
+  <!-- Colors -->
+  {% comment %}
+  <link rel="stylesheet" href="/static/css/blocklight-color.css"> {% endcomment %}
+  <script type="text/javascript"> //<![CDATA[ 
+    var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+    document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+    //]]>
+  </script>
+  {% endblock %}
+
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1172123533308995');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" 
+  src="https://www.facebook.com/tr?id=1172123533308995&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+  {% block landing_header %}{% include "layout/landing_header.html" %}{% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  {% block js %}
+  <script src="/static/js/jquery-1.11.3.min.js"></script>
+  <script src="/static/js/bootstrap3.3.7.min.js"></script>
+  <script src="/static/js/wow.min.js"></script>
+  <script src="/static/js/fancySelect.js"></script>
+  <script src="/static/js/custom-scripts.js"></script>
+  {% comment %}
+  <script src="/static/js/jquery.stellar.min.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/jquery.scrollTo.min.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/jquery.localScroll.min.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/jquery.nav.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/jquery.nicescroll.min.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/matchMedia.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/navbar.matchMedia.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/jquery.ajaxchimp.min.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/jquery.countdown.js"></script> {% endcomment %}
+  {% comment %}
+  <script src="/static/js/navbar-custom.js"></script> {% endcomment %}
+  {% endblock js %}
+  {% block landing_footer %}{% include "layout/landing_footer.html" %}{% endblock %}
+  <!-- <script language="JavaScript" type="text/javascript">
+    TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_sm_124x32.png", "CL1", "none");
+    </script>
+    <a  href="https://www.positivessl.com/" id="comodoTL">Positive SSL</a> -->
+
+</body>
+
+</html>

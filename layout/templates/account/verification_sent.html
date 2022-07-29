@@ -1,0 +1,47 @@
+{% extends "_layouts/loggedin.html" %}
+{% load avatar_tags %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block leftbar %}
+{% include "layout/leftsidebar.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Welcome {{user.username }}</h4>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item"><a href="#">Blocklight.IO</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <h1>{% trans "Verify Your E-mail Address" %}</h1>
+
+                    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to
+                        finalize the signup process. Please contact us if you do not receive it within a few
+                        minutes.{% endblocktrans %}</p>
+
+
+                </div>
+            </div>
+
+            {% endblock content %}

@@ -1,0 +1,122 @@
+[
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4000,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.287Z",
+			"user_iden": "26",
+			"datehour": "2018-07-30T18:00:00Z",
+			"medium": "referral",
+			"users": 2
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4001,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.290Z",
+			"user_iden": "26",
+			"datehour": "2018-07-31T19:00:00Z",
+			"medium": "(none)",
+			"users": 2
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4002,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.293Z",
+			"user_iden": "26",
+			"datehour": "2018-08-01T19:00:00Z",
+			"medium": "referral",
+			"users": 1
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4003,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.295Z",
+			"user_iden": "26",
+			"datehour": "2018-08-02T20:00:00Z",
+			"medium": "referral",
+			"users": 1
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4004,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.298Z",
+			"user_iden": "26",
+			"datehour": "2018-08-03T21:00:00Z",
+			"medium": "organic",
+			"users": 2
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4005,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.300Z",
+			"user_iden": "26",
+			"datehour": "2018-08-05T21:00:00Z",
+			"medium": "referral",
+			"users": 2
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4006,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.303Z",
+			"user_iden": "26",
+			"datehour": "2018-08-06T22:00:00Z",
+			"medium": "organic",
+			"users": 2
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4007,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.305Z",
+			"user_iden": "26",
+			"datehour": "2018-08-10T22:00:00Z",
+			"medium": "referral",
+			"users": 1
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4008,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.308Z",
+			"user_iden": "26",
+			"datehour": "2018-08-12T23:00:00Z",
+			"medium": "(none)",
+			"users": 1
+		}
+	},
+	{
+		"model": "dashboards.integrations_google_medium",
+		"pk": 4009,
+		"fields": {
+			"profile": 92,
+			"last_sync_time": "2019-07-01T20:21:01.311Z",
+			"user_iden": "26",
+			"datehour": "2018-08-20T23:00:00Z",
+			"medium": "referral",
+			"users": 1
+		}
+	}
+]

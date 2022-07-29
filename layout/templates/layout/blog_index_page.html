@@ -1,0 +1,176 @@
+{% extends "_layouts/domain_landing.html" %} {% block css %} {{block.super}} {% endblock css %}
+{% block page_title %}Blocklight - Home{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %}
+{% block landing_header %} {% include "layout/landing_header.html" %} {% endblock %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div class="spinner-wrapper">
+        <div class="bubblingG">
+            <span id="bubblingG_1"></span>
+            <span id="bubblingG_2"></span>
+            <span id="bubblingG_3"></span>
+        </div>
+    </div>
+
+    <!-- Blog -->
+    <section class="blog main" id="blog-main">
+        <div class="container">
+            <div class="row main-body" id="main-body">
+                <div class="blog-header">
+                    <h2>SOME "LIGHT" READING</h2>
+                </div>
+                <div class="email-form">
+                    <!-- Begin Mailchimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                        <form
+                            action="https://blocklight.us18.list-manage.com/subscribe/post?u=4b8ab896212f127f12728849f&amp;id=42d27a5919"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                            class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <div class="mc-field-group">
+                                  <div style="display:flex; flex-direction: row; align-items: center " >
+                                    <label for="mce-EMAIL"  class="subscribe"  >Subscribe:
+                                    </label>                          
+                                  <div id=wrapper1>
+                                    <input placeholder="Email Address" type="email" value="" name="EMAIL" class="rectangle-9"
+                                        id="mce-EMAIL">
+                                  </div>
+                                </div>
+                            </div> 
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none">
+                                    </div>
+                                    <div class="response" id="mce-success-response" style="display:none">Thank you for subscribing!</div>
+                                </div>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                        name="b_48261f0a9b4919f09fa57e33b_12c0884f73" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                                        id="mc-embedded-subscribe" class="blocklight-btn subscribe-btn"
+                                        style="border-radius: 8px; margin: auto"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <script type='text/javascript'
+                        src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                    <script
+                        type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-body1" id="">
+      <div class="blog-cta container">
+          <div class="blog-category-buttons">
+                  {% for category in categories %}
+                      <button class="blog-category-btn"> {{ category }}</button>
+                  {% endfor %}
+                  </div>
+                <div class="blog-category-inputs">
+                  <select>
+                  <option>Time Period</option>
+                  </select>
+                  <input placeholder="Search" type="text" name="Search" id="search-blog-input">
+                    </div>
+      </div>
+
+      <div class="row blog-posts-list">
+          {% for post in blogpages %}
+          {% with post=post.specific %}
+          <div class="blog-post">
+              <a href="{% pageurl post %}">
+                  <div class="post-img">
+                      {% with post.main_image as main_image %}
+                      {% if main_image %}{% image main_image fill-348x215 %}{% endif %}
+                      {% endwith %}
+                  </div>
+              </a>
+              <a href="{% pageurl post %}">
+                  <div class="post-title">
+                      {{ post.title }}
+                  </div>
+              </a>
+              <div class="post-date">
+                  {{ post.date }}
+              </div>
+
+              <div class="post-preview">
+                  {{ post.preview }}
+              </div>
+              <div class="blog-underline"></div>
+              <div class="read-more-row">
+
+                  <div class="read-more-btn">
+                      <a href="{% pageurl post %}">Read More <span>&#x25BA;</span></a>
+                  </div>
+              </div>
+          </div>
+
+          {% endwith %}
+          {% endfor %}
+
+
+      </div>
+
+    {% if blogpages.paginator.num_pages > 1 %}
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <div class="pagination">
+            {% if blogpages.has_previous %}
+              <li class="page-item">
+                <a href="?page={{ blogpages.previous_page_number }}" class="page-link">
+                  <span>&laquo;</span>
+                </a>
+              </li>
+            {% endif %}
+ 
+            {% for page_num in blogpages.paginator.page_range %}
+              <li class="page-item {% if page_num == blogpages.number %} active{% endif %}">
+                <a href="?page={{ page_num }}" class="page-link">
+                  {{ page_num }}
+                </a>
+              </li>
+            {% endfor %}
+ 
+            {% if blogpages.has_next %}
+              <li class="page-item">
+                <a href="?page={{ blogpages.next_page_number }}" class="page-link">
+                  <span>&raquo;</span>
+                </a>
+              </li>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+
+    </section>
+</body>
+
+</html>
+{% endblock %}

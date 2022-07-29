@@ -1,0 +1,28 @@
+{% extends "_layouts/loggedin.html" %}
+{% load account socialaccount %}
+{% load blocklight_tags %}
+{% block leftbar %} {% get_social_navbar user %} {% endblock %}
+{% block content %}
+{% block navtag_authenticated %} {% include "layout/navtag_authenticated.html" %} {% endblock %}
+<div class="coming_soon_container" style="">
+    <div class=" coming_soon_title">
+        <p class="coming_soon_header">Coming Soon</p>
+
+    </div>
+    <div class="coming_soon_text">
+        <p>We’re currently under construction,
+            Please keep an eye out on your email for updates!</p>
+    </div>
+
+</div>
+
+<!--
+<div id="social" class="social" style="">
+</div>  -->
+
+
+{% comment %} <script>
+response = {{response}}
+</script> {% endcomment %}
+
+{% endblock content %}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/js/highchartsv6.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_highcharts.css">
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <!-- ============================================================== -->
+    <!-- Empty container -->
+    <!-- ============================================================== -->
+    <div id="container"> </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Where the magic happens -->
+    <!-- ============================================================== -->
+    <script type="text/javascript">
+
+        // BEGIN chart styling
+        Highcharts.theme = {
+            colors: ['#e98535','#dd403a', '#456990', '#dfd6a7', '#36413e','#698996','#c17c74', '#247BA0','#bcac9b','#ffe0b5'],
+            chart: {
+                backgroundColor:'#ffffff',
+            },
+            title: {
+                style: {
+                    color: '#000000',
+                    fontWeight: 'bold'
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            xAxis: {
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            },
+            yAxis: [{
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            }],
+            lang: {
+                thousandsSep: ','
+            }
+        };
+        Highcharts.setOptions(Highcharts.theme);
+
+        // BEGIN chart template
+        var chart = new Highcharts.Chart('container', {
+
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'column'
+            },
+            title: {
+                // text: 'Stacked column chart' (set via JS)
+            },
+            subtitle: {
+                // text: 'Stacked column chart' (set via JS)
+            },
+            xAxis: {
+                // categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'] (set via JS - not anymore)
+                title: {
+                    // text: 'Total fruit consumption' (set via JS)
+                    style: {
+                        color: '#ffffff'
+                    }
+                },
+                type: 'datetime'
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    // text: 'Total fruit consumption' (set via JS)
+                    style: {
+                        color: '#ffffff'
+                    }
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                    },
+                    y : -25
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                x: -30,
+                verticalAlign: 'top',
+                y: 25,
+                floating: true,
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            /*tooltip: {
+                headerFormat: '<b>{point.x}</b><br/>',
+                pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+            },*/
+            tooltip: {
+                headerFormat: '<span style="font-size:12px">{point.key}</span><table>',
+                pointFormat: '<tr> <td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: false, // Turn this back on to display labels all the time
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                    }
+                }
+            },
+            series: [/*{
+                name: 'John',
+                data: [5, 3, 4, 7, 2]
+            }, {
+                name: 'Jane',
+                data: [2, 2, 3, 2, 1]
+            }, {
+                name: 'Joe',
+                data: [3, 4, 4, 2, 5]
+            }*/] // (set via JS)
+        }); // END chart template
+
+    function darkModeChart(){
+        chart.update({
+            chart: {
+                backgroundColor:'#000000',
+            },
+            title: {
+                style: {
+                    color: '#ffffff',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#ffffff',
+                }
+
+            },
+            xAxis: {
+                gridLineColor: '#ffffff',
+                lineColor: '#ffffff',
+                minorGridLineColor: '#ffffff',
+                tickColor: '#ffffff',
+                plotLines: [{
+                    color: '#ffffff'
+                }],        
+                labels: {
+                    style: {
+                        color: '#ffffff',
+                    }
+                },
+                title: {
+                    style: {
+                        color: '#ffffff',
+                    },
+                }
+            },
+            yAxis: {
+                gridLineColor: '#ffffff',
+                lineColor: '#ffffff',
+                minorGridLineColor: '#ffffff',
+                tickColor: '#ffffff',
+                plotLines: [{
+                    color: '#ffffff'
+                }],
+                labels: {
+                    style: {
+                        color: '#ffffff',
+                    } 
+                },
+                title: {
+                    style: {
+                        color: '#ffffff',
+                    },
+                },
+                stackLabels: {
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                    }
+                }
+            },
+            legend: {
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                itemStyle:{
+                    color: '#333333'
+                }
+            },
+        })
+    }
+    function lightModeChart(){
+        chart.update({
+            chart: {
+                backgroundColor:'#171718',
+            },
+            title: {
+                style: {
+                    color: '#ffffff',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#ffffff',
+                }
+
+            },
+            xAxis: {
+                gridLineColor: '#ffffff',
+                lineColor: '#ffffff',
+                minorGridLineColor: '#ffffff',
+                tickColor: '#ffffff',
+                plotLines: [{
+                    color: '#ffffff'
+                }],        
+                labels: {
+                    style: {
+                        color: '#ffffff',
+                    }
+                },
+                title: {
+                    style: {
+                        color: '#ffffff',
+                    },
+                }
+            },
+            yAxis: {
+                gridLineColor: '#ffffff',
+                lineColor: '#ffffff',
+                minorGridLineColor: '#ffffff',
+                tickColor: '#ffffff',
+                plotLines: [{
+                    color: '#ffffff'
+                }],
+                labels: {
+                    style: {
+                        color: '#ffffff',
+                    } 
+                },
+                title: {
+                    style: {
+                        color: '#ffffff',
+                    },
+                },
+                stackLabels: {
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                    }
+                }
+            },
+            legend: {
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                itemStyle:{
+                    color: '#333333'
+                }
+            },
+        })
+    }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="30px" viewBox="0 0 27 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tasklist-Modal-#0" transform="translate(-77.000000, -243.000000)" fill-rule="nonzero" fill="#EF7C15">
+            <g id="integrations-Moal" transform="translate(2.000000, 2.000000)">
+                <g id="user" transform="translate(75.000000, 241.000000)">
+                    <path d="M13.1415929,15 C17.2894082,15 20.6510746,11.6425781 20.6510746,7.5 C20.6510746,3.35742187 17.2894082,0 13.1415929,0 C8.99377765,0 5.63211125,3.35742187 5.63211125,7.5 C5.63211125,11.6425781 8.99377765,15 13.1415929,15 Z M18.3982301,16.875 L17.4184774,16.875 C16.1160517,17.4726562 14.6669564,17.8125 13.1415929,17.8125 C11.6162295,17.8125 10.1730009,17.4726562 8.86470844,16.875 L7.88495575,16.875 C3.5318031,16.875 0,20.4023437 0,24.75 L0,27.1875 C0,28.7402344 1.26135825,30 2.81605563,30 L23.4671302,30 C25.0218276,30 26.2831858,28.7402344 26.2831858,27.1875 L26.2831858,24.75 C26.2831858,20.4023437 22.7513827,16.875 18.3982301,16.875 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

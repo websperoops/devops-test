@@ -1,0 +1,34 @@
+{% extends "_layouts/domain_landing.html" %} {% block css %} {{block.super}} {% endblock css %} {% block page_title %}Blocklight - Home{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %} {% block landing_header %} {% include "layout/landing_header.html" %} {% endblock %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<!DOCTYPE html>
+
+
+<head>
+
+</head>
+<body>
+
+{% block content %}
+    <form action="{% url 'search' %}" method="get">
+        <input type="text" name="query" value="{{ search_query }}">
+        <input type="submit" value="Search">
+    </form>
+
+    {% if search_results %}
+        <ul>
+            {% for result in search_results %}
+                <li>
+                    <h4><a href="{% pageurl result %}">{{ result }}</a></h4>
+                    {% if result.search_description %}
+                        {{ result.search_description|safe }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% elif search_query %}
+        No results found
+    {% else %}
+        Please type something into the search box
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,170 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:dateHour",
+					"ga:socialNetwork"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:users",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"2018061614",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1373"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061722",
+							"Facebook"
+						],
+						"metrics": [
+							{
+								"values": [
+									"127"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061811",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061812",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061813",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061814",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061815",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061816",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061817",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061909",
+							"(not set)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					}
+				],
+				"rowCount": 3092,
+				"minimums": [
+					{
+						"values": [
+							"1"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"18"
+						]
+					}
+				]
+			},
+			"nextPageToken": "10"
+		}
+	]
+}

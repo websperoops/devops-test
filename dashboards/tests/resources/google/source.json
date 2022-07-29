@@ -1,0 +1,188 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:source",
+					"ga:hasSocialSourceReferral",
+					"ga:dateHour"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:users",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061614"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1179"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"accounts.google.com",
+							"Yes",
+							"2018061722"
+						],
+						"metrics": [
+							{
+								"values": [
+									"4"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061811"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061812"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061813"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061814"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061815"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061816"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061817"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(direct)",
+							"No",
+							"2018061909"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					}
+				],
+				"totals": [
+					{
+						"values": [
+							"5249"
+						]
+					}
+				],
+				"rowCount": 3899,
+				"minimums": [
+					{
+						"values": [
+							"1"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"16"
+						]
+					}
+				]
+			},
+			"nextPageToken": "10"
+		}
+	]
+}

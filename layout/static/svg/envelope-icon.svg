@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="120px" viewBox="0 0 160 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>envelope</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BAP-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Referral-Plan-News" transform="translate(-109.000000, -189.000000)" fill-rule="nonzero" fill="#EF7C15">
+            <g id="integrations-Moal" transform="translate(2.000000, 2.000000)">
+                <g id="Group-6" transform="translate(85.000000, 187.000000)">
+                    <g id="envelope" transform="translate(22.000000, 0.000000)">
+                        <path d="M145,0 L15,0 C6.715625,0 0,6.715625 0,15 L0,105 C0,113.284375 6.715625,120 15,120 L145,120 C153.284375,120 160,113.284375 160,105 L160,15 C160,6.715625 153.284375,0 145,0 Z M145,15 L145,27.7515625 C137.993125,33.4575 126.8225,42.33 102.941563,61.0296875 C97.67875,65.169375 87.25375,75.1146875 80,74.99875 C72.7475,75.1159375 62.3190625,65.1678125 57.0584375,61.0296875 C33.18125,42.3328125 22.0078125,33.4584375 15,27.7515625 L15,15 L145,15 Z M15,105 L15,46.999375 C22.160625,52.7028125 32.3153125,60.70625 47.793125,72.82625 C54.6234375,78.2028125 66.585,90.071875 80,89.9996875 C93.3490625,90.071875 105.159063,78.375 112.204063,72.82875 C127.681563,60.7090625 137.839063,52.7034375 145,46.9996875 L145,105 L15,105 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

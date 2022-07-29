@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/js/highchartsv6.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_highcharts.css">
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <!-- ============================================================== -->
+    <!-- Empty container -->
+    <!-- ============================================================== -->
+    <div id="container"> </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Where the magic happens -->
+    <!-- ============================================================== -->
+    <script type="text/javascript">
+        var width = $(window).width()
+        //console.log(width);
+        var size = 12+(24-16)*(width-400)/(1600-400) + 'px'
+        //console.log(size);
+        // BEGIN chart styling
+        Highcharts.theme = {
+            colors: ['#eb8527','#FFCA3D', '#babbbd', '#2e86ab', '#d20c0f'],
+            chart: {
+                backgroundColor:'#ffffff',
+            },
+            title: {
+                style: {
+                    color: '#000000',
+                    fontWeight: 'bold',
+                }
+            },
+            subtitle: {
+                align: "center",
+                style: {
+                    color: '#000000',
+                }
+            },
+            lang: {
+                thousandsSep: ','
+            }
+        };
+        Highcharts.setOptions(Highcharts.theme);
+
+        // BEGIN chart template
+        var chart = new Highcharts.Chart('container', {
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'pie',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                backgroundColor: null,
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            lang: {
+                    thousandsSep: ','
+                },
+            title: {
+                // text: 'Browser market shares in January, 2018' (set via JS)
+            },
+            subtitle: {
+                 // text: 'Source: thesolarfoundation.com' (set via JS)
+            },
+            tooltip: {
+                pointFormat: '{point.percentage:.1f} %'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.y}',
+                        style: {
+                            textOutline: "none",
+                            color: "#000000"
+                        }
+                    }
+                }
+            },
+            series: [/*{
+                name: 'Brands', (set via JS)
+                colorByPoint: true,  
+                data: [{
+                    name: 'Chrome',
+                    y: 61.41,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Internet Explorer',
+                    y: 11.84
+                }, {
+                    name: 'Firefox',
+                    y: 10.85
+                }, {
+                    name: 'Edge',
+                    y: 4.67
+                }, {
+                    name: 'Safari',
+                    y: 4.18
+                }, {
+                    name: 'Sogou Explorer',
+                    y: 1.64
+                }, {
+                    name: 'Opera',
+                    y: 1.6
+                }, {
+                    name: 'QQ',
+                    y: 1.2
+                }, {
+                    name: 'Other',
+                    y: 2.61
+                }] (set via JS)
+            }*/ ]
+
+        }); // END chart template
+    function darkModeChart(){
+        chart.update({
+            title: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+
+                }
+
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                       style: {
+                            textOutline: "none",
+                            color: "#000000"
+                        }
+                    }
+                }
+            },
+        })
+    }
+    function lightModeChart(){
+        chart.update({
+            title: {
+                style: {
+                    color: '#ffffff',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#ffffff',
+                }
+
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                       style: {
+                            textOutline: "none",
+                            color: "#ffffff"
+                        }
+                    }
+                }
+            },
+        })
+    }
+    
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+{% extends "_layouts/loggedin.html" %}
+{% load avatar_tags %}
+{% load blocklight_tags %}
+{% load static %}
+{% block leftbar %}
+{% include "layout/leftsidebar.html" %}
+{% endblock %}
+
+<!-- ============================================================== -->
+<!-- Main page content -->
+<!-- ============================================================== -->
+{% block content %}
+<!DOCTYPE html>
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<html lang="en">
+
+<head>
+
+</head>
+<div class="content-page">
+    <div class="content">
+        <div class="container-fluid">
+            <div id="user-profile"></div>
+<div class="modal fade" id="cancelTier" role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-lg vertical-align-center">
+            <div class="modal-content dark-theme-body" id="newChartModal_content">
+                <div class="modal-header profilePageModal-header dark-theme-text">
+                    <h3>Cancel Subscription<h3>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to cancel your <b>{{current_tier_public_name}}</b> subscription?
+                  <br>
+                  <br>
+                  You will lose access to your premium features.
+                    <form id="cancel-tier-form" class="form" method="GET" action="{% url 'user_tiers:cancel-tier' %}"
+                      autocapitalize="off">
+                        <div class="row justify-content-center align-items-center">
+                            <button type="button" class="subscription-btn_orange" onclick="closeModal('#cancelTier')">
+                              No, Thanks
+                            </button>
+                            <button type="submit" class="subscription-btn_white">Yes, cancel</button>
+                        </div>
+                    </form> <!-- End form -->
+                </div> <!-- End modal body -->
+            </div> <!-- End modal content -->
+        </div> <!-- End modal dialog -->
+    </div> <!-- End vertical alignment helper -->
+</div>
+
+<div class="modal fade" id="cancelPendingTier" role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-lg vertical-align-center">
+            <div class="modal-content dark-theme-body" id="newChartModal_content">
+                <div class="modal-header profilePageModal-header dark-theme-text">
+                    <h3>Cancel Pending Subscription<h3>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to cancel your pending <b>{{requested_tier_public_name}}</b> subscription?
+                  <br>
+                  <br>
+                  You will continue with your <b>{{current_tier_public_name}}</b> subscription.
+                    <form id="cancel-tier-form" class="form" method="GET" action="{% url 'user_tiers:cancel-requested-tier' %}"
+                      autocapitalize="off">
+                        <div class="row justify-content-center align-items-center">
+                            <button type="button" class="subscription-btn_orange"
+                              onclick="closeModal('#cancelPendingTier')">
+                              No, Thanks
+                            </button>
+                            <button type="submit" class="subscription-btn_white">Yes, cancel</button>
+                        </div>
+                    </form> <!-- End form -->
+                </div> <!-- End modal body -->
+            </div> <!-- End modal content -->
+        </div> <!-- End modal dialog -->
+    </div> <!-- End vertical alignment helper -->
+</div>
+
+<div class="modal fade" id="changeTier" role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-lg vertical-align-center">
+            <div class="modal-content dark-theme-body" id="newChartModal_content">
+                <div class="modal-header profilePageModal-header dark-theme-text">
+                    <h3>Change Tier:<h3>
+                </div>
+                <div class="modal-body">
+
+                    <form id="change-tier-form" class="form" method="GET" action="{% url 'payments_router:route-change' %}" autocapitalize="off">
+
+                        <!-- <div class="col-lg-5 col-md-5 col-sm-5  col-xs-12"> -->
+                        <div class="form-group">
+                            <label for="tier-select" class="theme-text">Tier</label>
+                            <select id="tier-selectedit" class="form-control input-sm" name="tier">
+                                <option value="plus">Plus</option>
+                                <option value="pro">Pro</option>
+                            </select>
+                            <label for="recurring-period-select" class="theme-text">Recurring period</label>
+                            <select id="recurring-period-select" class="form-control input-sm" name="recurring_period">
+                                <option value="monthly">Monthly</option>
+                                {% if not user.userprofile_set.first.signed_via_shopify %}
+                                  <option value="yearly">Annual</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                        <!-- </div> -->
+
+                        <div id="edit-userid_btn" class="row justify-content-center align-items-center">
+                            <button class="btn_orange" type="submit">Change</button>
+                            <button type="button" onclick="closeModal('#changeTier')"
+                                class="cancel-btn btn_clear"> Cancel</button>
+                        </div>
+
+                    </form> <!-- End form -->
+
+                </div> <!-- End modal body -->
+            </div> <!-- End modal content -->
+        </div> <!-- End modal dialog -->
+    </div> <!-- End vertical alignment helper -->
+</div>
+
+
+{% endblock content %}
+{% block js %}
+
+<!-- ============================================================== -->
+<!-- Save Day / Night Mode Selection -->
+<!-- ============================================================== -->
+<script type="text/javascript">
+    $(function () {
+        $("#day-night-toggle").change(function () {
+
+            // Determine selected theme color
+            var isChecked = $(this).is(':checked');
+            var theme = isChecked ? 'light' : 'dark';
+
+            // Save to user profile
+            var path = "{% url 'save_theme_color' %}?theme=" + theme;
+            $.getJSON(path);
+
+        });
+    });
+
+    function closeModal(modal) {
+        $(modal).modal('hide')
+    }
+</script>
+
+
+
+{% endblock js %}

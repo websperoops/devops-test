@@ -1,0 +1,66 @@
+{% extends "_layouts/loggedin.html" %}
+{% load i18n %}
+{% load i18n avatar_tags %}
+{% load blocklight_tags %}
+{% load account socialaccount %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+{% block content %}
+
+<div class="wrapper-page">
+    <div class="signup-background countdown-background">
+
+        <section class="login" id="login">
+            <div class="container">
+                <div class="row justify-content-center" style="margin-top: 20px;">
+                    <div class="row justify-content-center" style="margin-top: 20px;">
+
+                        <p>{% trans "Your current avatar: " %}</p>
+                        {% avatar user %}
+                    </div>
+
+                    {% if not avatars %}
+                    <p>{% trans "You haven't uploaded an avatar yet. Please upload one now." %}</p>
+                    {% else %}
+                    <div class="row justify-content-center" style="margin-top: 20px;">
+                        <form class="form" method="POST" action="{% url 'avatar_change' %}" autocapitalize="off">
+                            <div class="row justify-content-center" style="margin-top: 20px;">
+                                <ul>
+                                    {{ primary_avatar_form.as_ul }}
+                                </ul>
+                            </div>
+                            <div class="row justify-content-center" style="margin-top: 20px;">
+                                <p>{% csrf_token %}<button
+                                        class="btn-fill btn-standard btn btn-cus btn-register btn-login"
+                                        type="submit">{% trans "Choose New Default" %}</button>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                    {% endif %}
+
+                    <form class="form" enctype="multipart/form-data" method="POST" action="{% url 'avatar_add' %}">
+                        <div class="row justify-content-center" style="margin-top: 20px;">
+                            {{ upload_avatar_form.as_p }}
+                            <p>{% csrf_token %}<button class="btn-fill btn-standard btn btn-cus btn-register btn-login"
+                                    type="submit">{% trans "Upload New Image" %}</button></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+{% block scripts %}
+{{ block.super }}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#id_username').focus();
+    });
+</script>
+{% endblock %}

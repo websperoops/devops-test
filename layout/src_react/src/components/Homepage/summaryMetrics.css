@@ -1,0 +1,202 @@
+.arrow-margin {
+ margin-top: -10px;
+ margin-left: 10px;
+}
+
+.svg-style{
+   margin-left: 5px;
+   margin-bottom: 5px; 
+   width:30px;
+   height:45px;
+}
+
+.summary-title{
+ font-weight: bold;
+ margin-top: 25px; 
+ margin-bottom: 10px; 
+}
+
+.summary-value{
+ font-size: 2.3rem; 
+ color: #000000;
+}
+
+.chart-container{
+ width:310px;
+}
+
+.select-time-area {
+  display: flex;
+  justify-content: center;
+  /* height: 40px; */
+  align-items: center;
+}
+
+/*  home page summary row css */
+
+.homepage-onboarding-btn {
+    position: absolute;
+    left: 370px;
+    top: -70px;
+}
+  
+@media (max-width: 1427px) {
+    .homepage-onboarding-btn {
+      left: 230px;
+    }
+}
+  
+@media (max-width: 957px) {
+    .homepage-onboarding-btn {
+      left: 370px;
+    }
+}
+
+@media (max-width: 1121px) and (min-width: 958px){
+    .homepage-onboarding-header {
+      display: none;
+    }
+}
+  
+@media (max-width: 957px){
+    .homepage-onboarding-header {
+      display: inline;
+    }
+}
+  
+@media (max-width: 714px){
+    .homepage-onboarding-header {
+      display: none;
+    }
+  
+    .homepage-onboarding-btn {
+      left: 230px;
+    }
+}
+
+.homepage-header-dropdown{
+    position: absolute;
+    left: 130px;
+    top: -66px;
+    font-size: 13px;
+} 
+
+.homepage-item-title {
+    position: relative;
+    background-color: #ee7b15;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    margin: auto;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 7px;
+    font-size: 20px;
+    border-bottom: unset !important;
+}
+  
+.integration-img{
+    width: 15px;
+    margin-right:7px;
+}
+
+.homepage-header-timeline {
+    position: relative;
+}
+  
+.homepage-header-dropdown{
+    position: absolute;
+    left: 130px;
+    top: -66px;
+    font-size: 13px;
+}
+  
+.homepage-header-dropdown-title{
+    color: gray;
+}
+
+.checklist_button{
+  font-size: 17.5px;
+  padding: 7px;
+  width: 90px;
+  color: #fff !important;
+  background: #ef7c15 !important;
+  cursor: pointer;
+  border-radius: 17.5px ;
+  border: none;
+  margin-left: 3px;
+}
+
+.checklist_modal{
+  width: "50%";
+  
+}
+.checklist_modal .modal-content{
+  background-color: #EFEFEF;
+  width: "50%";
+}
+
+.check_list {
+  list-style: none; 
+  flex-direction: column;
+  background: #fff;
+  margin: auto;
+  width: 320px;
+  height: 350px;
+  margin-top: 10px;
+  border: 1px solid #d1d1d1;
+}
+
+.check_list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100px;
+  align-items: center;
+  padding: 5px;
+  margin-right: 6px;
+  position: relative;
+}
+
+.check_list li:first-child {
+  margin-top: 18px !important;
+}
+
+.check_list_item {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.checklist_item_name {
+  text-transform: capitalize;
+  font-size: 16px;
+  padding-top: 15px;
+  margin-right: 50px;
+}
+
+.integration_modal_logo {
+  width: 40px;
+  position: absolute;
+  left: -10px;
+  top: 12px;
+  width: 7%;
+}
+
+
+.grey_button{
+  background: transparent !important;
+  border: 1px solid #ef7c15 !important;
+  color: #ef7c15 !important;
+  cursor: pointer;
+}
+
+.homepage-timeline {
+  position: absolute;
+  left: 520px;
+  top: 43px;
+}

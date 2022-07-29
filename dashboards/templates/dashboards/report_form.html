@@ -1,0 +1,52 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Add a Report </h4>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item"><a href="#">Blocklight.IO</a></li>
+                            <li class="breadcrumb-item active">Integrations</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <form action="" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Save" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+</div>
+</div>
+
+{% endblock content %}
+
+{% block js %}
+<script>
+    var resizefunc = [];
+</script>
+{% endblock js %}

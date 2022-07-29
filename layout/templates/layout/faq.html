@@ -1,0 +1,107 @@
+{% extends "_layouts/domain_landing.html" %}
+{% block page_class %}faq-page{% endblock %}
+
+<!-- Updated Page Blocks -->
+{% block page_title %}FAQ - Blocklight{% endblock %}
+
+<!-- Updated Meta Data Blocks -->
+{% block title %}<meta name="title" content="FAQ - Blocklight"/>{% endblock %}
+{% block description %}<meta name="description" content="Frequently Asked Questions about Blocklight; signing up, expectations, cost, e-commerce integrations, and using business metrics to grow business." />{% endblock %}
+{% block facebook-url %}<meta property="og:url" content="https://blocklight.io/faq/"/>{% endblock %}
+{% block facebook-title %}<meta property="og:title" content="FAQ - Blocklight"/>{% endblock %}
+{% block facebook-description %}<meta property="og:description" content="Frequently Asked Questions about Blocklight; signing up, expectations, cost, e-commerce integrations, and using business metrics to grow business."/>{% endblock %}
+{% block twitter-title %}<meta name="twitter:title" content="FAQ - Blocklight">{% endblock %}
+{% block twitter-description %}<meta name="twitter:description" content="Frequently Asked Questions about Blocklight; signing up, expectations, cost, e-commerce integrations, and using business metrics to grow business.">{% endblock %}
+
+{% block content %}
+<!-- Start Content -->
+<!-- Pre-Loader -->
+<div class="spinner-wrapper">
+    <div class="bubblingG">
+        <span id="bubblingG_1"></span>
+        <span id="bubblingG_2"></span>
+        <span id="bubblingG_3"></span>
+    </div>
+</div>
+<!-- End Pre-Loader -->
+
+<!-- FAQ -->
+<section class="faq section" id="faq">
+    <div class = "faq-header">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+    </div>
+    <div class="container wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+        <div class = "faq-sections">
+            <button class = "accordion"><span><img src="../../static/images/plus.png"></span><h4>How do I sign up for Blocklight?</h4></button>
+            <div class = "panel">
+                <p>
+                    Signing up for the Blocklight Analytics Platform is easy and free. Get started <a href="/beta_signup">here.</a>
+                </p>
+            </div>
+
+            <button class = "accordion"><span><img src="../../static/images/plus.png"></span><h4>What can I expect to get from using Blocklight?</h4></button>
+            <div class = "panel2">
+                <p>
+                    Initially, we're offering a "limited" version of our Blocklight Analytics Platform 
+                    (BAP) to Shopify store owners. Over the next few months we'll be building out the 
+                    functionality of BAP as well as making it available to users beyond Shopify store
+                    owners, see <a href="/roadmap">here</a> for a list of shopping cart platforms we plan to support soon. 
+                    Initial Blocklight Analytics users can expect affordable (free), and insightful data
+                    visualizations which compare and track their business data on some of the world's 
+                    most popular marketing, shipping, and accounting tools. By early 2019, users of BAP
+                    should expect a feature-rich,unbelievably affordable tool which helps them better manage their online business.
+                </p>
+            </div>
+
+            <button class = "accordion"><span><img src="../../static/images/plus.png"></span><h4>How easy is it to use Blocklight?</h4></button>
+            <div class = "panel">
+                <p>
+                    We believe great design is crucial to the Blocklight experience.
+                    From easy-to-use dashboards and metrics to simple user settings, we think you'll agree that we've built Blocklight on the foundation of simplicity.
+                </p>
+            </div>
+
+            <button class = "accordion"><span><img src="../../static/images/plus.png"></span><h4>What other e-commerce platforms will Blocklight work with?</h4></button>
+            <div class = "panel">
+                <p>
+                    For an overview of near-future shopping cart platforms we plan to support, see our <a href="/roadmap">roadmap.</a>
+                </p>
+            </div>
+
+            <button class = "accordion"><span><img src="../../static/images/plus.png"></span><h4>How much does Blocklight cost?</h4></button>
+            <div class = "panel">
+                <p>
+                    Our analytics platform has 4 tiers; Basic, Plus, Pro, and Unlimited. See more on our pricing <a href="/#pricing">here</a>. For now sign up for a free beta / trial <a href="/beta_signup">here</a>!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        var icon = $(this).find("img").attr("src");
+        if(icon.indexOf("plus") !== -1){
+            $(this).find("img").attr("src","../../static/images/minus.png");
+        } else{
+            $(this).find("img").attr("src", "../../static/images/plus.png");
+        }
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+{% endblock %}

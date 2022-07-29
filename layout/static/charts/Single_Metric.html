@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_single_metric.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <link href="/static/css/font-awesome.css" rel="stylesheet"></link>
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <h1 id='title' class="dark-theme-text" style="font-weight: bold"><!--Filled via JS--></h1>
+    <h2 id='subtitle' class="dark-theme-text"><!--Filled via JS--></h2>
+
+    <div id="widget-container" class="widget-container" >
+            <span class = "widget-num dark-theme-text" id = "main-number"></span>
+            <span class = "widget-desc dark-theme-text" id = "main-desc"></span>
+            <div id='supporting_stat' class = "widget-arrow">
+                <h4 id='supporting-number'><!-- Filled via JS --></h4>
+            </div>
+            <div>
+                <i id="arrow" class="fa fa-3x"></i>
+            </div>
+            </div>
+    </div>
+
+<!-- ============================================================== -->
+<!-- Formatting JS -->
+<!-- ============================================================== -->
+<script type="text/javascript">
+    // Fill with data
+    function fillData(source, title, subtitle, main, supporting, arrow_direction){
+        // Title and subtitle
+        document.getElementById('title').innerHTML = title;
+        document.getElementById('subtitle').innerHTML = subtitle;
+        // Main value
+        main = main.split(" ");
+        document.getElementById('main-number').innerHTML = main[0];
+        // Main value description (optional)
+        if (main.length > 1) { 
+            document.getElementById('main-desc').innerHTML = main[1]; 
+            document.getElementById('main-desc').style.width = "50%";
+            document.getElementById('main-number').style.width = "50%";
+            document.getElementById('main-number').style.textAlign = "right"
+        }
+        else { 
+            document.getElementById('main-desc').innerHTML = ''; 
+            document.getElementById('main-desc').style.width = "0%";
+            document.getElementById('main-number').style.width = "100%";
+            document.getElementById('main-number').style.textAlign = "center"
+        }
+        // Supporting value and icon
+        if (arrow_direction == 'increase' || arrow_direction == 'decrease') {
+            /*document.getElementById('supporting_stat').style.display = "block";
+            document.getElementById('supporting-number').innerHTML = supporting;
+           document.getElementById('supporting-arrow').src = "/static/images/icons/" + arrow_direction + ".png"
+            document.getElementById('supporting-number').style.color = (arrow_direction == 'increase') ? "#2ecc71" : "#e74c3c"; */
+
+            document.getElementById('arrow').style.color = (arrow_direction == 'increase') ? "#2ecc71" : "#e74c3c";
+            document.getElementById('arrow').addClass = (arrow_direction == 'increase') ? "fa-arrow-up" : "fa-arrow-down";
+
+            //alert(arrow_direction)
+            
+        }
+        else {
+            document.getElementById('supporting_stat').style.display = "none";
+        }
+        // Special formatting for homepage single metric charts
+        if (source == 'homepage') {
+            document.getElementById('widget-container').style.top = "58%";
+            document.getElementById('supporting_stat').style.top = "85%";
+        }
+    }
+</script>
+<!-- ============================================================== -->
+<!-- Day and Night Toggle Function -->
+<!-- ============================================================== -->
+<script>
+    function setColors(theme_color) {
+        // Determine other color
+        var other_color = (theme_color == "dark") ? "light" : "dark";
+        // Toggle classes appropriately
+        $("."+other_color+"-theme-body").removeClass(other_color+"-theme-body").addClass(theme_color+"-theme-body");
+        $("."+other_color+"-theme-text").removeClass(other_color+"-theme-text").addClass(theme_color+"-theme-text");
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/static/js/jquery.fittext.js"></script>
+
+<!--<script>
+  jQuery("#main-number").fitText(0.9, {minFontSize: '70px', maxFontSize: '90px'});
+  jQuery("#main-desc").fitText(0.9, {minFontSize: '25px', maxFontSize: '42px'});
+</script>-->
+
+</body>
+</html>

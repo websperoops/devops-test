@@ -1,0 +1,3 @@
+[submodule "custom-libs/django-allauth-blocklight"]
+	path = custom-libs/django-allauth-blocklight
+	url = git@github.com:awaris123/django-allauth-blocklight.git

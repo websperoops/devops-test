@@ -1,0 +1,80 @@
+{% extends "_layouts/login.html" %}
+{% load account socialaccount %}
+
+{% load i18n %}
+
+{% block css %}
+{{block.super}}
+
+{% endblock css %}
+
+{% block page_title %}Blocklight - Login{% endblock %}
+{% block page_class %}login-page{% endblock %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+{% get_providers as socialaccount_providers %}
+
+    <div class="wrapper-page">
+        <div class="signup-background">
+
+            <section class="login" id="login">
+                <div class="container signin-container">
+                    <h1>Welcome Back!</h1>
+                    <h4 style="color:white; text-align: center; font-weight: 500; line-height: 30px;">
+                        Not using Blocklight yet? <a href="/signup" style="color:#ef7b15">Sign Up!</a>
+                    </h4>
+
+                    {% if form.errors %}
+                    <div class="alert">
+                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                         <p>The username or password you entered was incorrect</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- Login form -->
+                  <form class="form input-group" method="POST" action="{% url 'account_login' %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                        {% csrf_token %}
+                        <div class="login_input_div"><label for="id_login">Username or E-mail</label> <input type="text" name="login"  autofocus="autofocus" required="" id="id_login"></div>
+                        <div class="login_input_div"><label for="id_password">Password</label> <input type="password" name="password" required="" id="id_password"></p>
+                        <p class="signin-rememberme"><label style="font-weight: normal" for="id_remember">Remember Me:</label> <input type="checkbox" name="remember" id="id_remember"></div>
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                            {% endif %}
+                        <div class = "login-btns">
+                        <div>
+                            <button class="btn_orange btn-login" type="submit">{% trans "Sign In" %}</button>
+                        </div>
+
+                        <div class="signin-forgotpassword">
+                        <a class="forgot-password" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                        </div>
+                        </div>
+
+                    </form> <!-- End login form -->
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+  <script>
+
+    </script>
+
+{% endblock %}
+
+
+
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_username').focus();
+        });
+    </script>
+{% endblock %}

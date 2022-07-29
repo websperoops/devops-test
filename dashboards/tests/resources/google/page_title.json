@@ -1,0 +1,262 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:pageTitle",
+					"ga:dateHour"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:pageviews",
+							"type": "INTEGER"
+						},
+						{
+							"name": "ga:uniquePageviews",
+							"type": "INTEGER"
+						},
+						{
+							"name": "ga:timeOnPage",
+							"type": "TIME"
+						},
+						{
+							"name": "ga:exits",
+							"type": "INTEGER"
+						},
+						{
+							"name": "ga:sessions",
+							"type": "INTEGER"
+						},
+						{
+							"name": "ga:screenviews",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"(not set)",
+							"2018070922"
+						],
+						"metrics": [
+							{
+								"values": [
+									"2",
+									"1",
+									"1524.0",
+									"0",
+									"1",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"Blocklight - Home",
+							"2018071710"
+						],
+						"metrics": [
+							{
+								"values": [
+									"11",
+									"3",
+									"1206.0",
+									"0",
+									"1",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071711"
+						],
+						"metrics": [
+							{
+								"values": [
+									"23",
+									"1",
+									"1790.0",
+									"1",
+									"0",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071712"
+						],
+						"metrics": [
+							{
+								"values": [
+									"19",
+									"2",
+									"2797.0",
+									"2",
+									"2",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071713"
+						],
+						"metrics": [
+							{
+								"values": [
+									"16",
+									"0",
+									"3570.0",
+									"0",
+									"0",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071714"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1",
+									"0",
+									"0.0",
+									"1",
+									"0",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071717"
+						],
+						"metrics": [
+							{
+								"values": [
+									"7",
+									"1",
+									"1666.0",
+									"1",
+									"1",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071718"
+						],
+						"metrics": [
+							{
+								"values": [
+									"10",
+									"1",
+									"2891.0",
+									"0",
+									"1",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071719"
+						],
+						"metrics": [
+							{
+								"values": [
+									"12",
+									"0",
+									"3134.0",
+									"1",
+									"0",
+									"0"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"(not set)",
+							"2018071721"
+						],
+						"metrics": [
+							{
+								"values": [
+									"4",
+									"4",
+									"30.0",
+									"0",
+									"1",
+									"0"
+								]
+							}
+						]
+					}
+				],
+				"totals": [
+					{
+						"values": [
+							"28603",
+							"8931",
+							"3082210.0",
+							"4584",
+							"4584",
+							"0"
+						]
+					}
+				],
+				"rowCount": 3969,
+				"minimums": [
+					{
+						"values": [
+							"1",
+							"0",
+							"0.0",
+							"0",
+							"0",
+							"0"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"146",
+							"35",
+							"12443.0",
+							"18",
+							"19",
+							"0"
+						]
+					}
+				]
+			},
+			"nextPageToken": "10"
+		}
+	]
+}

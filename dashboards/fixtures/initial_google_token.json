@@ -1,0 +1,58 @@
+[
+    {
+        "model": "socialaccount.socialapp",
+        "pk": 1,
+        "fields": {
+            "provider": "google",
+            "name": "google",
+            "client_id": "876865146153-nlbrprabb2rll2kfj9ih6eot712ikvi4.apps.googleusercontent.com",
+            "secret": "fkLCMaR53KeFm8LMG090NHyu",
+            "key": "",
+            "sites": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "socialaccount.socialtoken",
+        "pk": 58,
+        "fields": {
+            "app": 1,
+            "account": 270,
+            "token": "ya29.Gls4B5Dfebix1CgsETOB1WnhRT4T2xMKb09QSNGPOnG1moJdMNot1ZSLotVyliiMgJ7e6HltiJAabydsEx25hrU-20kjguzrbAUj27iy5fZPeRDxourFVlnqkvkp",
+            "token_secret": "1/uf7xjkW1I4jdO2fLsjwJB2RuMBN0SOBxVCHderq1_Ug8L0QyCDT-cKHicff3bhxg",
+            "expires_at": "2019-06-11T16:33:11.687Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 26,
+        "fields": {
+            "password": "pbkdf2_sha256$36000$Gzyle3AzGYeE$OnBGhBZQETBLZzNMV/KTsPodWsQWMr98NPOZM8/ulBk=",
+            "last_login": "2019-06-11T15:30:22.310Z",
+            "is_superuser": false,
+            "username": "beta@blocklight.io",
+            "first_name": "Local test account",
+            "last_name": "",
+            "email": "beta@blocklight.io",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-05-07T04:21:47.224Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "socialaccount.socialaccount",
+        "pk": 270,
+        "fields": {
+            "user": 26,
+            "provider": "google",
+            "uid": "104299338014240558127",
+            "last_login": "2019-06-11T15:33:11.951Z",
+            "date_joined": "2019-06-11T15:33:11.951Z",
+            "extra_data": "{\"id\": \"104299338014240558127\", \"email\": \"beta@blocklight.io\", \"verified_email\": true, \"name\": \"Beta Test\", \"given_name\": \"Beta\", \"family_name\": \"Test\", \"picture\": \"https://lh3.googleusercontent.com/-y9dqDTzQqU8/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdipNJe0ZoUzmrT23vRf0K-JhW8OA/mo/photo.jpg\", \"locale\": \"en\", \"hd\": \"blocklight.io\"}"
+        }
+    }
+]

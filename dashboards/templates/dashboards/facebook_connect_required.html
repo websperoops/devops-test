@@ -1,0 +1,60 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+{% load account socialaccount %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+{% block content %}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row justify-content-around" style="margin-top:30px">
+                <form action="{% url 'dashboards_integrations' %}">
+                    <img src="/static/images/facebook.jpg" class="logo justify-content-around" alt=""
+                        style="height:75px">
+                    <br>
+                    <br>
+                    <h4> One last step.<br>
+                        <small>Blocklight requires the name of the facebook page you wish to integrate.<br>The associated Instagram business account (if it exists) will also be integrated but can be removed in Integrations.</small></h4>
+                    <br>
+                    <br>
+                    <h5><i>Choose Facebook Page Name (not the @)</i></h5>
+                    <br>
+
+                    {% for entry in data %}
+                        <input type="radio" name="shop" id={{ entry.name }} value={{ entry.name }} {% if forloop.first %}checked{% endif %}>
+                        <label for={{ entry.name }}>{{ entry.name }}</label>
+                        <br>
+                    {% endfor %}
+                    <span><input type="hidden" name="process" value="connect"> </span>
+                    <br><br>
+                    <input type="submit" value="Submit" class="btn-fill btn-standard btn btn-cus">
+                </form>
+
+
+            </div>
+            <!-- end col -8 -->
+
+        </div>
+        <!-- end row -->
+
+
+    </div>
+    <!-- end container -->
+</div>
+<!-- end content -->
+<!-- Error Message for if the account has already been integrated by another account-->
+{#{% if already_connected %}#}
+{#<script>#}
+{#    alert('This Shopify Store is already connected to another Blocklight Account.')#}
+{##}
+{#</script>#}
+{#{% endif %}#}
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+{% endblock content %}

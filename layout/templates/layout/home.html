@@ -1,0 +1,629 @@
+{% extends "_layouts/domain_landing.html" %}
+{% block page_class %}home-page{% endblock %}
+
+<!-- Updated Page Blocks -->
+{% block page_title %}Blocklight | E-Commerce Analytics{% endblock %}
+
+<!-- Updated Meta Data Blocks -->
+{% block title %}<meta name="title" content="Blocklight"/>{% endblock %}
+{% block description %}<meta name="description" content="We help e-commerce stores manage their business and grow their brands with intelligent, affordable tools. - Blocklight" />{% endblock %}
+{% block facebook-url %}<meta property="og:url" content="https://blocklight.io/"/>{% endblock %}
+{% block facebook-title %}<meta property="og:title" content="Blocklight"/>{% endblock %}
+{% block facebook-description %}<meta property="og:description" content="Blocklight is a powerful data and analytics platform for small and medium e-commerce businesses. We help you grow your business and visualize all your business data in one place."/>{% endblock %}
+{% block twitter-title %}<meta name="twitter:title" content="Blocklight">{% endblock %}
+{% block twitter-description %}<meta name="twitter:description" content="Blocklight is a powerful data and analytics platform for small and medium e-commerce businesses. We help you grow your business and visualize all your business data in one place.">{% endblock %}
+
+{% block content %}
+<!-- Start Content -->
+<!-- Pre-Loader -->
+<div class="spinner-wrapper">
+    <div class="bubblingG">
+        <span id="bubblingG_1"></span>
+        <span id="bubblingG_2"></span>
+        <span id="bubblingG_3"></span>
+    </div>
+</div>
+<!-- End Pre-Loader -->
+     {% for message in messages %}
+               {% endfor %}
+<!-- Main Section -->
+<section class="main main-background" id="main">
+
+    <div class="main-container wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s"
+        style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+        <div class="row main-body-home" id="main-body">
+
+            <div class="main-header">
+                <div class="responsive-div">
+                    <h2 class="homepage-title homepage-title-one">SMALL BUSINESS</h2>
+                    <h2 class="homepage-title homepage-title-two">ISN'T SMALL TO US</h2>
+                </div>
+            </div>
+
+            <p class="homepage-intro">
+                We’re not just another analytics platform.
+                We help you grow with tools and insights specific to your business,
+                from the accounts you use every day.
+            </p>
+
+            <a href="/signup/" alt="sign-up" class="homepage-main-btn">Sign Up For Free</a>
+        </div>
+
+        <div class="homepage-header-image-container">
+            <img class="homepage-header-image" src="../../static/images/Header-Mockup-Image.png"/>
+        </div>
+    </div>
+
+    <a class="product-hunt-btn" href="https://www.producthunt.com/posts/blocklight-analytics/" target="_blank">
+        <span class="product-hunt-container">
+            <img class="product-hunt-logo" src='../../static/images/product-hunt-logo.png'/>
+            <div class="product-hunt-text">
+              <div class="now-on">Now on</div>
+              <div class="product-hunt">Product Hunt</div>
+            </div>
+        </span>
+    </a>
+    <!-- End row  -->
+</section>
+
+<!-- What do we do? Section -->
+<section class="companies-ribbon" id="companies-ribbon">
+    <!-- <div class="companies-ribbon"> -->
+        <img class="companies-logo" src="../../static/images/vibrate-higher-design.png" />
+        <img class="companies-logo" src="../../static/images/boost.png" />
+        <img class="companies-logo" src="../../static/images/carolyns-golden-needle.jpg" />
+        <img class="companies-logo" src="../../static/images/half-day-cbd.png" />
+        <img class="companies-logo" src="../../static/images/ashley-nell-tipton.png" />
+    <!-- </div> -->
+</section>
+
+<!-- What do we do? Section -->
+<section class="help" id="help">
+    <div class="container wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s"
+        style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+        <h1>WE EMPOWER YOUR E-COMMERCE BUSINESS</h1>
+        <h4>We believe e-commerce entrepreneurs need a modern way to manage their business. We give you one place to
+            see your entire business and grow by using data from the business tools you use every day.
+        </h4>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s"
+        style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+        <h1>BLOCKLIGHT ANALYTICS PLATFORM</h1>
+        <h2>VISUALIZE YOUR BUSINESS DATA</h2>
+        <h4 class="about-description" style="color: #fff !important">Ever wish you could better understand your business as
+            a whole? Our analytics platform gives you real-time information about your sales, accounting, social media,
+            email marketing, and shipping/logistics channels. We simplify business management and our insights make growth
+            a reality for your business.</h4>
+        <div class="about-section-container">
+            <div class="about-section-details">
+                <div class="about-section-details-top"></div>
+                <img class="about-item-container" src="/static/images/BAPcontainer.png" />
+                <div class="about-section-info">
+                    <img src="/static/svg/customvisualdata.svg">
+                    <h3>All Data<span> In One Place</span></h3>
+                    <p>Connect all your accounts to see sales, marketing, social media, and finance information in one place.</p>
+                </div>
+            </div>
+
+            <div class="about-section-details">
+                <div class="about-section-details-top"></div>
+                <img class="about-item-container" src="/static/images/BAPcontainer.png" />
+                <div class="about-section-info">
+                    <img src="/static/svg/smallbusinessfocused.svg">
+                    <h3>Small<span> Business Focused</span></h3>
+                    <p>Our passion is arming businesses with the tools necessary to compete in today’s digital ecosystem.</p>
+                </div>
+            </div>
+
+           <div class="about-section-details" >
+            <div class="about-section-details-top"></div>
+                <img class="about-item-container" src="/static/images/BAPcontainer.png" />
+                <div class="about-section-info">
+                    <img src="/static/svg/alldatainoneplace.svg">
+                    <h3>Custom<span> Visualizations</span></h3>
+                    <p>Gain clarity about your business by seeing your data customized the way you want, when you want.</p>
+                </div>
+            </div>
+
+            <div class="about-section-details">
+                <div class="about-section-details-top"></div>
+                <img class="about-item-container" src="/static/images/BAPcontainer.png" />
+                <div class="about-section-info">
+                    <img src="/static/svg/insanelyaffordable.svg">
+                    <h3>Insanely Affordable</h3>
+                    <p>Basic usage is completely free and our advanced functionality is unlocked for a small monthly fee.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Analytics Section -->
+<section class="analytics" id="analytics">
+    <div class="container wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s"
+        style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+        <h1>HOW DOES IT WORK?</h1>
+
+        <!-- Blocklight Analytics Platform -->
+        <div style="display: flex;justify-content: center;margin-bottom: 40px;margin-top:40px">
+        <iframe class="sync_video" width="500" height="300" src="https://www.youtube.com/embed/sLAgIiY2bu8"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="row analytics-details">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature-item">
+                <div class="icon"><img src="/static/svg/laptop.svg"></div>
+                <div class="description">
+                    <h4>DASHBOARDS</h4>
+                    <p>Dashboards <b>display your business metrics.</b> Get started quickly with our default
+                        dashboards or <b>create your own</b> specific to your business.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature-item">
+                <div class="icon"><img src="/static/svg/form.svg"></div>
+                <div class="description">
+                    <h4>REPORTS</h4>
+                    <p>You need reports to run your business. Easily <b>create and export reports</b> from any
+                        dashboard or metric to use in your daily business activities.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature-item">
+                <div class="icon"><img src="/static/svg/recommended.svg"></div>
+                <div class="description">
+                    <h4>RECOMMENDATIONS</h4>
+                    <p>We want to help you succeed. Our platform will <b>recommend metrics</b> or full dashboards to
+                        help your business grow.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature-item">
+                <div class="icon"><img src="/static/svg/update.svg"></div>
+                <div class="description">
+                    <h4>ACCESSIBILITY</h4>
+                    <p><b>Timeliness is crucial.</b> Your account stays<b> updated in real-time,</b> keeping you in
+                        sync with your growing business.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature-item">
+                <div class="icon"><img src="/static/svg/customization.svg"></div>
+                <div class="description">
+                    <h4>CUSTOMIZATION</h4>
+                    <p>You can <b>customize the size, shape, and layout</b> of any business metric on any dashboard.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature-item">
+                <div class="icon"><img src="/static/svg/features.svg"></div>
+                <div class="description">
+                    <h4>FEATURES</h4>
+                    <p>Benefit from <b>new features and capabilities</b> constantly being added to make Blocklight
+                        more powerful.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integrations Section -->
+<section class="integrations" id="integrations">
+
+    <div class="container wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s"
+        style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+        <h1 class="integrations-header">CONNECT THE TOOLS YOU USE</h1>
+        <div class="row integrations-row">
+            <div class="shopify integrations-logo">
+                <img src="/static/images/shopify_black_text.png" alt="integrations" class="img-responsive">
+            </div>
+            <div class="facebook integrations-logo">
+                <img src="/static/images/facebook.jpg" alt="integrations" class="img-responsive">
+            </div>
+            <div class="google integrations-logo">
+                <img src="/static/images/google.png" alt="integrations" class="img-responsive">
+            </div>
+            <div class="instagram integrations-logo">
+                <img src="/static/images/instagram_black_text.jpg" alt="integrations" class="img-responsive">
+            </div>
+            <div class="shipstation integrations-logo">
+                <img src="/static/images/ShipStation-logo.jpg" alt="integrations" class="img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            <div class="integrations-logo">
+                <img src="/static/images/twitter-text.png" alt="integrations" class="img-responsive">
+            </div>
+            <div class="integrations-logo">
+                <img src="/static/images/etsy-text.png" alt="integrations" class="img-responsive" style="height: 50px; margin-top: 20px;">
+            </div>
+            <div class="mailchimp integrations-logo" style="padding-top: 20px;">
+                <img src="/static/images/mailchimp.jpg" alt="integrations" class="img-responsive">
+            </div>
+            <div class="quickbooks integrations-logo" style="padding-top: 20px;">
+                <img src="/static/images/quickbooks.png" alt="integrations" class="img-responsive">
+            </div>
+        </div>
+    </div>
+    <!-- End Container  -->
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing" id="pricing">
+    <h1>PRICING</h1>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label id="monthly-prices" class="btn btn-warning active">
+          <input type="radio" name="options" id="monthly-swithch-btn" checked> Monthly
+      </label>
+        {% if not user.is_authenticated or not user.userprofile_set.first.signed_via_shopify %}
+        <label id="yearly-prices" class="btn btn-warning">
+            <input type="radio" name="options" id="yearly-switch-btn"> Annual
+        </label>
+      {% endif %}
+    </div>
+
+    <div class="pricing-trial-container">
+        <div class="pricing-trial-btn">
+            <button><a href="/signup/">Start My 14-Day Trial!</a></button>
+             <div class="pricing-trial-underline"></div>
+        </div>
+    </div>
+
+    <div class="pricing-container" id="monthly-pricing-container">
+        <div class="pricing-item">
+            <div class="pricing-item-top">
+                <div class="pricing-item-header">
+                    <h2>Basic</h2>
+                </div>
+                <div class="pricing-item-price">
+                    <p>$0</p>
+                    <form action="{% url 'account_login' %}" method="get">
+                    <button class="blocklight-btn pricing-btn">Sign Up!</button>
+                    </form>
+                </div>
+            </div>
+            <div class="pricing-item-features">
+                <ul>
+                    <li><i class="fa fa-check"></i>Access to small business forum </li>
+                    <li><i class="fa fa-check"></i>Standard business analytics </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pricing-item">
+            <div class="pricing-item-top">
+            <div class="pricing-item-header">
+                <h2>Plus</h2>
+            </div>
+            <div class="pricing-item-price">
+                <p>$29</p>
+                <!-- <p>or $288/year</p> -->
+                <form action="{% url 'payments_router:route-payment' %}" method="get">
+                    <input type="hidden" name="tier" value="plus" />
+                    <input type="hidden" name="period" value="monthly" />
+                    <button class="blocklight-btn pricing-btn">Subscribe!</button>
+                </form>
+            </div>
+        </div>
+            <div class="pricing-item-features">
+                <ul>
+                    <li><i class="fa fa-check"></i>Access to small business forum </li>
+                    <li><i class="fa fa-check"></i>Standard business analytics </li>
+                    <li><i class="fa fa-check"></i>Premium business analytics </li>
+                    <li><i class="fa fa-check"></i>Click-2-Grow Insights </li>
+                    <li><i class="fa fa-check"></i>Download, export & email reports and metrics </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pricing-item">
+            <div class="pricing-item-top">
+            <div class="pricing-item-header">
+                <h2>Pro</h2>
+            </div>
+            <div class="pricing-item-price">
+                <p>$49</p>
+                <!-- <p>or $468/year</p> -->
+                <form action="{% url 'payments_router:route-payment' %}" method="get">
+                    <input type="hidden" name="tier" value="pro" />
+                    <input type="hidden" name="period" value="monthly" />
+                    <button class="blocklight-btn pricing-btn">Subscribe!</button>
+                </form>
+            </div>
+        </div>
+            <div class="pricing-item-features">
+                <ul>
+                    <li><i class="fa fa-check"></i>Access to small business forum </li>
+                    <li><i class="fa fa-check"></i>Standard business analytics </li>
+                    <li><i class="fa fa-check"></i>Premium business analytics </li>
+                    <li><i class="fa fa-check"></i>Click-2-Grow Insights </li>
+                    <li><i class="fa fa-check"></i>Download, export & email reports and metrics </li>
+                    <li><i class="fa fa-check"></i>Social Media Manager (SMM) </li>
+                    <li><i class="fa fa-check"></i>Custom business analytics </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pricing-item">
+            <div class="pricing-item-top">
+            <div class="pricing-item-header">
+                <h2>Unlimited</h2>
+            </div>
+            <div class="pricing-item-price">
+                <p>$69</p>
+                <!-- <p>$69 /month </p> -->
+                <!-- <p>or $648/year</p> -->
+                <!-- <form action="..." method="get"> -->
+                    <button class="blocklight-btn disabled-btn">Coming soon!</button>
+                <!-- </form> -->
+            </div>
+        </div>
+            <div class="pricing-item-features">
+                <ul>
+                    <li><i class="fa fa-check"></i>Access to small business forum </li>
+                    <li><i class="fa fa-check"></i>Standard business analytics </li>
+                    <li><i class="fa fa-check"></i>Premium business analytics </li>
+                    <li><i class="fa fa-check"></i>Click-2-Grow Insights </li>
+                    <li><i class="fa fa-check"></i>Download, export & email reports and metrics </li>
+                    <li><i class="fa fa-check"></i>Social Media Manager (SMM)</li>
+                    <li><i class="fa fa-check"></i>Custom business analytics </li>
+                    <li><i class="fa fa-check"></i>Access to the Blocklight data marketplace</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% if not user.is_authenticated or not user.userprofile_set.first.signed_via_shopify %}
+      <div class="pricing-container" id="yearly-pricing-container" style="display: none;">
+          <div class="pricing-item">
+            <div class="pricing-item-top">
+              <div class="pricing-item-header">
+                  <h2>Basic</h2>
+              </div>
+              <div class="pricing-item-price">
+                  <p>$0</p>
+                  <form action="{% url 'account_login' %}" method="get">
+                    <button class="blocklight-btn pricing-btn">Sign Up!</button>
+                  </form>
+              </div>
+            </div>
+              <div class="pricing-item-features">
+                  <ul>
+                      <li><i class="fa fa-check"></i>Access to small business forum </li>
+                      <li><i class="fa fa-check"></i>Standard business analytics </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="pricing-item">
+            <div class="pricing-item-top">
+              <div class="pricing-item-header">
+                  <h2>Plus</h2>
+              </div>
+              <div class="pricing-item-price">
+                  <p>$288</p>
+                  <!-- <p>or $288/year</p> -->
+                  <form action="{% url 'payments_router:route-payment' %}" method="get">
+                      <input type="hidden" name="tier" value="plus" />
+                      <input type="hidden" name="period" value="yearly" />
+                      <button class="blocklight-btn pricing-btn">Subscribe!</button>
+                  </form>
+              </div>
+            </div>
+              <div class="pricing-item-features">
+                  <ul>
+                      <li><i class="fa fa-check"></i>Access to small business forum </li>
+                      <li><i class="fa fa-check"></i>Standard business analytics </li>
+                      <li><i class="fa fa-check"></i>Premium business analytics </li>
+                      <li><i class="fa fa-check"></i>Click-2-Grow Insights </li>
+                      <li><i class="fa fa-check"></i>Download, export & email reports and metrics </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="pricing-item">
+            <div class="pricing-item-top">
+              <div class="pricing-item-header">
+                  <h2>Pro</h2>
+              </div>
+              <div class="pricing-item-price">
+                  <p>$468</p>
+                  <!-- <p>or $468/year</p> -->
+                  <form action="{% url 'payments_router:route-payment' %}" method="get">
+                      <input type="hidden" name="tier" value="pro" />
+                      <input type="hidden" name="period" value="yearly" />
+                      <button class="blocklight-btn pricing-btn">Subscribe!</button>
+                  </form>
+              </div>
+            </div>
+              <div class="pricing-item-features">
+                  <ul>
+                      <li><i class="fa fa-check"></i>Access to small business forum </li>
+                      <li><i class="fa fa-check"></i>Standard business analytics </li>
+                      <li><i class="fa fa-check"></i>Premium business analytics </li>
+                      <li><i class="fa fa-check"></i>Click-2-Grow Insights </li>
+                      <li><i class="fa fa-check"></i>Download, export & email reports and metrics </li>
+                      <li><i class="fa fa-check"></i>Social Media Manager (SMM) </li>
+                      <li><i class="fa fa-check"></i>Custom business analytics </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="pricing-item">
+            <div class="pricing-item-top">
+              <div class="pricing-item-header">
+                  <h2>Unlimited</h2>
+              </div>
+              <div class="pricing-item-price">
+                  <p>$648</p>
+                  <!-- <p>$69 /month </p> -->
+                  <!-- <p>or $648/year</p> -->
+                  <!-- <form action="..." method="get"> -->
+                      <button class="blocklight-btn disabled-btn">Coming soon!</button>
+                  <!-- </form> -->
+              </div>
+            </div>
+              <div class="pricing-item-features">
+                  <ul>
+                      <li><i class="fa fa-check"></i>Access to small business forum </li>
+                      <li><i class="fa fa-check"></i>Standard business analytics </li>
+                      <li><i class="fa fa-check"></i>Premium business analytics </li>
+                      <li><i class="fa fa-check"></i>Click-2-Grow Insights </li>
+                      <li><i class="fa fa-check"></i>Download, export & email reports and metrics </li>
+                      <li><i class="fa fa-check"></i>Social Media Manager (SMM) </li>
+                      <li><i class="fa fa-check"></i>Custom business analytics </li>
+                      <li><i class="fa fa-check"></i>Access to the Blocklight data marketplace</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    {% endif %}
+</section>
+
+<!-- Partners Section -->
+<section class="partners" id="partners">
+    <div class="container">
+        <div class="row partners-body">
+            <div class="wow fadeInDown  animated" data-wow-offset="120" data-wow-duration="1.5s"
+                style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInDown;">
+                <h1>OUR PARTNERS</h1>
+            </div>
+            <div class="wow fadeInUp  animated" data-wow-offset="120" data-wow-duration="1.5s"
+                style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
+                <!-- Unbank Ventures -->
+                <div class="col-md-3 col-lg-3">
+                    <div class="partner-item">
+                        <!-- Icon -->
+                        <div class="icon vcenter"
+                            style="height: 150px; width: 200px; margin: auto; margin-top: -35px">
+                            <a href="https://www.unbankventures.com/" target="_blank">
+                            <img src="/static/images/unbankventures.png" alt="Unbank Ventures Partner"
+                                class="img-responsive unbank"> </a>
+                        </div>
+                        <!-- Description -->
+                        <!-- <div class="description unbank-description" style="width:70%; margin: auto;">
+                            <p>
+                                <a href="https://www.unbankventures.com/" target="_blank">
+                                    <b>Unbank.Ventures</b></a> is building the gold standard in
+                                FinTech Incubation and Acceleration. Twice a year Unbank.Ventures selects 8 -10
+                                companies globally to join its cohort. <br><br> We are proudly a part of the 5th
+                                cohort, Spring 2019!
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Chicago Blockchain Project -->
+                <div class="col-md-3 col-lg-3">
+                    <div class="partner-item">
+                        <!-- Icon -->
+                        <div class="icon vcenter" style="height: 150px; width: 200px; margin: auto;">
+                            <a href="https://www.voiceofblockchain.com/" target="_blank">
+                            <img src="/static/images/chicagoblockchain-logo.jpg" alt="Chicago Blockchain Project partner"
+                                class="img-responsive"></a>
+                        </div>
+                        <!-- Description -->
+                        <!-- <div class="description" style="width:70%; margin: auto;">
+                            <p>
+                                We’re an active member of the <a href="http://chicagoblockchainproject.com/"
+                                    target="_blank">
+                                    <b>Chicago Blockchain Project (CBP)</b></a>
+                                – an organization working to build Chicago to be the blockchain capital of the world.
+                                <br><br>
+                                We exhibited at CBP’s
+                                <b><a href="https://www.voiceofblockchain.com/" target="_blank">Voice of Blockchain
+                                    conference</a></b> on August 24-25, 2018 as the Chicago Partner for Innovation.
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Myndshft -->
+                <div class="col-md-3 col-lg-3">
+                    <div class="partner-item">
+                        <!-- Icon -->
+                        <div class="icon vcenter" style="height: 150px; width: 250px; margin: auto;">
+                            <a href="https://www.myndshft.com/" target="_blank">
+                            <img src="/static/images/myndshft-logo.jpg" alt="Myndshft partner"
+                                class="img-responsive myndshft"></a>
+                        </div>
+                        <!-- Description -->
+                        <!-- <div class="description" style="width:70%; margin: auto;">
+                            <p>
+                                We’ve partnered with
+                                <a href="https://www.myndshft.com/"
+                                    target="_blank"><b>myndshft</b></a>
+                                – a company specializing in the deployment of enterprise-grade machine learning
+                                using a cognitive blockchain platform.
+                                <br><br>
+                                The partnership will significantly accelerate the integration of machine learning
+                                into the Blocklight platform.
+                            </p>
+                        </div> -->
+                    </div>
+                 </div>
+                <!-- Embarc -->
+                <div class="col-md-3 col-lg-3">
+                    <div class="partner-item">
+                        <!-- Icon -->
+                        <div class="icon vcenter" style="height: 150px; width: 200px; margin: auto;">
+                            <a href="https://www.embarccollective.com/" target="_blank">
+                            <img src="/static/images/embarc-logo.png" alt="Embarc partner"
+                                class="img-responsive" style="padding-top: 20px;"></a>
+                        </div>
+                        <!-- Description -->
+                        <!-- <div class="description" style="width:70%; margin: auto;">
+                            <p>
+                                <a href="https://www.embarccollective.com/"
+                                    target="_blank"><b>Embarc Collective</b></a>
+                                    helps Tampa Bay’s startup talent build bold, scalable, thriving companies.
+                                    Their staff of executive advisors and function-specific experts deliver
+                                    individualized support to startups at their state-of-the-art 32,000 square foot
+                                    collaboration facility.
+                                <br><br>
+                                We began working together in the Spring of 2020!
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start: analytics Body Area -->
+    </div>
+    <!-- End: .container  -->
+</section>
+
+<script>
+
+const user = '{{user}}';
+if(user !== 'AnonymousUser') {
+    document.querySelector('.login-btn').textContent = user;
+
+}
+
+</script>
+
+<script>
+
+setTimeout(() => {
+       $('#yearly-prices').css('background','transparent')
+      $('#monthly-prices').css('background','#E37614')
+
+        $('section.pricing .btn-group .btn').click((e)=> {
+    if ($(e.target).find("input")[0]["id"] == "monthly-swithch-btn" ){
+      $("#yearly-pricing-container").hide()
+      $("#monthly-pricing-container").show()
+
+      $('#yearly-prices').css('background','transparent')
+      $('#monthly-prices').css('background','#E37614')
+
+
+    } else {
+      $("#monthly-pricing-container").hide()
+      $("#yearly-pricing-container").show()
+
+        $('#monthly-prices').css('background','transparent')
+      $('#yearly-prices').css('background','#E37614',)
+    }
+  });
+
+}, 100)
+
+</script>
+{% endblock %}

@@ -1,0 +1,53 @@
+.feedback-header {
+    font-family: Open sans;
+    font-weight: bold;
+    font-size: 24px;
+    /* color: #ffffff; */
+    color: #2c2c2c;
+    letter-spacing: 0;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.feedback-topic {
+    margin: 10px 0;
+}
+  
+.feedback-topic #topic_select {
+    background: #fff;
+    color: #2c2c2c;
+    border: 1px solid #d1d1d1;
+}
+  
+.feedback-topic .form-control {
+    width: 100%;
+}
+
+.feedback-desc .form-control {
+    width: 100%;
+    margin-bottom: 20px;
+    background: #fff !important;
+    color: #2c2c2c;
+    border: 1px solid #d1d1d1;
+}
+
+.feedback-form-group.submit-button {
+    display: flex;
+    justify-content: center;
+}
+  
+.feedback-submit-btn {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background: #ef7c15;
+    color: #fff;
+    cursor: pointer;
+    line-height: 17px;
+    border-radius: 3px;
+    height: 24px;
+    font-size: 12px;
+}

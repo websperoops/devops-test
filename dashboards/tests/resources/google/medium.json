@@ -1,0 +1,177 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:dateHour",
+					"ga:medium"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:users",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"2018061614",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1179"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061722",
+							"organic"
+						],
+						"metrics": [
+							{
+								"values": [
+									"199"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061811",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061812",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061813",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061814",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061815",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061816",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061817",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"2018061909",
+							"(none)"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					}
+				],
+				"totals": [
+					{
+						"values": [
+							"5154"
+						]
+					}
+				],
+				"rowCount": 3456,
+				"minimums": [
+					{
+						"values": [
+							"1"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"16"
+						]
+					}
+				]
+			},
+			"nextPageToken": "10"
+		}
+	]
+}

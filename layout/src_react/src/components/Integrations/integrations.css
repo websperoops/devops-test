@@ -1,0 +1,338 @@
+/*   google analytics modal css  */
+
+.google-analytics-modal-outer {
+    background: #efefef;
+    position: absolute;
+    opacity: 1 !important;
+    width: 400px;
+    height: 575px;
+    top: 110px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 2px 2px #8d8d8d;
+    z-index: 3;
+}
+
+.google-analytics-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-top: -20px;
+}
+  
+.google-analytics-header > .fa {
+    position: absolute;
+    left: 10px;
+    color: #7d7d7d;
+    cursor: pointer;
+    top: -6px;
+}
+  
+.google-analytics-header > p {
+    font-size: 20px;
+}
+  
+.google-analytics-header > .underline {
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    background: #7d7d7d;
+}
+
+.underline {
+    height: 1px;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    position: absolute;
+}
+
+.google-analytics-modal-inner {
+    background: #fff;
+    text-align: left;
+    padding-left: 25px;
+    height: 400px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.google-analytics-modal-inner p {
+    font-size: 12px;
+}
+  
+.google-analytics-modal-inner .input-selector {
+    display: flex;
+    font-size: 12px;
+    align-items: baseline;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+  
+.input-selector select {
+    width: 125px;
+    position: absolute;
+    right: 25%;
+}
+  
+.google-analytics-logo {
+    width: 30px;
+    margin-right: 25px;
+}
+
+.google-analytics-modal-inner .logo-container {
+    text-align: center;
+    margin: 25px;
+} 
+
+/*   integration modal css  */  
+
+.integration_modal {
+    position: absolute;
+    color: #2c2c2c;
+    top: 60px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    width: 100%;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.integration_modal_container {
+  background: #efefef;
+  position: absolute;
+  opacity: 1 !important;
+  width: 400px;
+  height: 500px;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 1px 2px 2px #8d8d8d;
+  z-index: 1;
+}
+
+.integration_modal_container h4 {
+  border-bottom: 1px solid #8d8d8d;
+  padding-bottom: 10px;
+  width: 325px;
+  font-size: 20px !important;
+  padding-top: 15px;
+  margin: auto;
+}
+
+.integration_modal_input_container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  display: none;
+  /* for now */
+}
+
+.integration_modal_input_container .fa-search {
+  position: absolute;
+  right: 125px;
+  font-size: 10px;
+  top: 116px;
+  color: #8d8d8d;
+  cursor: pointer;
+}
+
+.search_account_label {
+  color: #8d8d8d;
+  font-size: 12px;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+.search_account_input {
+  height: 18px;
+  width: 195px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid #8d8d8d;
+}
+
+.accounts_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin: auto;
+  width: 320px;
+  height: 350px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  border: 1px solid #d1d1d1;
+}
+
+.accounts_list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #8d8d8d;
+  width: 227px;
+  /* align-items: center; */
+  padding: 5px;
+  margin-right: 6px;
+  position: relative;
+}
+
+.accounts_list li:first-child {
+  margin-top: 18px !important;
+}
+
+.check_list li:first-child {
+  margin-top: 18px !important;
+}
+
+.accounts_list li p {
+  /* padding-top: 15px; */
+  margin-right: 43px;
+}
+
+.accounts_list .light_gray_btn {
+  background: #ededed !important;
+  font-size: 12px;
+  margin-top: 20px;
+  width: 90px;
+  border-radius: 11px;
+  height: 20px;
+  padding: 1px;
+  cursor: not-allowed;
+  border: none;
+}
+
+.account_item_btn {
+  position: absolute;
+  right: -20px;
+  top: 0;
+}
+
+.integration_modal_item_name {
+  text-transform: capitalize;
+  font-size: 14px;
+  padding-top: 15px;
+  margin-right: 50px;
+}
+
+.etsy-ps {
+  font-size: 9px;
+  color: #8d8d8d;
+  font-style: italic;
+  margin-left: 30px;
+}
+
+.integration_modal_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* integration services css */
+
+.integration_services_container {
+  margin-top: 18px;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  width: 100%;
+}
+
+@media (max-width: 974px) {
+  .integration_services_container {
+    justify-content: center;
+  }
+}
+
+/*  shipstation integration modal css */
+
+.shipstation-modal-header .fa {
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  color: #7d7d7d;
+  cursor: pointer;
+}
+
+.shipstation-modal-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#shipstationform {
+  margin-top: -20px;
+}
+
+#shipstationform h3 {
+  display: none;
+}
+
+#shipstationform .form {
+  width: 100% !important;
+}
+
+/* add integration service block css */
+
+.integration_block {
+  background: #fff;
+  font-family: Open sans;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 360px;
+  margin-top: 12px;
+  margin-left: 12px;
+  min-height: 180px;
+}
+
+.integration_add_block {
+  border: 2px dotted #ddd;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.integration_add_block .fa-plus {
+  color: #ef7c15;
+}
+
+.integration_add_block:hover {
+  background: #fff;
+  transform: scale(0.98);
+}
+
+.integration_add_block > p {
+  cursor: pointer;
+}
+
+.check_list_item {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 20px;
+  height: auto;
+  width: 100%;
+}

@@ -1,0 +1,52 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+{% load account socialaccount %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+{% block content %}
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row justify-content-around" style="margin-top:30px">
+                <form action="{% provider_login_url 'shopify' scope=scope auth_params=auth_params %}">
+                    <img src="/static/images/shopify_black_text.png" class="logo justify-content-around" alt=""
+                        style="height:75px">
+                    <br>
+                    <br>
+                    <h4> Blocklight billing is handled by Shopify.<br>
+                        <small>Please integrate your Shopify store</small></h4>
+                    <br>
+                    <br>
+                    <h5><i>Enter Shopify Shop Name</i></h5>
+                    <br>
+                    <input type="text" name="shop" class="form-cus form-control" value={{store_name}}>
+                    <span><input type="hidden" name="process" value="connect"> .myshopify.com</span>
+                    <br><br>
+                    <input type="submit" value="Submit" class="btn-fill btn-standard btn btn-cus">
+                </form>
+
+
+            </div>
+            <!-- end col -8 -->
+
+        </div>
+        <!-- end row -->
+
+
+    </div>
+    <!-- end container -->
+</div>
+<!-- end content -->
+<!-- Error Message for if the account has already been integrated by another account-->
+{% if already_connected %}
+<script>
+    alert('This Shopify Store is already connected to another Blocklight Account.')
+
+</script>
+{% endif %}
+
+{% endblock content %}

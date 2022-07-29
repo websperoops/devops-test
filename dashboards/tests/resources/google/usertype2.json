@@ -1,0 +1,176 @@
+{
+	"reports": [
+		{
+			"columnHeader": {
+				"dimensions": [
+					"ga:userType",
+					"ga:dateHour"
+				],
+				"metricHeader": {
+					"metricHeaderEntries": [
+						{
+							"name": "ga:users",
+							"type": "INTEGER"
+						}
+					]
+				}
+			},
+			"data": {
+				"rows": [
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018062609"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018062915"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070209"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070211"
+						],
+						"metrics": [
+							{
+								"values": [
+									"3"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070310"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070316"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070317"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070319"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070323"
+						],
+						"metrics": [
+							{
+								"values": [
+									"3"
+								]
+							}
+						]
+					},
+					{
+						"dimensions": [
+							"New Visitor",
+							"2018070409"
+						],
+						"metrics": [
+							{
+								"values": [
+									"1"
+								]
+							}
+						]
+					}
+				],
+				"totals": [
+					{
+						"values": [
+							"5146"
+						]
+					}
+				],
+				"rowCount": 3239,
+				"minimums": [
+					{
+						"values": [
+							"1"
+						]
+					}
+				],
+				"maximums": [
+					{
+						"values": [
+							"14"
+						]
+					}
+				]
+			}
+		}
+	]
+}

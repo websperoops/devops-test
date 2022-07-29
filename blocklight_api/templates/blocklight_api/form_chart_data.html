@@ -1,0 +1,298 @@
+{% load static %}
+{# <link rel="stylesheet" href="/static/master.css"> #}
+
+<!-- https://www.cssscript.com/vanilla-date-range-picker/ -->
+<link href="{% static 'blocklight_api/vanillajs-datepicker-master/css/datepicker.min.css' %}" rel="stylesheet" />
+<link href="{% static 'blocklight_api/vanillajs-datepicker-master/css/datepicker-bs4.min.css' %}" rel="stylesheet" />
+
+
+<style media="screen">
+
+.dropdown-menu a {
+  padding: 3px;
+  color: black;
+  width: 100%;
+  display: block;
+
+}
+.checkbox-inline input {
+  padding-left: 10px;
+}
+
+.btn-xs {
+  border: 0px;
+  margin-left: 7px;
+  margin-top: 2px;
+}
+
+form.form .btn {
+  background-color: #ef7c15;
+}
+
+form.form .btn.btn-xs{
+  background-color: white;
+}
+
+.datepicker {
+  z-index: 1050;
+}
+
+.distinct-cbx {
+  width: 50px;
+}
+
+</style>
+
+<script>
+
+function toggle_op_input(el){
+    el_jq = $(el);
+    var field_name = el_jq.data("field_name");
+    var field_type = el_jq.data("field_type");
+    var fd = $("#filter-fields").children('#' + field_name);
+    var op = el_jq.data("op");
+
+    if (el_jq.prop("checked")) {
+      fd.append(
+          $("<label>").text(field_name + "__" + op
+          ).attr('for', field_name + "__" + op)
+      );
+      if (field_type == "text"){
+        fd.append(
+            $("<input>").attr("type", "text"
+          ).attr("name", field_name + "__" + op).addClass("form-control")
+        );
+      } else if (field_type == "datetime") {
+          dt_inp = $("<input>").attr("type", "text").attr("name", field_name + "__" + op)
+          fd.append(dt_inp);
+          // const datepicker = new Datepicker(dt_inp[0]);
+          const datepicker = new Datepicker(dt_inp[0], {format: 'yyyy-mm-dd 00:00:00-0000'});
+      }
+
+    } else {
+      fd.find("label[for=" + field_name + "__" + op + "]").remove();
+      fd.find("input[name=" + field_name + "__" + op + "]").remove();
+    };
+
+}
+
+function build_checkboxes(field_name, field_type){
+  ops = ['eq', 'lt', 'gt', 'lte', 'gte'];
+
+  return ops.map( op => {
+      return $("<label>").addClass("checkbox-inline").attr("for", "cx_eq" + op + '_' +field_name).append(
+        $("<input>").addClass("form-check-input").attr("type", "checkbox").attr(
+          "id", 'cx_' + op + '_' + field_name
+        ).data("op", op).data("field_name", field_name).data("field_type", field_type).attr(
+          "onclick", "toggle_op_input(this)"
+        )
+      ).append("&nbsp;" + op)
+    }
+  );
+}
+
+function add_form_filter_input(el){
+  el_jq = $(el)
+  field_name = el_jq.data().field_name
+  field_type = el_jq.data().field_type
+
+  var ff = $("#filter-fields");
+  fd = $("<div>").addClass('f_input_div').attr("id", field_name);
+
+  fd.append($("<label>").text(field_name));
+
+  build_checkboxes(field_name, field_type).forEach(function(cx) {
+    fd.append(cx)
+  })
+
+  fd.append(
+    $("<button>").attr("type", "button").attr("onclick", "remove_filter_input(this)").addClass(
+      "btn btn-default btn-xs").append(
+        $("<span>").addClass("glyphicon glyphicon-remove")
+    )
+  );
+  fd.append("<br>")
+  ff.append(fd)
+
+}
+
+function remove_filter_input(el){
+  $(el).parent("div").remove();
+
+}
+
+function add_timerange_field(el){
+  el_jq = $(el)
+  field_name = el_jq.data().field_name
+  field_type = el_jq.data().field_type
+
+  fd = $("<div>").addClass('f_input_div').attr("id", field_name);
+
+  var ff = $("#timerange-fields");
+  fd.append(
+      $("<label>").text(field_name
+      ).attr('for', field_name)
+  );
+  dt_inp = $("<input>").attr("type", "text").attr("name", field_name)
+  fd.append(dt_inp);
+
+  fd.append(
+    $("<button>").attr("type", "button").attr("onclick", "remove_timerange_field(this)").addClass(
+      "btn btn-default btn-xs").append(
+        $("<span>").addClass("glyphicon glyphicon-remove")
+    )
+  );
+  fd.append("<br>")
+  ff.append(fd)
+}
+
+function remove_timerange_field(el){
+  $(el).parent("div").remove();
+}
+
+function add_groupby_field(el){
+  $("#groupby-fields").append(
+    $("<div>").append([
+      $("<label>").text($(el).data("field_name")),
+      $("<button>").attr("type", "button").attr("onclick", "remove_groupby_field(this)").addClass("btn btn-default btn-xs").append(
+        $("<span>").addClass("glyphicon glyphicon-remove")
+      )
+    ])
+  );
+}
+
+function remove_groupby_field(el){
+  $(el).parent("div").remove();
+}
+
+function add_agg_dd(el){
+  el_jq = $(el)
+  agg_name = el_jq.data().agg_name
+  agg_dds = $("#agg-dds");
+  agg_dds.append(
+    $("<div>").addClass("agg-container").append([
+      $("<span>").text(agg_name),
+      $("<button>").attr("type", "button").attr("onclick", "remove_agg_dd(this)").addClass("btn btn-default btn-xs").append(
+        $("<span>").addClass("glyphicon glyphicon-remove")
+      ),
+      $("<select>").addClass("form-control").append(
+        $("#agg-dd").data("all_fields").split(",").map(f => $("<option>").text(f))
+      ),
+      $("<label>").text("Distinct"),
+      $("<input>").addClass("distinct-cbx").attr("type", "checkbox"),
+      $("<br>")
+    ])
+  );
+}
+
+function remove_agg_dd(el){
+  $(el).parent("div").remove();
+}
+
+function get_form_filter_param(){
+
+  filter_data = $("#filter-fields").find("input[type=text]").toArray().map(inp => [$(inp).attr("name"), $(inp).prop("value")])
+  filter_str = "filter=("
+  // filter_str += filter_data.map(n_v => "(" + n_v[0] + "=" + n_v[1] +")").reduce((a, b) => a + 'and' + b)
+  filter_str += filter_data.map(n_v => "(" + n_v[0] + '="' + n_v[1] +'")').join('and')
+  filter_str += ")"
+  return filter_str
+}
+
+function get_form_timerange_param(){
+  tr_data = $("#timerange-fields").find("input").toArray().map(inp => [$(inp).attr("name"), $(inp).prop("value")])
+  return tr_data.map(ft => ft.join("=")).join("&")
+}
+
+function get_form_groupby_param(){
+  return "group-by=" + $("#groupby-fields").find("label").toArray().map(l => $(l).text()).join(",");
+}
+
+function get_form_agg_param(){
+  return "aggregate=" + $("#agg-dds").children(".agg-container").toArray(
+  ).map(aggc => $(aggc).children("select").children("option:selected").text()
+                + "__"
+                + $(aggc).children("span").text()
+                + ($(aggc).children(".distinct-cbx").prop("checked") ? "__distinct" : "")
+  ).join(",");
+}
+
+function submit_form(event){
+  event.preventDefault();
+
+  var filter_param = get_form_filter_param();
+  var timerange_param = get_form_timerange_param();
+  var groupby_param = get_form_groupby_param();
+  var agg_param = get_form_agg_param();
+
+  // console.log(filter_param);
+  // console.log(groupby_param);
+  // console.log(agg_param);
+  // console.log(timerange_param)
+  // return;
+
+  window.location = window.location.origin + window.location.pathname + "?" + filter_param + "&" + timerange_param + "&" + groupby_param + "&" + agg_param;
+}
+
+</script>
+
+<form class="form" action="" method="get">
+    <h3>Filters</h3>
+    <div id="filter-fields" class="form-group"></div>
+    <div class="btn-group">
+        <a class="btn btn-info dropdown-toggle" href="#" role="button" id="filter-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add Filter
+        </a>
+        <div class="dropdown-menu">
+          {% for field in filter_fields %}
+            <a class="dropdown-item" data-field_name="{{ field.0 }}", data-field_type="{{ field.1 }}" onclick="add_form_filter_input(this)">{{ field.0 }}</a>
+          {% endfor %}
+        </div>
+    </div>
+
+    <h3>TimeRange</h3>
+    <div id="timerange-fields" class="form-group"></div>
+    <div class="btn-group">
+        <a class="btn btn-info dropdown-toggle" href="#" role="button" id="groupby-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add TimeRange field
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" data-field_name="timerange-since" onclick="add_timerange_field(this)">timerange-since</a>
+            <a class="dropdown-item" data-field_name="timerange-until" onclick="add_timerange_field(this)">timerange-until</a>
+        </div>
+    </div>
+
+    <h3>Group-By</h3>
+    <div id="groupby-fields" class="form-group"></div>
+    <div class="btn-group">
+        <a class="btn btn-info dropdown-toggle" href="#" role="button" id="groupby-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add group-by field
+        </a>
+        <div class="dropdown-menu">
+          {% for field in groupby_fields %}
+            <a class="dropdown-item" data-field_name="{{ field }}" onclick="add_groupby_field(this)">{{ field }}</a>
+          {% endfor %}
+        </div>
+    </div>
+
+    <h3>Aggregate</h3>
+    <div id="agg-dds" class="form-group"></div>
+    <div class="btn-group">
+        <a class="btn btn-info dropdown-toggle" href="#" role="button" id="agg-dd" data-all_fields={{ agg_fields_csv }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add Aggregation
+        </a>
+        <div class="dropdown-menu">
+          {% for agg in supported_aggs %}
+            <a class="dropdown-item" data-agg_name="{{ agg }}" onclick="add_agg_dd(this)">{{ agg }}</a>
+          {% endfor %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <button id='submit-button' class="btn btn-primary" onclick="submit_form(event)">Submit</button>
+</form>
+
+
+<!-- https://www.cssscript.com/vanilla-date-range-picker/ -->
+<!-- <script src="{% static 'blocklight_api/vanillajs-datepicker-master/js/datepicker-full.min.js' %}"></script> -->
+<script src="{% static 'blocklight_api/vanillajs-datepicker-master/js/datepicker-full.min.js' %}"></script>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/js/highchartsv6.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_highcharts.css">
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <!-- ============================================================== -->
+    <!-- Empty container -->
+    <!-- ============================================================== -->
+    <div id="container"> </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Where the magic happens -->
+    <!-- ============================================================== -->
+    <script type="text/javascript">
+
+        // BEGIN chart styling
+        Highcharts.theme = {
+            colors: ['#eb8527','#FFCA3D', '#babbbd', '#2e86ab', '#d20c0f'],
+            chart: {
+                backgroundColor: '#ffffff',
+            },
+            title: {
+                style: {
+                    color: '#000000',
+                    fontWeight: 'bold'
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            xAxis: {
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            },
+            yAxis: [{
+                gridLineColor: '#000000',
+                lineColor: '#000000',
+                minorGridLineColor: '#000000',
+                tickColor: '#000000',
+                plotLines: [{
+                    color: '#000000'
+                }],
+                labels: {
+                    style: {
+                        color: '#000000',
+                    }
+                }
+            }]
+        };
+        Highcharts.setOptions(Highcharts.theme);
+
+        // BEGIN chart template
+        var chart = new Highcharts.Chart('container', {
+
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                // text: 'Historic World Population by Region' (set via JS)
+            },
+            subtitle: {
+                // text: 'Source: Fake' (set via JS)
+            },
+            xAxis: {
+                // categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'], (set via JS)
+                title: {
+                   // text: null (set via JS)
+                }
+            },
+            yAxis: {
+                title: {
+                   // text: 'Population (millions)' (set via JS)
+                }
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 80,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                shadow: true
+            },
+            series: [/*{
+                name: 'Year 1800',
+                data: [107, 31, 635, 203, 2]
+            }, {
+                name: 'Year 1900',
+                data: [133, 156, 947, 408, 6]
+            }*/] // (set via JS - data array length must equal number of categories)
+
+        }); // END chart template
+         function darkModeChart(){
+        chart.update({
+            title: {
+                style: {
+                    color: '#000000',
+                }
+            },
+            subtitle: {
+                style: {
+                    color: '#000000',
+                }
+
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                       style: {
+                            textOutline: "none",
+                            color: "#000000"
+                        }
+                    }
+                }
+            },
+            xAxis: {
+                title: {
+                    // text: 'Year' (set via JS)
+                    style: {
+                        color: '#000000'
+                    }
+                }
+            },
+            yAxis: {
+                gridLineColor: '#ffffff',
+                title: {
+                    // text: 'Nuclear weapon states' (set via JS)
+                    style: {
+                        color: '#000000'
+                    }
+                }
+            },
+            legend: {
+                backgroundColor: 'rgba(0, 0, 0, 0.4)'
+            },
+        })
+    }
+
+    </script>
+
+</body>
+</html>

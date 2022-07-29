@@ -1,0 +1,87 @@
+.show-icon-text {
+    display: inline !important;
+}
+
+.dash-side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background: #2c2c2c;
+    min-height: 100vh;
+    z-index: 4;
+    width: 50px;
+    transition: all 0.3s;
+    left: 0;
+    top: 70px;
+}
+  
+.dash-side-menu .close-icon {
+    display: none;
+}
+
+@media (max-width: 640px) {
+  .dash-side-menu {
+        width: 0;
+        transform: translateX(-100px);
+  }
+  .dash-side-menu-open {
+        width: 40%;
+        transform: translateX(0);
+        background: #fff;
+  }
+  .dash-side-menu .close-icon {
+        display: inline;
+  }
+  .dash-side-menu-open .close-icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+  }
+  .dash-side-menu-open p {
+        display: inline !important;
+  }
+  .dash-side-menu-open li {
+        color: #000 !important;
+  }
+}
+
+.dash-side-menu li {
+    color: white;
+    margin: 20px;
+    margin-left: -24px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.dash-side-menu p {
+    font-size: 10px;
+    display: none;
+    margin-left: 5px;
+    margin-top: 3px;
+    text-align: center;
+    transition: all 0.3s;
+    margin-bottom: 0;
+}
+
+@media (min-width: 641px) {
+  .dash-side-menu:hover {
+        width: 150px;
+  }
+    
+  .dash-side-menu:hover > li p {
+      display: inline;
+  }
+    
+  .dash-side-menu:hover > li {
+      width: 120px;
+  }
+
+  .dash-side-open {
+        width: 150px !important;
+  }
+}

@@ -1,0 +1,47 @@
+{% extends "_layouts/loggedin.html" %}
+{% load blocklight_tags %}
+{% load account socialaccount %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+  
+{% block content %}
+    <div class="wrapper-page">
+        <div class="signup-background countdown-background">
+
+                <div class="container">
+
+                    <!-- Login form -->
+                  <form class="form" method="POST" action="connectshipstation/" autocapitalize="off" >
+
+                    {% csrf_token %}
+                    {{ form }}
+
+                    <!-- Hidden fields (user_iden set later) -->
+                    <input id="user_iden" type="hidden" name="user_iden" value="none" />
+                    <input id="integration_name" type="hidden" name="integration_name" value="shipstation" />
+
+                    <div class="row justify-content-center" style="margin-top: 20px;">
+                        <label for="api_key" >Key: </label>
+                        <br>
+                        <input id="api_key" type="password" name="api_key" maxlength="100" required />
+                    </div>
+                    <div class="row justify-content-center" style="margin-top: 20px;">
+                        <label for="api_secret" style="width:60px">Secret: </label>
+                        <br>
+                        <input id="api_secret" type="password" name="api_secret" maxlength="100" required />
+                    </div>
+                    <div class="row justify-content-center align-items-center" style="margin-top:20px;">
+                        <button class="btn btn-primary btn-custom w-md waves-effect waves-light" type="submit">Submit</button>
+                    </div>
+
+                  </form>
+
+
+                </div>
+
+        </div>
+</div>
+{% endblock content %}
+
+

@@ -1,0 +1,18 @@
+{% extends "_layouts/loggedin.html" %}
+{% load account socialaccount %}
+{% load blocklight_tags %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+{% block content %}
+  <div id='feedback_sent'></div>
+    <section class="feedback-sent">
+      <div class="feedback-sent-header text-dark">
+        <h1 style="color: #000;margin-top: 60px;font-size: 30px" >Thank you for your feedback!</h1>
+      </div>
+    </section>
+
+
+
+{% endblock %}

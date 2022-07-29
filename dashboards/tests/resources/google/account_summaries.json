@@ -1,0 +1,128 @@
+{
+	"kind": "analytics#accountSummaries",
+	"username": "beta@blocklight.io",
+	"totalResults": 3,
+	"startIndex": 1,
+	"itemsPerPage": 1000,
+	"items": [
+		{
+			"id": "142018643",
+			"kind": "analytics#accountSummary",
+			"name": "Another test",
+			"webProperties": [
+				{
+					"kind": "analytics#webPropertySummary",
+					"id": "UA-142018643-1",
+					"name": "127.0.0.1",
+					"internalWebPropertyId": "203176700",
+					"level": "STANDARD",
+					"websiteUrl": "http://127.0.0.1",
+					"profiles": [
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196799292",
+							"name": "All Web Site Data",
+							"type": "WEB"
+						}
+					]
+				},
+				{
+					"kind": "analytics#webPropertySummary",
+					"id": "UA-142018643-2",
+					"name": "dev blocklight",
+					"internalWebPropertyId": "203188923",
+					"level": "STANDARD",
+					"websiteUrl": "https://dev.blocklight.io",
+					"profiles": [
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196792021",
+							"name": "Advertising",
+							"type": "WEB"
+						},
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196844127",
+							"name": "All Web Site Data",
+							"type": "WEB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "120810601",
+			"kind": "analytics#accountSummary",
+			"name": "Blocklight",
+			"webProperties": [
+				{
+					"kind": "analytics#webPropertySummary",
+					"id": "UA-120810601-1",
+					"name": "Blocklight",
+					"internalWebPropertyId": "178618680",
+					"level": "STANDARD",
+					"websiteUrl": "https://www.blocklight.io/",
+					"profiles": [
+						{
+							"kind": "analytics#profileSummary",
+							"id": "177083815",
+							"name": "All Web Site Data",
+							"type": "WEB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "141933286",
+			"kind": "analytics#accountSummary",
+			"name": "Test",
+			"webProperties": [
+				{
+					"kind": "analytics#webPropertySummary",
+					"id": "UA-141933286-1",
+					"name": "localBlocklight",
+					"internalWebPropertyId": "203051676",
+					"level": "STANDARD",
+					"websiteUrl": "http://127.0.0.1",
+					"profiles": [
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196722831",
+							"name": "All Web Site Data",
+							"type": "WEB"
+						},
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196720930",
+							"name": "Second view",
+							"type": "WEB"
+						},
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196759408",
+							"name": "Third view",
+							"type": "WEB"
+						}
+					]
+				},
+				{
+					"kind": "analytics#webPropertySummary",
+					"id": "UA-141933286-2",
+					"name": "Second property",
+					"internalWebPropertyId": "203049413",
+					"level": "STANDARD",
+					"websiteUrl": "http://127.0.0.2:9000",
+					"profiles": [
+						{
+							"kind": "analytics#profileSummary",
+							"id": "196761116",
+							"name": "All Web Site Data",
+							"type": "WEB"
+						}
+					]
+				}
+			]
+		}
+	]
+}

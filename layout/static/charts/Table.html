@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_datatable.css">
+</head>
+
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+
+    <h1 id='title' class = "theme-text" style="font-weight: bold"><!--Filled via JS--></h1>
+    <h2 id='subtitle' class = "theme-text"><!--Filled via JS--></h2>
+
+    <div id='table_area'>
+        <table id="datatable" class="dataTable display">
+            <thead>
+                <tr id='names' class = "theme-text">
+                    <!--<th>Column 1</th>
+                    <th>Column 2</th>--> <!-- Filled via JS -->
+                </tr>
+            </thead>
+            <tbody id='data' class = "theme-text">
+                <!--<tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2 Data 1</td>
+                    <td>Row 2 Data 2</td> 
+                </tr>--> <!-- Filled via JS -->
+            </tbody>
+        </table>
+    </div>
+<!-- ============================================================== -->
+<!-- Formatting JS -->
+<!-- ============================================================== -->
+<script type="text/javascript">
+    // Initializing the datatable
+    /*$(document).ready(function() {
+        $('#datatable').DataTable(
+            {
+                "dom": 'Bfrtip',
+                //"paging": true,
+                "autoWidth": true,
+                "scrollX": false,
+                "scrollY": "60vh",
+                "scrollCollapse": true,
+                "paging": false,
+                "searching": false
+            }
+        );
+    });*/
+    // Initializing the datatable (only works once data is loaded, so has to be called from dashboard JS)
+    function initializeTable(){
+        $('#datatable').DataTable(
+            {
+                "dom": 'Bfrtip',
+                //"paging": true,
+                "autoWidth": false,
+                "scrollX": true,
+                "scrollY": "80vh",
+                "scrollCollapse": true,
+                "paging": false,
+                "searching": false
+            }
+        );
+    }
+
+    // Check if table has been initialized
+    function checkInitialized(){
+        var initialized = $.fn.DataTable.isDataTable('#datatable');
+        return initialized;
+    }
+    // Clear table and add new data
+    function newData(data){
+        // Get table object
+        var table = $('#datatable').DataTable();
+        // Change header (column names)
+        for (var j = 0; j < data.columns.length; j++) {
+            table.columns(j+1).header().to$().text(data.columns[j])
+        }
+        // Clear table data
+        table.clear().draw();
+        // Add new data
+        for (var i = 0; i < data.series.length; i++) {
+            var row_values = [(i+1)];
+            for (var j = 0; j < data.columns.length; j++) {
+                row_values.push(data.series[i][data.columns[j]]);
+            }
+            // Add row
+            table.row.add(row_values);
+        }
+        // Redraw
+        table.columns.adjust().draw();
+    }
+
+</script>
+
+</body>
+</html>
+

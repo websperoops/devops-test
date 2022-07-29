@@ -1,0 +1,146 @@
+.facebook-dropdown-container {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.facebook-dropdown-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.facebook-img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.facebook-date {
+  font-size: 12px;
+}
+
+.facebook-left-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d1d1d1;
+  margin: 8px 0;
+}
+
+.facebook-text {
+  overflow: auto;
+  font-size: 12px;
+  max-height: 150px;
+}
+
+/* ================================================================================================================================ */
+
+.facebook-dropdown-right {
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.facebook-post-performance-header {
+  border-bottom: 2px solid #d1d1d1;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+.facebook-post-details {
+  display: flex;
+}
+
+.facebook-post-label-container {
+  border-right: 2px solid #d1d1d1;
+  flex-grow: 1;
+}
+.facebook-post-label {
+  font-size: 12px;
+  color: #8d8d8d;
+  margin: 6px 0;
+}
+.facebook-post-value-container {
+  min-width: 35px;
+}
+.facebook-post-value {
+  font-size: 12px;
+  margin: 6px 3px;
+  text-align: right;
+}
+
+/* ================================================================================================================================ */
+
+.facebook-post-reactions-container {
+  margin-bottom: 6px;
+}
+
+.facebook-post-reactions-header {
+  border-bottom: 2px solid #d1d1d1;
+  margin-top: 6px;
+  padding-bottom: 3px;
+}
+
+.facebook-post-reactions-type-container {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facebook-post-reactions-type-block {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.facebook-post-reactions-type-img {
+  margin: auto;
+  width: 20px;
+}
+
+.facebook-post-reactions-type-value {
+  /* color: #8d8d8d; */
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ================================================================================================================================ */
+.facebook-impressions-reach-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.facebook-impressions-reach {
+  width: 49%;
+}
+
+.facebook-impressions-reach-header {
+  border-bottom: 2px solid #d1d1d1;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+/* ================================================================================================================================ */
+@media (min-width: 1100px) and (max-width: 1400px), (max-width: 670px) {
+  .facebook-impressions-reach-container {
+    flex-direction: column;
+  }
+
+  .facebook-impressions-reach {
+    width: 100%;
+  }
+
+  .facebook-text {
+    max-height: 255px;
+  }
+}

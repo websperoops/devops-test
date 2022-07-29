@@ -1,0 +1,31 @@
+{% extends "_layouts/loggedin.html" %}
+{% load account socialaccount %}
+{% load blocklight_tags %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+
+{% block content %}
+            <div class="content-page">
+                    <!-- Start content -->
+                    <div class="content">
+                        <div class="container-fluid">
+    
+                            <div class="row justify-content-center align-items-center" style="margin-top:50px">
+                                <h2 style="color: #FFCA3D">Wait!</h2>
+                            </div>
+                            <div class="row justify-content-center align-items-center" style="margin-top:10px">
+                                <h4>Did you decline (or forget) to approve the Blocklight App charge?</h4><br>
+                            </div>
+                            <div class="row justify-content-center align-items-center" style="margin-top:10px; margin-bottom:30px">
+                                <h3><b>Blocklight is free!</b></h3> &nbsp;&nbsp;&nbsp;
+                                <h4> To integrate your Shopify store, 
+                                    <a href="/dashboards/integrations" style="color: #FFCA3D"><u>click here</u></a>
+                                </h4><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock content %}
+

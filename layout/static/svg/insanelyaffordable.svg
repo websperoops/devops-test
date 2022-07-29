@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="83px" viewBox="0 0 75 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>savings</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Blocklight-Website-Prototype" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOMEPAGE" transform="translate(-983.000000, -1392.000000)">
+            <g id="MEET-BLOCKLIGHT" transform="translate(0.000000, 495.000000)">
+                <g id="icon-bkgd-copy-4" transform="translate(904.000000, 858.000000)">
+                    <g id="Group-10">
+                        <g id="savings" transform="translate(79.000000, 39.000000)">
+                            <g id="XMLID_821_" transform="translate(0.000000, 49.270073)">
+                                <path d="M74.2852327,9.1778415 C72.8658755,6.68031804 69.8044038,5.87486966 67.4468537,7.37877998 L51.3625026,16.0862096 C52.2845312,15.1282586 52.8571455,13.7937435 52.8571455,12.3172836 C52.8571455,9.4016684 50.626474,7.03834724 47.8750024,7.03834724 L32.771137,7.03834724 C26.5071438,7.03858186 23.5550579,2.34619395 13,2.34619395 C13,14.1581074 13,25.8081335 13,25.8081335 C13,25.8081335 15.8785716,27.919708 19.6428576,30.5005214 C23.0019292,32.8033107 24.5787222,32.8467153 27.1355581,32.8467153 L43.6311021,32.8403806 C45.6974736,32.8403806 47.7642881,31.9082377 50.0525311,30.7351408 C52.3407741,29.5620438 72.5873183,16.4233577 72.5873183,16.4233577 C74.944647,14.9192127 75.7045899,11.6755996 74.2852327,9.1778415 Z" id="XMLID_823_" fill="#FFD200" fill-rule="nonzero"></path>
+                                <g id="XMLID_822_" transform="translate(0.000000, 16.423358)" fill-rule="nonzero" fill="#FF9811">
+                                    <rect id="XMLID_50_" x="0" y="0" width="9.375" height="16.4233577"></rect>
+                                </g>
+                                <rect id="XMLID_48_" fill="#FF9811" fill-rule="nonzero" x="0" y="0" width="9.375" height="17"></rect>
+                                <circle id="Oval-2" fill="#FFFFFF" cx="4.5" cy="5.5" r="1.5"></circle>
+                            </g>
+                            <g id="XMLID_826_" transform="translate(11.718750, 0.000000)" fill-rule="nonzero">
+                                <g id="XMLID_827_" transform="translate(25.781250, 30.500521)">
+                                    <ellipse id="XMLID_828_" fill="#FFD200" cx="10.546875" cy="10.5578728" rx="10.546875" ry="10.5578728"></ellipse>
+                                    <path d="M10.546875,21.1157456 C4.72195312,21.1157456 0,16.388634 0,10.5578728 C0,4.72711157 4.72195312,0 10.546875,0" id="XMLID_829_" fill="#FF9811"></path>
+                                    <ellipse id="XMLID_830_" fill="#FFFFFF" cx="10.546875" cy="10.5578728" rx="5.859375" ry="5.86548488"></ellipse>
+                                </g>
+                                <g id="XMLID_831_" transform="translate(0.000000, 21.115746)">
+                                    <ellipse id="XMLID_832_" fill="#FFD200" cx="10.546875" cy="10.5578728" rx="10.546875" ry="10.5578728"></ellipse>
+                                    <path d="M10.546875,21.1157456 C4.72195312,21.1157456 0,16.388634 0,10.5578728 C0,4.72711157 4.72195312,0 10.546875,0" id="XMLID_833_" fill="#FF9811"></path>
+                                    <ellipse id="XMLID_834_" fill="#FFFFFF" cx="10.546875" cy="10.5578728" rx="5.859375" ry="5.86548488"></ellipse>
+                                </g>
+                                <g id="XMLID_835_" transform="translate(16.406250, 0.000000)">
+                                    <ellipse id="XMLID_836_" fill="#FFD200" cx="10.546875" cy="10.5578728" rx="10.546875" ry="10.5578728"></ellipse>
+                                    <path d="M10.546875,21.1157456 C4.72195312,21.1157456 0,16.3888686 0,10.5578728 C0,4.72687696 4.72195312,0 10.546875,0" id="XMLID_837_" fill="#FF9811"></path>
+                                    <ellipse id="XMLID_838_" fill="#FFFFFF" cx="10.546875" cy="10.5578728" rx="5.859375" ry="5.86548488"></ellipse>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

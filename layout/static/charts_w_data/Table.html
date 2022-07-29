@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ============================================================== -->
+<!-- Header -->
+<!-- ============================================================== -->
+<head>
+    <meta charset="utf-8">
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_datatable.css">
+</head>
+<!-- ============================================================== -->
+<!-- Body -->
+<!-- ============================================================== -->
+<body style="overflow:hidden">
+    <h1 id='title' style="font-size: 20px; color: white; text-align: center">Table title goes here</h1>
+    <h2 id='subtitle' style="font-size: 16px; color: white; text-align: center">Table subtitle goes here</h2>
+    <table id="datatable" class="dataTable display">
+        <thead>
+            <tr id='names' style="color: white">
+                <th>#</th>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody id='data' style="color: white">
+            <tr>
+                <td>1</td>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Row 3 Data 1</td>
+                <td>Row 3 Data 2</td>
+                <td>Row 3 Data 3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Row 4 Data 1</td>
+                <td>Row 4 Data 2</td>
+                <td>Row 4 Data 3</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Row 5 Data 1</td>
+                <td>Row 5 Data 2</td>
+                <td>Row 5 Data 3</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Row 6 Data 1</td>
+                <td>Row 6 Data 2</td>
+                <td>Row 6 Data 3</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Row 7 Data 1</td>
+                <td>Row 7 Data 2</td>
+                <td>Row 7 Data 3</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Row 8 Data 1</td>
+                <td>Row 8 Data 2</td>
+                <td>Row 8 Data 3</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Row 9 Data 1</td>
+                <td>Row 9 Data 2</td>
+                <td>Row 9 Data 3</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Row 10 Data 1</td>
+                <td>Row 10 Data 2</td>
+                <td>Row 10 Data 3</td>
+            </tr>
+        </tbody>
+    </table>
+<!-- ============================================================== -->
+<!-- Formatting JS -->
+<!-- ============================================================== -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#datatable').DataTable(
+            {
+                "dom": 'Bfrtip',
+                //"paging": true,
+                "autoWidth": true,
+                "scrollX": false,
+                "scrollY": "60vh",
+                "scrollCollapse": true,
+                "paging": false,
+                "searching": false
+            }
+        );
+    });
+</script>
+</body>
+</html>

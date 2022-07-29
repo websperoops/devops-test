@@ -1,0 +1,229 @@
+.stripe.stripe-form-wrapper {
+  background-color: #fff;
+}
+
+.stripe.stripe-form-wrapper * {
+  font-family: Source Code Pro, Consolas, Menlo, monospace;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.stripe.stripe-form-wrapper .row {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin: 0 5px 10px;
+}
+
+.stripe.stripe-form-wrapper .field {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.stripe.stripe-form-wrapper .field.half-width {
+  width: 50%;
+}
+
+.stripe.stripe-form-wrapper .field.quarter-width {
+  width: calc(25% - 10px);
+}
+
+.stripe.stripe-form-wrapper .baseline {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #cfd7df;
+  transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe.stripe-form-wrapper label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 8px;
+  color: #cfd7df;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transform-origin: 0 50%;
+  cursor: text;
+  pointer-events: none;
+  transition-property: color, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe.stripe-form-wrapper .input {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 7px;
+  color: #32325d;
+  background-color: transparent;
+}
+
+.stripe.stripe-form-wrapper .input::-webkit-input-placeholder {
+  color: transparent;
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe.stripe-form-wrapper .input::-moz-placeholder {
+  color: transparent;
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe.stripe-form-wrapper .input:-ms-input-placeholder {
+  color: transparent;
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe.stripe-form-wrapper .input.StripeElement {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity;
+}
+
+.stripe.stripe-form-wrapper .input.focused,
+.stripe.stripe-form-wrapper .input:not(.empty) {
+  opacity: 1;
+}
+
+.stripe.stripe-form-wrapper .input.focused::-webkit-input-placeholder,
+.stripe.stripe-form-wrapper .input:not(.empty)::-webkit-input-placeholder {
+  color: #cfd7df;
+}
+
+.stripe.stripe-form-wrapper .input.focused::-moz-placeholder,
+.stripe.stripe-form-wrapper .input:not(.empty)::-moz-placeholder {
+  color: #cfd7df;
+}
+
+.stripe.stripe-form-wrapper .input.focused:-ms-input-placeholder,
+.stripe.stripe-form-wrapper .input:not(.empty):-ms-input-placeholder {
+  color: #cfd7df;
+}
+
+.stripe.stripe-form-wrapper .input.focused + label,
+.stripe.stripe-form-wrapper .input:not(.empty) + label {
+  color: #aab7c4;
+  transform: scale(0.85) translateY(-25px);
+  cursor: default;
+}
+
+.stripe.stripe-form-wrapper .input.focused + label {
+  /* color: #24b47e; */
+  color: #EF7C15;
+}
+
+.stripe.stripe-form-wrapper .input.invalid + label {
+  color: #ffa27b;
+}
+
+.stripe.stripe-form-wrapper .input.focused + label + .baseline {
+  /* background-color: #24b47e; */
+  background-color: #EF7C15;
+}
+
+.stripe.stripe-form-wrapper .input.focused.invalid + label + .baseline {
+  background-color: #e25950;
+}
+
+.stripe.stripe-form-wrapper input, .stripe.stripe-form-wrapper button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+.stripe.stripe-form-wrapper input:-webkit-autofill {
+  -webkit-text-fill-color: #e39f48;
+  transition: background-color 100000000s;
+  -webkit-animation: 1ms void-animation-out;
+}
+
+.stripe.stripe-form-wrapper .StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.stripe.stripe-form-wrapper input, .stripe.stripe-form-wrapper button {
+  -webkit-animation: 1ms void-animation-out;
+}
+
+#bl-logo {
+  height: 40px;
+  width: 115.38px;
+}
+
+.stripe.stripe-form-wrapper button {
+  display: block;
+  /* width: calc(100% - 30px); */
+  /* height: 40px; */
+  /* margin: 40px 15px 0; */
+  /* background-color: #24b47e;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer; */
+
+  height: 19px;
+  width: 231px;
+  color: #FFFFFF;
+  font-family: "Open Sans";
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 19px;
+  text-align: center;
+  font-weight: 500;
+  height: 24px;
+  width: 217px;
+  border-radius: 15px;
+  background-color: #EF7C15;
+
+  margin: 30px;
+
+}
+
+.stripe.stripe-form-wrapper .error svg {
+  margin-top: 0 !important;
+}
+
+.stripe.stripe-form-wrapper .error svg .base {
+  fill: #e25950;
+}
+
+.stripe.stripe-form-wrapper .error svg .glyph {
+  fill: #fff;
+}
+
+.stripe.stripe-form-wrapper .error .message {
+  color: #e25950;
+}
+
+.stripe.stripe-form-wrapper .success .icon .border {
+  stroke: #abe9d2;
+}
+
+.stripe.stripe-form-wrapper .success .icon .checkmark {
+  stroke: #24b47e;
+}
+
+.stripe.stripe-form-wrapper .success .title {
+  color: #32325d;
+  font-size: 16px !important;
+}
+
+.stripe.stripe-form-wrapper .success .message {
+  color: #8898aa;
+  font-size: 13px !important;
+}
+
+.stripe.stripe-form-wrapper .success .reset path {
+  fill: #24b47e;
+}

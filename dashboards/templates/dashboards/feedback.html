@@ -1,0 +1,19 @@
+{% extends "_layouts/loggedin.html" %}
+{% load account socialaccount %}
+{% load blocklight_tags %}
+{% block leftbar %}
+{% get_social_navbar user %}
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ============================================================== -->
+<!-- Main content -->
+<!-- ============================================================== -->
+<div id="feedback_content" class="homepage-container">
+
+
+
+</div>
+{% endblock content %}
